@@ -139,7 +139,16 @@ class RiskEngine:
                              f"≤{self.max_positions}", len(current_positions) + 1,
                              "Max concurrent positions reached")])
 
-            new_exposure = sum(current_positions.values()) + order_value
+            def _pos_val(v):
+                if isinstance(v, (int, float)):
+                    return float(v)
+                if isinstance(v, dict):
+                    qty = float(v.get("quantity", 0))
+                    p = float(v.get("current_price", v.get("entry_price", v.get("avg_price", 0.0))))
+                    return qty * p
+                return 0.0
+
+            new_exposure = sum(_pos_val(v) for v in current_positions.values()) + order_value
             if new_exposure > cash * self.max_exposure:
                 return RiskApproval(False, [RiskViolation("max_exposure",
                              f"≤{self.max_exposure*100:.0f}% of cash",

@@ -1,0 +1,8 @@
+{
+  "active": false,
+  "engaged_at": "2026-09-26T10:46:06Z",
+  "engaged_by": "RISK_OFFICER",
+  "reason": "Hostile market spike",
+  "disengaged_at": "2026-09-26T10:46:06Z",
+  "disengaged_by": "TEST"
+}
