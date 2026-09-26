@@ -1,0 +1,282 @@
+{
+  "US": {
+    "listing_dates": {
+      "AAPL": {
+        "listing_date": "1980-12-12",
+        "exchange": "NASDAQ",
+        "sector": "Technology",
+        "industry": "Consumer Electronics"
+      },
+      "MSFT": {
+        "listing_date": "1986-03-13",
+        "exchange": "NASDAQ",
+        "sector": "Technology",
+        "industry": "Software"
+      },
+      "AMZN": {
+        "listing_date": "1997-05-15",
+        "exchange": "NASDAQ",
+        "sector": "Consumer Discretionary",
+        "industry": "Broadline Retail"
+      },
+      "GOOGL": {
+        "listing_date": "2004-08-19",
+        "exchange": "NASDAQ",
+        "sector": "Communication Services",
+        "industry": "Interactive Media"
+      },
+      "META": {
+        "listing_date": "2012-05-18",
+        "exchange": "NASDAQ",
+        "sector": "Communication Services",
+        "industry": "Interactive Media"
+      },
+      "TSLA": {
+        "listing_date": "2010-06-29",
+        "exchange": "NASDAQ",
+        "sector": "Consumer Discretionary",
+        "industry": "Automobile"
+      },
+      "NVDA": {
+        "listing_date": "1999-01-22",
+        "exchange": "NASDAQ",
+        "sector": "Technology",
+        "industry": "Semiconductors"
+      },
+      "SPY": {
+        "listing_date": "1993-01-22",
+        "exchange": "NYSE Arca",
+        "sector": "ETF",
+        "industry": "Index"
+      },
+      "QQQ": {
+        "listing_date": "1999-03-10",
+        "exchange": "NASDAQ",
+        "sector": "ETF",
+        "industry": "Index"
+      },
+      "IWM": {
+        "listing_date": "2000-05-22",
+        "exchange": "NYSE Arca",
+        "sector": "ETF",
+        "industry": "Index"
+      },
+      "PLTR": {
+        "listing_date": "2020-09-30",
+        "exchange": "NYSE",
+        "sector": "Technology",
+        "industry": "Software"
+      },
+      "SNOW": {
+        "listing_date": "2020-09-16",
+        "exchange": "NYSE",
+        "sector": "Technology",
+        "industry": "Cloud Software"
+      },
+      "ABNB": {
+        "listing_date": "2020-12-10",
+        "exchange": "NASDAQ",
+        "sector": "Consumer Discretionary",
+        "industry": "Travel Services"
+      },
+      "COIN": {
+        "listing_date": "2021-04-14",
+        "exchange": "NASDAQ",
+        "sector": "Financials",
+        "industry": "Financial Technology"
+      },
+      "RIVN": {
+        "listing_date": "2021-11-10",
+        "exchange": "NASDAQ",
+        "sector": "Consumer Discretionary",
+        "industry": "Electric Vehicles"
+      },
+      "ARM": {
+        "listing_date": "2023-09-14",
+        "exchange": "NASDAQ",
+        "sector": "Technology",
+        "industry": "Semiconductors"
+      },
+      "RDDT": {
+        "listing_date": "2024-03-21",
+        "exchange": "NYSE",
+        "sector": "Communication Services",
+        "industry": "Social Media"
+      }
+    },
+    "delisted_or_inactive": {
+      "TWTR": {
+        "effective_date": "2022-10-27",
+        "status": "DELISTED",
+        "reason": "Acquired by X Corp / Musk"
+      },
+      "SBNY": {
+        "effective_date": "2023-03-12",
+        "status": "DELISTED",
+        "reason": "FDIC Receivership / Bank Failure"
+      },
+      "FRC": {
+        "effective_date": "2023-05-01",
+        "status": "DELISTED",
+        "reason": "FDIC Receivership / Acquired by JPMorgan"
+      },
+      "BBBY": {
+        "effective_date": "2023-05-03",
+        "status": "DELISTED",
+        "reason": "Chapter 11 Bankruptcy"
+      },
+      "SVB": {
+        "effective_date": "2023-03-10",
+        "status": "DELISTED",
+        "reason": "FDIC Receivership / Silicon Valley Bank Failure"
+      }
+    }
+  },
+  "IN": {
+    "listing_dates": {
+      "RELIANCE": {
+        "listing_date": "1995-11-29",
+        "exchange": "NSE",
+        "sector": "Energy"
+      },
+      "TCS": {
+        "listing_date": "2004-08-25",
+        "exchange": "NSE",
+        "sector": "Technology"
+      },
+      "INFY": {
+        "listing_date": "1993-06-14",
+        "exchange": "NSE",
+        "sector": "Technology"
+      },
+      "HDFCBANK": {
+        "listing_date": "1995-05-19",
+        "exchange": "NSE",
+        "sector": "Financials"
+      },
+      "ICICIBANK": {
+        "listing_date": "1997-09-17",
+        "exchange": "NSE",
+        "sector": "Financials"
+      },
+      "SBIN": {
+        "listing_date": "1995-03-01",
+        "exchange": "NSE",
+        "sector": "Financials"
+      },
+      "BHARTIARTL": {
+        "listing_date": "2002-02-18",
+        "exchange": "NSE",
+        "sector": "Telecom"
+      },
+      "ITC": {
+        "listing_date": "1995-11-03",
+        "exchange": "NSE",
+        "sector": "Consumer Goods"
+      },
+      "HINDUNILVR": {
+        "listing_date": "1995-11-03",
+        "exchange": "NSE",
+        "sector": "Consumer Goods"
+      },
+      "LT": {
+        "listing_date": "2004-06-23",
+        "exchange": "NSE",
+        "sector": "Industrials"
+      },
+      "BAJFINANCE": {
+        "listing_date": "2003-01-08",
+        "exchange": "NSE",
+        "sector": "Financials"
+      },
+      "KOTAKBANK": {
+        "listing_date": "2003-04-08",
+        "exchange": "NSE",
+        "sector": "Financials"
+      },
+      "ZOMATO": {
+        "listing_date": "2021-07-23",
+        "exchange": "NSE",
+        "sector": "Consumer Services"
+      },
+      "NYKAA": {
+        "listing_date": "2021-11-10",
+        "exchange": "NSE",
+        "sector": "Consumer Discretionary"
+      },
+      "PAYTM": {
+        "listing_date": "2021-11-18",
+        "exchange": "NSE",
+        "sector": "Financials"
+      },
+      "POLICYBZR": {
+        "listing_date": "2021-11-15",
+        "exchange": "NSE",
+        "sector": "Financials"
+      },
+      "LICI": {
+        "listing_date": "2022-05-17",
+        "exchange": "NSE",
+        "sector": "Financials"
+      },
+      "DELHIVERY": {
+        "listing_date": "2022-05-24",
+        "exchange": "NSE",
+        "sector": "Logistics"
+      },
+      "MANKIND": {
+        "listing_date": "2023-05-09",
+        "exchange": "NSE",
+        "sector": "Healthcare"
+      },
+      "TATATECH": {
+        "listing_date": "2023-11-30",
+        "exchange": "NSE",
+        "sector": "Technology"
+      },
+      "IREDA": {
+        "listing_date": "2023-11-29",
+        "exchange": "NSE",
+        "sector": "Financials"
+      },
+      "SWIGGY": {
+        "listing_date": "2024-11-13",
+        "exchange": "NSE",
+        "sector": "Consumer Services"
+      }
+    },
+    "delisted_or_inactive": {
+      "DHFL": {
+        "effective_date": "2021-06-14",
+        "status": "DELISTED",
+        "reason": "Insolvency / Piramal Acquisition"
+      },
+      "RCOM": {
+        "effective_date": "2019-05-08",
+        "status": "SUSPENDED",
+        "reason": "Insolvency / Trading Suspension"
+      },
+      "SREINFRA": {
+        "effective_date": "2023-02-15",
+        "status": "DELISTED",
+        "reason": "Insolvency resolution"
+      },
+      "JET AIRWAYS": {
+        "effective_date": "2019-06-20",
+        "status": "SUSPENDED",
+        "reason": "Grounded operations"
+      },
+      "COX&KINGS": {
+        "effective_date": "2020-04-10",
+        "status": "DELISTED",
+        "reason": "Insolvency liquidation"
+      },
+      "YESBANK": {
+        "effective_date": "2020-03-05",
+        "status": "RECONSTRUCTED",
+        "reason": "RBI Reconstruction Scheme"
+      }
+    }
+  },
+  "last_updated": "2026-09-22T20:15:22.065267"
+}

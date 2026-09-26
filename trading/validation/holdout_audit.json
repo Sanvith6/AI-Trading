@@ -1,0 +1,65 @@
+[
+  {
+    "access_id": 1,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": false,
+    "total_accesses": 1
+  },
+  {
+    "access_id": 2,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": false,
+    "total_accesses": 2
+  },
+  {
+    "access_id": 3,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": false,
+    "total_accesses": 3
+  },
+  {
+    "access_id": 4,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": false,
+    "total_accesses": 4
+  },
+  {
+    "access_id": 5,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": false,
+    "total_accesses": 5
+  },
+  {
+    "access_id": 6,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 6
+  },
+  {
+    "access_id": 7,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 7
+  },
+  {
+    "access_id": 8,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 8
+  },
+  {
+    "access_id": 9,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 9
+  }
+]

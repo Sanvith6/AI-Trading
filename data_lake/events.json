@@ -1,0 +1,13 @@
+[
+  {
+    "event_id": "AAPL_Q1_2024",
+    "symbol": "AAPL",
+    "event_type": "EARNINGS_RELEASE",
+    "event_time": "2024-02-01T21:30:00Z",
+    "source": "SEC_EDGAR",
+    "available_at": "2024-02-01T21:35:00Z",
+    "importance": "HIGH",
+    "raw_reference": "0000320193-24-000006",
+    "data_payload": null
+  }
+]

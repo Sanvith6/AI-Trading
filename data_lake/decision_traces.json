@@ -1,0 +1,42 @@
+{
+  "TR_20240315_001": {
+    "trade_id": "TR_20240315_001",
+    "timestamp": "2024-03-15T14:30:00Z",
+    "market": "US",
+    "symbol": "NVDA",
+    "action": "BUY",
+    "universe_rank": 1,
+    "alpha_scores": {
+      "MOMENTUM": 0.85,
+      "BREAKOUT": 0.72
+    },
+    "ml_probability": 0.88,
+    "ml_confidence": 0.91,
+    "regime": "BULLISH",
+    "market_context": {
+      "market_trend": "BULLISH",
+      "vix_level": 14.5
+    },
+    "fundamentals": {
+      "f_revenue_growth_yoy": 2.05
+    },
+    "portfolio_state_before": {
+      "cash": 50000.0,
+      "positions": 3
+    },
+    "risk_validation": {
+      "passed": true,
+      "checks": [
+        "position_limit",
+        "sector_limit"
+      ]
+    },
+    "position_size": 25.0,
+    "target_weight": 0.15,
+    "execution_assumption": {
+      "slippage_bps": 4.5,
+      "fee": 1.0
+    },
+    "final_decision_reason": "Strong cross-sectional momentum in leading Tech sector"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "ret_1d:v1": {
+    "feature_name": "ret_1d",
+    "version": "v1",
+    "description": "1-day simple return",
+    "source": "price",
+    "lookback": 1,
+    "timestamp_semantics": "LAGGED_EOD",
+    "dependencies": [
+      "close"
+    ],
+    "market": "GLOBAL",
+    "status": "ACTIVE",
+    "formula_expression": "close[t] / close[t-1] - 1.0",
+    "feature_hash": "36cdefaea1a3"
+  },
+  "ret_5d:v1": {
+    "feature_name": "ret_5d",
+    "version": "v1",
+    "description": "5-day simple return",
+    "source": "price",
+    "lookback": 5,
+    "timestamp_semantics": "LAGGED_EOD",
+    "dependencies": [
+      "close"
+    ],
+    "market": "GLOBAL",
+    "status": "ACTIVE",
+    "formula_expression": "close[t] / close[t-5] - 1.0",
+    "feature_hash": "9f998870592c"
+  },
+  "ret_20d:v1": {
+    "feature_name": "ret_20d",
+    "version": "v1",
+    "description": "20-day momentum return",
+    "source": "price",
+    "lookback": 20,
+    "timestamp_semantics": "LAGGED_EOD",
+    "dependencies": [
+      "close"
+    ],
+    "market": "GLOBAL",
+    "status": "ACTIVE",
+    "formula_expression": "close[t] / close[t-20] - 1.0",
+    "feature_hash": "402d4b234e4b"
+  },
+  "rsi_14:v1": {
+    "feature_name": "rsi_14",
+    "version": "v1",
+    "description": "14-day Relative Strength Index",
+    "source": "price",
+    "lookback": 14,
+    "timestamp_semantics": "LAGGED_EOD",
+    "dependencies": [
+      "close"
+    ],
+    "market": "GLOBAL",
+    "status": "ACTIVE",
+    "formula_expression": "100 - (100 / (1 + RS(14)))",
+    "feature_hash": "91822d51fa08"
+  },
+  "vol_20d:v1": {
+    "feature_name": "vol_20d",
+    "version": "v1",
+    "description": "20-day annualized rolling volatility",
+    "source": "price",
+    "lookback": 20,
+    "timestamp_semantics": "LAGGED_EOD",
+    "dependencies": [
+      "close"
+    ],
+    "market": "GLOBAL",
+    "status": "ACTIVE",
+    "formula_expression": "std(ret_1d, 20) * sqrt(252)",
+    "feature_hash": "2d657671645c"
+  },
+  "atr_14:v1": {
+    "feature_name": "atr_14",
+    "version": "v1",
+    "description": "14-day Average True Range",
+    "source": "price",
+    "lookback": 14,
+    "timestamp_semantics": "LAGGED_EOD",
+    "dependencies": [
+      "high",
+      "low",
+      "close"
+    ],
+    "market": "GLOBAL",
+    "status": "ACTIVE",
+    "formula_expression": "rolling_mean(TrueRange, 14)",
+    "feature_hash": "807c16282bc7"
+  },
+  "f_quality_score:v1": {
+    "feature_name": "f_quality_score",
+    "version": "v1",
+    "description": "Fundamental Composite Quality Score",
+    "source": "fundamentals",
+    "lookback": 90,
+    "timestamp_semantics": "AS_OF_FILING",
+    "dependencies": [
+      "operating_margin",
+      "roe",
+      "free_cash_flow"
+    ],
+    "market": "US",
+    "status": "ACTIVE",
+    "formula_expression": "clip(operating_margin*2 + roe*0.5 + fcf/revenue, 0, 1)",
+    "feature_hash": "819cb74e6a35"
+  },
+  "market_risk_on_off:v1": {
+    "feature_name": "market_risk_on_off",
+    "version": "v1",
+    "description": "Macro Market Context Risk Regime",
+    "source": "market_context",
+    "lookback": 50,
+    "timestamp_semantics": "LAGGED_EOD",
+    "dependencies": [
+      "SPY",
+      "QQQ",
+      "VIX",
+      "Sector_ETFs"
+    ],
+    "market": "US",
+    "status": "ACTIVE",
+    "formula_expression": "composite(tech_spread, vix_penalty, spy_trend)",
+    "feature_hash": "ee701556f4cf"
+  }
+}

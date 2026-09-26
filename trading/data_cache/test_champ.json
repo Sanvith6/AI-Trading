@@ -1,0 +1,15 @@
+{
+  "champion": {
+    "strategy_id": "CHAMPION_V1_BASELINE",
+    "species": "Trend",
+    "promoted_at": "2026-09-20",
+    "metrics": {
+      "sharpe": 1.45,
+      "max_drawdown_pct": 8.5,
+      "profit_factor": 1.6
+    }
+  },
+  "challengers": [],
+  "shadow_records": [],
+  "history": []
+}

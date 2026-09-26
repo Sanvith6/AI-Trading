@@ -1,0 +1,146 @@
+[
+  {
+    "strategy_id": "strat_1_trend_01",
+    "name": "TrendGladiator_1",
+    "generation": 1,
+    "species": "Trend",
+    "alphas": [
+      "TrendAlpha",
+      "RegimeAlpha"
+    ],
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0,
+    "fatal_metric": "max_dd_8%",
+    "reason": "Choppy regime exhaustion",
+    "regime_behavior": {},
+    "timestamp": "2026-09-20T19:43:31Z"
+  },
+  {
+    "strategy_id": "strat_1_trend_01",
+    "name": "TrendGladiator_1",
+    "generation": 1,
+    "species": "Trend",
+    "alphas": [
+      "TrendAlpha",
+      "RegimeAlpha"
+    ],
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0,
+    "fatal_metric": "max_dd_8%",
+    "reason": "Choppy regime exhaustion",
+    "regime_behavior": {},
+    "timestamp": "2026-09-20T19:44:08Z"
+  },
+  {
+    "strategy_id": "strat_1_trend_01",
+    "name": "TrendGladiator_1",
+    "generation": 1,
+    "species": "Trend",
+    "alphas": [
+      "TrendAlpha",
+      "RegimeAlpha"
+    ],
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0,
+    "fatal_metric": "max_dd_8%",
+    "reason": "Choppy regime exhaustion",
+    "regime_behavior": {},
+    "timestamp": "2026-09-20T19:47:11Z"
+  },
+  {
+    "strategy_id": "strat_1_trend_01",
+    "name": "TrendGladiator_1",
+    "generation": 1,
+    "species": "Trend",
+    "alphas": [
+      "TrendAlpha",
+      "RegimeAlpha"
+    ],
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0,
+    "fatal_metric": "max_dd_8%",
+    "reason": "Choppy regime exhaustion",
+    "regime_behavior": {},
+    "timestamp": "2026-09-20T19:53:55Z"
+  },
+  {
+    "strategy_id": "strat_1_trend_01",
+    "name": "TrendGladiator_1",
+    "generation": 1,
+    "species": "Trend",
+    "alphas": [
+      "TrendAlpha",
+      "RegimeAlpha"
+    ],
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0,
+    "fatal_metric": "max_dd_8%",
+    "reason": "Choppy regime exhaustion",
+    "regime_behavior": {},
+    "timestamp": "2026-09-20T20:34:54Z"
+  },
+  {
+    "strategy_id": "strat_1_trend_01",
+    "name": "TrendGladiator_1",
+    "generation": 1,
+    "species": "Trend",
+    "alphas": [
+      "TrendAlpha",
+      "RegimeAlpha"
+    ],
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0,
+    "fatal_metric": "max_dd_8%",
+    "reason": "Choppy regime exhaustion",
+    "regime_behavior": {},
+    "timestamp": "2026-09-20T20:51:06Z"
+  },
+  {
+    "strategy_id": "strat_1_trend_01",
+    "name": "TrendGladiator_1",
+    "generation": 1,
+    "species": "Trend",
+    "alphas": [
+      "TrendAlpha",
+      "RegimeAlpha"
+    ],
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0,
+    "fatal_metric": "max_dd_8%",
+    "reason": "Choppy regime exhaustion",
+    "regime_behavior": {},
+    "timestamp": "2026-09-20T20:53:59Z"
+  },
+  {
+    "strategy_id": "strat_1_trend_01",
+    "name": "TrendGladiator_1",
+    "generation": 1,
+    "species": "Trend",
+    "alphas": [
+      "TrendAlpha",
+      "RegimeAlpha"
+    ],
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0,
+    "fatal_metric": "max_dd_8%",
+    "reason": "Choppy regime exhaustion",
+    "regime_behavior": {},
+    "timestamp": "2026-09-20T21:04:29Z"
+  },
+  {
+    "strategy_id": "strat_1_trend_01",
+    "name": "TrendGladiator_1",
+    "generation": 1,
+    "species": "Trend",
+    "alphas": [
+      "TrendAlpha",
+      "RegimeAlpha"
+    ],
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0,
+    "fatal_metric": "max_dd_8%",
+    "reason": "Choppy regime exhaustion",
+    "regime_behavior": {},
+    "timestamp": "2026-09-22T20:35:20Z"
+  }
+]

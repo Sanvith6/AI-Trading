@@ -1,0 +1,9 @@
+{
+  "cash": 99657.62,
+  "positions": {
+    "AAPL": {
+      "quantity": 1,
+      "avg_price": 342.38
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "EXP_REPRO_TEST": {
+    "experiment_id": "EXP_REPRO_TEST",
+    "strategy_id": "MOMENTUM_v1",
+    "strategy_dna": {
+      "lookback": 20
+    },
+    "dataset_sha256": "abc123def456",
+    "dataset_version": "v1",
+    "feature_version": "v1",
+    "universe_version": "v1",
+    "model_version": "v1",
+    "environment": {
+      "git_commit_sha": "UNKNOWN_NO_GIT",
+      "git_dirty": false,
+      "python_version": "3.12.3",
+      "key_packages": {
+        "duckdb": "1.5.5",
+        "pyarrow": "14.0.2",
+        "polars": "1.41.2",
+        "optuna": "3.6.1",
+        "pandas": "2.2.2",
+        "numpy": "1.26.4",
+        "scipy": "1.13.1",
+        "sklearn": "1.5.0"
+      },
+      "random_seed": 42,
+      "config_hash": "44136fa355b3",
+      "timestamp": "2026-09-22T20:30:05.820003"
+    },
+    "baseline_metrics": {
+      "sharpe": 1.75,
+      "cagr": 0.3
+    },
+    "created_at": "2026-09-22T20:30:05.820003"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "GOLDEN_MOMENTUM_US_2023": {
+    "benchmark_id": "GOLDEN_MOMENTUM_US_2023",
+    "strategy_id": "CROSS_SECTIONAL_MOMENTUM",
+    "symbols": [
+      "AAPL",
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL",
+      "META",
+      "TSLA"
+    ],
+    "period": {
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    "seed": 42,
+    "expected_metrics": {
+      "cagr": 0.385,
+      "sharpe": 1.78,
+      "sortino": 2.45,
+      "calmar": 2.65,
+      "max_drawdown": 0.145,
+      "trade_count": 68.0,
+      "turnover": 6.8,
+      "final_equity": 138500.0
+    },
+    "metric_tolerances_pct": {
+      "sharpe": 0.05,
+      "cagr": 0.05,
+      "max_drawdown": 0.05,
+      "trade_count": 0.02,
+      "turnover": 0.05
+    },
+    "last_frozen_at": "2024-01-15T00:00:00Z"
+  },
+  "GOLDEN_VOL_ARBITRAGE_US_2022": {
+    "benchmark_id": "GOLDEN_VOL_ARBITRAGE_US_2022",
+    "strategy_id": "DEFENSIVE_VOLATILITY",
+    "symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "XLP",
+      "XLU"
+    ],
+    "period": {
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    },
+    "seed": 42,
+    "expected_metrics": {
+      "cagr": 0.085,
+      "sharpe": 0.95,
+      "sortino": 1.35,
+      "calmar": 1.05,
+      "max_drawdown": 0.081,
+      "trade_count": 42.0,
+      "turnover": 4.2,
+      "final_equity": 108500.0
+    },
+    "metric_tolerances_pct": {
+      "sharpe": 0.05,
+      "cagr": 0.05,
+      "max_drawdown": 0.05,
+      "trade_count": 0.05
+    },
+    "last_frozen_at": "2023-01-15T00:00:00Z"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "test_ds:v1": {
+    "dataset_id": "test_ds",
+    "version": "v1",
+    "market": "US",
+    "source": "synthetic",
+    "created_at": "2026-09-22T20:14:01.059508",
+    "date_range": {
+      "start": "2024-01-01",
+      "end": "2024-01-02"
+    },
+    "symbols": [],
+    "schema_version": "1.0",
+    "feature_version": "v1",
+    "checksum_sha256": "e723a26e94e1648cec1e8cfae462ad9103bad03ef641c05117bc2d8f8a898c44",
+    "row_count": 2,
+    "column_names": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "storage_path": "C:\\GRAG\\AI\\ai-trading\\data_lake\\market_data\\US\\1d\\TEST_SYM.parquet",
+    "description": "",
+    "metadata": {}
+  }
+}

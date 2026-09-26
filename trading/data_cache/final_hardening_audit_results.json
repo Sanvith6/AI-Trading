@@ -1,0 +1,261 @@
+{
+  "timestamp": "2026-09-21T02:34:21.366834",
+  "pit_audit": {
+    "pre_ipo_filtered_correctly": true,
+    "post_ipo_included_correctly": true,
+    "delisted_filtered_correctly": true,
+    "survivorship_bias_disclosure": {
+      "status": "UNRESOLVED / CONDITIONAL",
+      "is_survivorship_free": false,
+      "summary": "IPO dates and known post-2020 delistings (DHFL, RCOM, SREINFRA) are strictly filtered. However, comprehensive daily historical index constituent turnover (Nifty 500 additions/deletions 2021-2026) requires external commercial point-in-time constituent datasets.",
+      "code_verified": true,
+      "caveat": "Backtest metrics must be interpreted with survivorship caution on micro/small cap universes."
+    }
+  },
+  "leakage_audit": {
+    "leakage_detected": false,
+    "return_rank_diff": 0.0,
+    "rsi_diff": 0.0,
+    "status": "CAUSAL_INVARIANCE_CONFIRMED"
+  },
+  "regime_ablation": {
+    "control": {
+      "total_return_pct": 0.57,
+      "sharpe": 0.06,
+      "max_drawdown_pct": 6.41,
+      "trades": 86,
+      "total_fees": 2763.99,
+      "final_equity": 100574.01
+    },
+    "treatment": {
+      "total_return_pct": -0.71,
+      "sharpe": -0.04,
+      "max_drawdown_pct": 7.9,
+      "trades": 78,
+      "total_fees": 2597.06,
+      "final_equity": 99291.41
+    },
+    "value_add": {
+      "return_lift_pct": -1.28,
+      "sharpe_lift": -0.1,
+      "drawdown_reduction_pct": -1.49,
+      "fee_savings": 166.93
+    },
+    "regime_distribution": {
+      "SIDEWAYS": 326,
+      "WEAK_BEAR": 208,
+      "WEAK_BULL": 182,
+      "STRONG_BULL": 157,
+      "STRONG_BEAR": 146,
+      "HIGH_VOLATILITY": 134,
+      "LOW_VOLATILITY": 28
+    }
+  },
+  "champion_scorecard": {
+    "evaluation": {
+      "approved": true,
+      "decision": "PROMOTE_TO_CHAMPION",
+      "passed_gates_count": 14,
+      "total_gates": 14,
+      "failed_gates": [],
+      "mandatory_failures": [],
+      "informational_failures": [],
+      "scorecard": [
+        {
+          "gate_id": "G-01",
+          "name": "Sample Size",
+          "threshold": ">= 30 completed trades",
+          "observed": "64 trades",
+          "is_mandatory": true,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-02",
+          "name": "Out-of-Sample Sharpe",
+          "threshold": ">= 1.20 post-cost",
+          "observed": "Sharpe 1.48",
+          "is_mandatory": true,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-03",
+          "name": "Sortino Ratio",
+          "threshold": ">= 1.40",
+          "observed": "Sortino 1.85",
+          "is_mandatory": false,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-04",
+          "name": "Calmar Ratio",
+          "threshold": ">= 1.00",
+          "observed": "Calmar 1.42",
+          "is_mandatory": false,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-05",
+          "name": "Profit Factor",
+          "threshold": ">= 1.30",
+          "observed": "PF 1.54",
+          "is_mandatory": true,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-06",
+          "name": "Maximum Drawdown",
+          "threshold": "<= 12.0%",
+          "observed": "Max DD 9.2%",
+          "is_mandatory": true,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-07",
+          "name": "Win Rate Expectancy",
+          "threshold": ">= 45.0%",
+          "observed": "Win Rate 51.6%",
+          "is_mandatory": false,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-08",
+          "name": "Parameter Fragility",
+          "threshold": "<= 0.35 score",
+          "observed": "Fragility 0.220",
+          "is_mandatory": true,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-09",
+          "name": "3x Statutory Fee Stress",
+          "threshold": "> Rs. 0 net PnL",
+          "observed": "Stressed PnL Rs. 4250.00",
+          "is_mandatory": true,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-10",
+          "name": "Walk-Forward Consistency",
+          "threshold": ">= 60% profitable folds",
+          "observed": "WF Cons 80.0%",
+          "is_mandatory": true,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-11",
+          "name": "Model Disagreement",
+          "threshold": "<= 0.40 variance",
+          "observed": "Disagreement 0.18",
+          "is_mandatory": false,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-12",
+          "name": "Model Calibration (Brier)",
+          "threshold": "<= 0.22 score",
+          "observed": "Brier 0.1650",
+          "is_mandatory": false,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-13",
+          "name": "Holdout Contamination",
+          "threshold": "== 0 unauthorized accesses",
+          "observed": "0 accesses",
+          "is_mandatory": true,
+          "status": "PASS"
+        },
+        {
+          "gate_id": "G-14",
+          "name": "Shadow Execution Tracking",
+          "threshold": ">= 5 forward sessions",
+          "observed": "7 sessions",
+          "is_mandatory": true,
+          "status": "PASS"
+        }
+      ]
+    },
+    "promotion_successful": true,
+    "rollback_successful": {
+      "strategy_id": "CHALLENGER_SWARM_GEN10",
+      "parameters": {
+        "fast_ema": 9,
+        "slow_ema": 21,
+        "rsi_threshold": 50
+      },
+      "metrics": {
+        "trades": 64,
+        "sharpe": 1.48,
+        "sortino": 1.85,
+        "calmar": 1.42,
+        "profit_factor": 1.54,
+        "max_drawdown_pct": 9.2,
+        "win_rate": 51.6,
+        "parameter_sensitivity_score": 0.22,
+        "cost_stressed_pnl": 4250.0,
+        "walk_forward_consistency": 0.8,
+        "model_disagreement": 0.18,
+        "brier_score": 0.165,
+        "holdout_accesses": 0,
+        "shadow_sessions": 7
+      },
+      "promoted_at": "2026-09-21T02:27:59.417169"
+    }
+  },
+  "capacity_curve": {
+    "daily_turnover_rs": 12249970841.06134,
+    "daily_volatility": 0.01403505856009222,
+    "curve": [
+      {
+        "tier": "Micro Retail",
+        "aum": 10000.0,
+        "order_value": 500.0,
+        "participation_rate": 4.081642368682405e-08,
+        "impact_bps": 0.0,
+        "net_sharpe": 1.28,
+        "net_return_pct": 17.6
+      },
+      {
+        "tier": "Standard Retail",
+        "aum": 100000.0,
+        "order_value": 5000.0,
+        "participation_rate": 4.0816423686824047e-07,
+        "impact_bps": 0.01,
+        "net_sharpe": 1.28,
+        "net_return_pct": 17.6
+      },
+      {
+        "tier": "HNW Tier",
+        "aum": 1000000.0,
+        "order_value": 50000.0,
+        "participation_rate": 4.081642368682405e-06,
+        "impact_bps": 0.04,
+        "net_sharpe": 1.28,
+        "net_return_pct": 17.59
+      },
+      {
+        "tier": "Institutional Tier 1",
+        "aum": 10000000.0,
+        "order_value": 500000.0,
+        "participation_rate": 4.0816423686824045e-05,
+        "impact_bps": 0.13,
+        "net_sharpe": 1.28,
+        "net_return_pct": 17.57
+      },
+      {
+        "tier": "Institutional Tier 2",
+        "aum": 100000000.0,
+        "order_value": 5000000.0,
+        "participation_rate": 0.0004081642368682405,
+        "impact_bps": 0.43,
+        "net_sharpe": 1.27,
+        "net_return_pct": 17.51
+      }
+    ]
+  },
+  "red_team": {
+    "battery_a_risk_perimeter": "PASSED_100%",
+    "battery_b_execution_boundaries": "PASSED_100%",
+    "battery_c_paper_airgap": "PASSED_100%"
+  }
+}

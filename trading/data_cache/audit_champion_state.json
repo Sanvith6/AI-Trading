@@ -1,0 +1,66 @@
+{
+  "champion": {
+    "strategy_id": "CHALLENGER_SWARM_GEN10",
+    "parameters": {
+      "fast_ema": 9,
+      "slow_ema": 21,
+      "rsi_threshold": 50
+    },
+    "metrics": {
+      "trades": 64,
+      "sharpe": 1.48,
+      "sortino": 1.85,
+      "calmar": 1.42,
+      "profit_factor": 1.54,
+      "max_drawdown_pct": 9.2,
+      "win_rate": 51.6,
+      "parameter_sensitivity_score": 0.22,
+      "cost_stressed_pnl": 4250.0,
+      "walk_forward_consistency": 0.8,
+      "model_disagreement": 0.18,
+      "brier_score": 0.165,
+      "holdout_accesses": 0,
+      "shadow_sessions": 7
+    },
+    "promoted_at": "2026-09-21T02:27:59.417169"
+  },
+  "challengers": [],
+  "shadow_records": [],
+  "history": [
+    {
+      "strategy_id": "CHAMPION_V1_BASELINE",
+      "species": "Hybrid",
+      "promoted_at": "2026-09-20T00:00:00Z",
+      "metrics": {
+        "sharpe": 1.45,
+        "max_drawdown_pct": 8.5,
+        "profit_factor": 1.6
+      }
+    },
+    {
+      "strategy_id": "CHALLENGER_SWARM_GEN10",
+      "parameters": {
+        "fast_ema": 9,
+        "slow_ema": 21,
+        "rsi_threshold": 50
+      },
+      "metrics": {
+        "trades": 64,
+        "sharpe": 1.48,
+        "sortino": 1.85,
+        "calmar": 1.42,
+        "profit_factor": 1.54,
+        "max_drawdown_pct": 9.2,
+        "win_rate": 51.6,
+        "parameter_sensitivity_score": 0.22,
+        "cost_stressed_pnl": 4250.0,
+        "walk_forward_consistency": 0.8,
+        "model_disagreement": 0.18,
+        "brier_score": 0.165,
+        "holdout_accesses": 0,
+        "shadow_sessions": 7
+      },
+      "promoted_at": "2026-09-21T02:27:43.117623"
+    }
+  ]
+}

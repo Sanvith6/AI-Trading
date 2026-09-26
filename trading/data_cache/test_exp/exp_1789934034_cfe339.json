@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp_1789934034_cfe339",
+  "dataset_version": "2026-NSE-DAILY",
+  "universe_version": "UNIV-100-2026",
+  "feature_version": "FEAT-V2-TIMESAFE",
+  "strategy_version": "v2.1-quant",
+  "model_version": "META-ENS-V1",
+  "code_version": "GIT-CLEAN",
+  "random_seed": 1234,
+  "created_at": "2026-09-20T19:53:54Z",
+  "parameters": {},
+  "metrics": {},
+  "notes": null,
+  "signature": "831fe7abd83f25ee"
+}

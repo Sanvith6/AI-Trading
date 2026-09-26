@@ -1,0 +1,36 @@
+[
+  {
+    "agent_id": "gen1_breakout_01",
+    "name": "Viper (Breakout Hunter)",
+    "generation": 1,
+    "archetype": "Breakout Hunter",
+    "initial_capital": 2500.0,
+    "final_capital": 2100.0,
+    "remaining_cash": 2100.0,
+    "total_loss": 400.0,
+    "total_pnl": -400.0,
+    "trades_count": 1,
+    "wins_count": 0,
+    "losses_count": 1,
+    "death_reason": "Max Drawdown Breached: -16.00% (limit: -3.0%)",
+    "time_of_death": "2026-09-21 01:23:50",
+    "parent_id": null,
+    "autopsy": {
+      "fatal_mistake": "Agent failed due to: Max Drawdown Breached: -16.00% (limit: -3.0%). Losses compounded beyond allowable threshold.",
+      "market_condition": "Adverse market momentum with lack of trend follow-through.",
+      "directive": "Enforce stricter confirmation signals and immediate stop-loss exit."
+    },
+    "trade_history": [
+      {
+        "symbol": "RELIANCE",
+        "buy_price": 2500.0,
+        "sell_price": 2100.0,
+        "quantity": 1,
+        "pnl": -400.0,
+        "pnl_pct": -16.0,
+        "reason": "Simulated Stop-Loss",
+        "timestamp": "2026-09-21 01:23:50"
+      }
+    ]
+  }
+]
