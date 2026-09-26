@@ -1,0 +1,27 @@
+{
+  "total_examples": 5000,
+  "split_distribution": {
+    "train": "3512 (70.2%)",
+    "val": "876 (17.5%)",
+    "locked_holdout": "144 (2.9%)",
+    "cal": "424 (8.5%)",
+    "frozen_holdout": "44 (0.9%)"
+  },
+  "side_distribution": {
+    "LONG": "3978 (79.6%)",
+    "SHORT": "1022 (20.4%)"
+  },
+  "year_distribution": {
+    "2021": "845 (16.9%)",
+    "2022": "839 (16.8%)",
+    "2023": "895 (17.9%)",
+    "2024": "933 (18.7%)",
+    "2025": "876 (17.5%)",
+    "2026": "612 (12.2%)"
+  },
+  "sector_count": 9,
+  "sector_hhi": 0.1166,
+  "symbol_count": 27,
+  "symbol_hhi": 0.037,
+  "duplicate_rate": 0.0
+}
