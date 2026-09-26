@@ -1,0 +1,61 @@
+{
+  "unit_of_observation": {
+    "total_candidates": 371,
+    "approved_candidates": 28,
+    "unique_entry_trading_sessions": 23,
+    "total_calendar_business_days": 43,
+    "non_invested_days": 20,
+    "max_trades_in_single_session": 2,
+    "mean_trades_per_active_session": 1.22,
+    "effective_independent_portfolio_observations": 43
+  },
+  "sharpe_methodology_comparison": {
+    "method_1_v2_published_evaluator": {
+      "annualization_factor": "sqrt(252)",
+      "observation_basis": "Active entry days only (19 days)",
+      "cash_days_included": false,
+      "sharpe": 8.32,
+      "notes": "Flawed: Excludes 24 cash days and concentrates 10-bar holding return onto single entry date."
+    },
+    "method_2_active_days_exact": {
+      "annualization_factor": "sqrt(252)",
+      "observation_basis": "Active entry days (19 days)",
+      "cash_days_included": false,
+      "mean_return": 0.01519,
+      "std_return": 0.03801,
+      "sharpe": 6.35
+    },
+    "method_3_all_calendar_portfolio_days": {
+      "annualization_factor": "sqrt(252)",
+      "observation_basis": "All business days in holdout (43 days)",
+      "cash_days_included": true,
+      "mean_daily_return": 0.00671,
+      "std_daily_return": 0.02637,
+      "sharpe": 4.04,
+      "sortino": 7.09,
+      "notes": "True daily portfolio performance including cash drag on uninvested days."
+    },
+    "method_4_trade_cycle_annualized": {
+      "annualization_factor": "sqrt(25.2)",
+      "observation_basis": "28 approved trades (10-bar holding horizon)",
+      "cash_days_included": "N/A",
+      "mean_trade_net_return": 0.03555,
+      "std_trade_net_return": 0.08528,
+      "sharpe": 2.09,
+      "notes": "True per-trade annualized Sharpe assuming 25.2 non-overlapping 10-bar cycles/year."
+    },
+    "method_5_naive_trade_annualized": {
+      "annualization_factor": "sqrt(252)",
+      "observation_basis": "28 approved trades treated as 1-day trades",
+      "sharpe": 6.62,
+      "notes": "Severely inflated: treats 10-day trade as 1-day trade."
+    }
+  },
+  "risk_adjusted_metrics_all_days": {
+    "daily_sharpe": 4.04,
+    "daily_sortino": 7.09,
+    "max_drawdown": -0.0606,
+    "calmar_ratio_annualized": 65.39,
+    "cumulative_return": 0.3143
+  }
+}

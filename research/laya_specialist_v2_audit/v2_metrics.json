@@ -1,0 +1,22 @@
+{
+  "candidate_count": 371,
+  "approved_count": 28,
+  "approval_rate": 0.0755,
+  "trade_count": 28,
+  "win_rate": 0.7143,
+  "profit_factor": 3.01,
+  "mean_net_return": 0.03555,
+  "median_net_return": 0.0353,
+  "std_net_return": 0.08528,
+  "avg_mae": -0.02619,
+  "avg_mfe": 0.07757,
+  "mean_friction_bps": 15.0,
+  "daily_portfolio_sharpe_all_days": 4.04,
+  "daily_portfolio_sharpe_invested_days": 6.35,
+  "sortino_all_days": 7.09,
+  "max_drawdown": -0.0606,
+  "calmar_ratio": 5.19,
+  "total_cumulative_return": 0.3143,
+  "calendar_days": 43,
+  "invested_days_count": 19
+}

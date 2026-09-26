@@ -1,0 +1,69 @@
+{
+  "future_leakage_audit_passed": true,
+  "ablation_matrix": {
+    "FULL_MODEL": {
+      "approved_trades": 28,
+      "win_rate": 0.7143,
+      "profit_factor": 3.01,
+      "mean_net_return": 0.03555,
+      "daily_portfolio_sharpe": 4.81,
+      "holding_cycle_sharpe": 2.09
+    },
+    "NO_REGIME_MACRO": {
+      "approved_trades": 43,
+      "win_rate": 0.6047,
+      "profit_factor": 1.52,
+      "mean_net_return": 0.01025,
+      "daily_portfolio_sharpe": 1.47,
+      "holding_cycle_sharpe": 0.81
+    },
+    "NO_VOLATILITY_ATR": {
+      "approved_trades": 143,
+      "win_rate": 0.5385,
+      "profit_factor": 1.17,
+      "mean_net_return": 0.0044,
+      "daily_portfolio_sharpe": 1.36,
+      "holding_cycle_sharpe": 0.31
+    },
+    "NO_TECHNICALS": {
+      "approved_trades": 32,
+      "win_rate": 0.5938,
+      "profit_factor": 1.11,
+      "mean_net_return": 0.0031,
+      "daily_portfolio_sharpe": 1.45,
+      "holding_cycle_sharpe": 0.22
+    },
+    "NO_ML_ALPHAS": {
+      "approved_trades": 56,
+      "win_rate": 0.4821,
+      "profit_factor": 1.16,
+      "mean_net_return": 0.00436,
+      "daily_portfolio_sharpe": 1.63,
+      "holding_cycle_sharpe": 0.29
+    },
+    "NO_RANK_BASELINE": {
+      "approved_trades": 53,
+      "win_rate": 0.4906,
+      "profit_factor": 0.83,
+      "mean_net_return": -0.00481,
+      "daily_portfolio_sharpe": -1.28,
+      "holding_cycle_sharpe": -0.34
+    },
+    "NO_PROFILE": {
+      "approved_trades": 83,
+      "win_rate": 0.5542,
+      "profit_factor": 1.57,
+      "mean_net_return": 0.01142,
+      "daily_portfolio_sharpe": 2.84,
+      "holding_cycle_sharpe": 0.91
+    },
+    "INFORMATION_FREE_NULL": {
+      "approved_trades": 347,
+      "win_rate": 0.5245,
+      "profit_factor": 1.24,
+      "mean_net_return": 0.00611,
+      "daily_portfolio_sharpe": 3.48,
+      "holding_cycle_sharpe": 0.42
+    }
+  }
+}

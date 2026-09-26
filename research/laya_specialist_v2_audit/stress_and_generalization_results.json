@@ -1,0 +1,315 @@
+{
+  "phase_16_calibration": {
+    "cal_samples": 939,
+    "calibrated_temperature": 1.0,
+    "calibrated_threshold": 0.27,
+    "expected_calibration_error_ece": 0.1298,
+    "brier_score": 0.0232
+  },
+  "phase_17_selectivity_sweep": [
+    {
+      "threshold": 0.15,
+      "trade_count": 371,
+      "selectivity_pct": 100.0,
+      "win_rate": 0.5283,
+      "profit_factor": 1.27,
+      "mean_net_return": 0.00674,
+      "daily_portfolio_sharpe": 3.44
+    },
+    {
+      "threshold": 0.2,
+      "trade_count": 371,
+      "selectivity_pct": 100.0,
+      "win_rate": 0.5283,
+      "profit_factor": 1.27,
+      "mean_net_return": 0.00674,
+      "daily_portfolio_sharpe": 3.44
+    },
+    {
+      "threshold": 0.25,
+      "trade_count": 178,
+      "selectivity_pct": 47.98,
+      "win_rate": 0.5506,
+      "profit_factor": 1.25,
+      "mean_net_return": 0.0059,
+      "daily_portfolio_sharpe": 2.94
+    },
+    {
+      "threshold": 0.27,
+      "trade_count": 28,
+      "selectivity_pct": 7.55,
+      "win_rate": 0.7143,
+      "profit_factor": 3.01,
+      "mean_net_return": 0.03555,
+      "daily_portfolio_sharpe": 4.78
+    },
+    {
+      "threshold": 0.3,
+      "trade_count": 3,
+      "selectivity_pct": 0.81,
+      "win_rate": 1.0,
+      "profit_factor": 2692.46,
+      "mean_net_return": 0.08975,
+      "daily_portfolio_sharpe": 3.54
+    },
+    {
+      "threshold": 0.35,
+      "trade_count": 0,
+      "selectivity_pct": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": 0.0,
+      "mean_net_return": 0.0,
+      "daily_portfolio_sharpe": 0.0
+    },
+    {
+      "threshold": 0.4,
+      "trade_count": 0,
+      "selectivity_pct": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": 0.0,
+      "mean_net_return": 0.0,
+      "daily_portfolio_sharpe": 0.0
+    },
+    {
+      "threshold": 0.45,
+      "trade_count": 0,
+      "selectivity_pct": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": 0.0,
+      "mean_net_return": 0.0,
+      "daily_portfolio_sharpe": 0.0
+    }
+  ],
+  "phase_18_cost_stress": {
+    "1.0x_friction": {
+      "friction_bps": 15,
+      "win_rate": 0.7143,
+      "profit_factor": 3.01,
+      "mean_net_return": 0.03555,
+      "daily_portfolio_sharpe": 4.81
+    },
+    "1.5x_friction": {
+      "friction_bps": 22,
+      "win_rate": 0.7143,
+      "profit_factor": 2.94,
+      "mean_net_return": 0.0348,
+      "daily_portfolio_sharpe": 4.72
+    },
+    "2.0x_friction": {
+      "friction_bps": 30,
+      "win_rate": 0.7143,
+      "profit_factor": 2.88,
+      "mean_net_return": 0.03405,
+      "daily_portfolio_sharpe": 4.64
+    },
+    "3.0x_friction": {
+      "friction_bps": 45,
+      "win_rate": 0.7143,
+      "profit_factor": 2.75,
+      "mean_net_return": 0.03255,
+      "daily_portfolio_sharpe": 4.46
+    },
+    "5.0x_friction": {
+      "friction_bps": 75,
+      "win_rate": 0.7143,
+      "profit_factor": 2.52,
+      "mean_net_return": 0.02955,
+      "daily_portfolio_sharpe": 4.11
+    }
+  },
+  "phase_18_delay_stress": {
+    "0_bars_lag": {
+      "friction_bps": 15,
+      "win_rate": 0.7143,
+      "profit_factor": 3.01,
+      "mean_net_return": 0.03555,
+      "daily_portfolio_sharpe": 4.81
+    },
+    "1_bar_lag": {
+      "win_rate": 0.6786,
+      "profit_factor": 2.74,
+      "mean_net_return": 0.0315,
+      "daily_portfolio_sharpe": 3.65
+    },
+    "2_bars_lag": {
+      "win_rate": 0.6429,
+      "profit_factor": 2.41,
+      "mean_net_return": 0.0272,
+      "daily_portfolio_sharpe": 3.12
+    },
+    "5_bars_lag": {
+      "win_rate": 0.5714,
+      "profit_factor": 1.78,
+      "mean_net_return": 0.0165,
+      "daily_portfolio_sharpe": 1.88
+    }
+  },
+  "phase_19_sector_attribution": {
+    "Communication": {
+      "total_candidates": 34,
+      "laya_approved": 2,
+      "baseline_mean_return": 0.01511,
+      "baseline_win_rate": 0.5588,
+      "laya_mean_return": 0.06948,
+      "laya_win_rate": 1.0
+    },
+    "ConsumerCyclical": {
+      "total_candidates": 44,
+      "laya_approved": 1,
+      "baseline_mean_return": 0.01062,
+      "baseline_win_rate": 0.6136,
+      "laya_mean_return": 0.03882,
+      "laya_win_rate": 1.0
+    },
+    "Energy": {
+      "total_candidates": 28,
+      "laya_approved": 2,
+      "baseline_mean_return": 0.00864,
+      "baseline_win_rate": 0.5357,
+      "laya_mean_return": -0.01195,
+      "laya_win_rate": 0.5
+    },
+    "Financials": {
+      "total_candidates": 56,
+      "laya_approved": 6,
+      "baseline_mean_return": -0.0036,
+      "baseline_win_rate": 0.4643,
+      "laya_mean_return": 0.02997,
+      "laya_win_rate": 0.8333
+    },
+    "Healthcare": {
+      "total_candidates": 31,
+      "laya_approved": 8,
+      "baseline_mean_return": -0.0086,
+      "baseline_win_rate": 0.4194,
+      "laya_mean_return": 0.05884,
+      "laya_win_rate": 0.75
+    },
+    "Index": {
+      "total_candidates": 51,
+      "laya_approved": 4,
+      "baseline_mean_return": 0.02068,
+      "baseline_win_rate": 0.6471,
+      "laya_mean_return": 0.01621,
+      "laya_win_rate": 0.75
+    },
+    "Industrials": {
+      "total_candidates": 28,
+      "laya_approved": 4,
+      "baseline_mean_return": 0.02702,
+      "baseline_win_rate": 0.4643,
+      "laya_mean_return": -0.02338,
+      "laya_win_rate": 0.25
+    },
+    "Semiconductors": {
+      "total_candidates": 48,
+      "laya_approved": 0,
+      "baseline_mean_return": 0.00486,
+      "baseline_win_rate": 0.5833,
+      "laya_mean_return": 0.0,
+      "laya_win_rate": 0.0
+    },
+    "Technology": {
+      "total_candidates": 51,
+      "laya_approved": 1,
+      "baseline_mean_return": -0.00581,
+      "baseline_win_rate": 0.4314,
+      "laya_mean_return": 0.21962,
+      "laya_win_rate": 1.0
+    }
+  },
+  "phase_20_regime_attribution": {
+    "HIGH_VOLATILITY": {
+      "total_candidates": 58,
+      "laya_approved": 1,
+      "baseline_mean_return": -0.00145,
+      "baseline_win_rate": 0.4483,
+      "laya_mean_return": 0.02622,
+      "laya_win_rate": 1.0
+    },
+    "RISK_OFF": {
+      "total_candidates": 39,
+      "laya_approved": 1,
+      "baseline_mean_return": -0.02048,
+      "baseline_win_rate": 0.359,
+      "laya_mean_return": -0.03167,
+      "laya_win_rate": 0.0
+    },
+    "SIDEWAYS": {
+      "total_candidates": 73,
+      "laya_approved": 9,
+      "baseline_mean_return": 0.00027,
+      "baseline_win_rate": 0.4795,
+      "laya_mean_return": 0.01852,
+      "laya_win_rate": 0.5556
+    },
+    "STRONG_BULL": {
+      "total_candidates": 107,
+      "laya_approved": 9,
+      "baseline_mean_return": 0.01471,
+      "baseline_win_rate": 0.6168,
+      "laya_mean_return": 0.03631,
+      "laya_win_rate": 0.6667
+    },
+    "WEAK_BULL": {
+      "total_candidates": 94,
+      "laya_approved": 8,
+      "baseline_mean_return": 0.01906,
+      "baseline_win_rate": 0.5851,
+      "laya_mean_return": 0.06342,
+      "laya_win_rate": 1.0
+    }
+  },
+  "phase_21_confusion_matrix": {
+    "TAKE_Approved": {
+      "count": 28,
+      "mean_net_return": 0.03555,
+      "win_rate": 0.7143,
+      "total_pnl_pct": 99.54
+    },
+    "PASS_WAIT_Rejected": {
+      "count": 343,
+      "mean_net_return": 0.00439,
+      "win_rate": 0.5131,
+      "avoided_losses_count": 167,
+      "missed_winners_count": 176
+    },
+    "Selection_Edge_Delta": {
+      "win_rate_alpha": 0.2012,
+      "mean_return_alpha": 0.03116
+    }
+  },
+  "phase_22_multi_horizon": {
+    "5_bars": {
+      "baseline_mean_net_return": 0.00491,
+      "baseline_win_rate": 0.5148,
+      "laya_mean_net_return": 0.02656,
+      "laya_win_rate": 0.6429,
+      "laya_profit_factor": 3.59
+    },
+    "10_bars": {
+      "baseline_mean_net_return": 0.00674,
+      "baseline_win_rate": 0.5283,
+      "laya_mean_net_return": 0.03555,
+      "laya_win_rate": 0.7143,
+      "laya_profit_factor": 3.01
+    },
+    "20_bars": {
+      "baseline_mean_net_return": 0.0111,
+      "baseline_win_rate": 0.5526,
+      "laya_mean_net_return": 0.05816,
+      "laya_win_rate": 0.6786,
+      "laya_profit_factor": 3.97
+    }
+  },
+  "phase_23_downside_defense": {
+    "baseline_candidates_count": 371,
+    "baseline_losing_trades_count": 175,
+    "baseline_worst_trade": -0.18532,
+    "laya_approved_trades_count": 28,
+    "laya_losing_trades_count": 8,
+    "laya_worst_trade": -0.16448,
+    "toxic_candidates_eliminated": 167,
+    "toxic_rejection_rate": 0.9543
+  }
+}

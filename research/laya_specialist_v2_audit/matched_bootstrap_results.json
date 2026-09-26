@@ -1,0 +1,54 @@
+{
+  "matched_random_control": {
+    "profit_factor": {
+      "mean": 1.38,
+      "std": 0.73,
+      "p95": 2.7,
+      "p99": 4.26,
+      "p_value": 0.032
+    },
+    "win_rate": {
+      "mean": 0.5286,
+      "std": 0.0881,
+      "p95": 0.6786,
+      "p99": 0.7143,
+      "p_value": 0.008
+    },
+    "mean_net_return": {
+      "mean": 0.00572,
+      "std": 0.01266,
+      "p95": 0.02672,
+      "p99": 0.03653,
+      "p_value": 0.011
+    },
+    "daily_sharpe": {
+      "mean": 0.13,
+      "std": 2.36,
+      "p95": 4.07,
+      "p99": 5.28,
+      "p_value": 0.051
+    }
+  },
+  "session_block_bootstrap_ci": {
+    "mean_net_return": {
+      "mean": 0.03612,
+      "ci_95_lower": 0.00328,
+      "ci_95_upper": 0.06699
+    },
+    "win_rate": {
+      "mean": 0.713,
+      "ci_95_lower": 0.5357,
+      "ci_95_upper": 0.875
+    },
+    "profit_factor": {
+      "mean": 4.17,
+      "ci_95_lower": 1.1,
+      "ci_95_upper": 12.53
+    },
+    "holding_cycle_sharpe": {
+      "mean": 2.73,
+      "ci_95_lower": 1.16,
+      "ci_95_upper": 4.92
+    }
+  }
+}

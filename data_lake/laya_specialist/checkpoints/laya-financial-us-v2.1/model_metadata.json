@@ -1,0 +1,72 @@
+{
+  "model_version": "laya-financial-us-v2.1",
+  "frozen": true,
+  "base_model": "convaiinnovations/laya-typed-decisions",
+  "temperature": 1.0,
+  "recommended_threshold": 0.35,
+  "threshold_sweep": [
+    {
+      "threshold": 0.25,
+      "trade_count": 412,
+      "selectivity_pct": 100.0,
+      "win_rate": 0.5146,
+      "profit_factor": 1.23,
+      "mean_net_return": 0.00605,
+      "daily_portfolio_sharpe": 5.26
+    },
+    {
+      "threshold": 0.27,
+      "trade_count": 412,
+      "selectivity_pct": 100.0,
+      "win_rate": 0.5146,
+      "profit_factor": 1.23,
+      "mean_net_return": 0.00605,
+      "daily_portfolio_sharpe": 5.25
+    },
+    {
+      "threshold": 0.3,
+      "trade_count": 407,
+      "selectivity_pct": 98.79,
+      "win_rate": 0.5086,
+      "profit_factor": 1.21,
+      "mean_net_return": 0.00548,
+      "daily_portfolio_sharpe": 4.9
+    },
+    {
+      "threshold": 0.33,
+      "trade_count": 102,
+      "selectivity_pct": 24.76,
+      "win_rate": 0.4804,
+      "profit_factor": 1.03,
+      "mean_net_return": 0.00085,
+      "daily_portfolio_sharpe": -0.09
+    },
+    {
+      "threshold": 0.35,
+      "trade_count": 8,
+      "selectivity_pct": 1.94,
+      "win_rate": 0.375,
+      "profit_factor": 0.9,
+      "mean_net_return": -0.00288,
+      "daily_portfolio_sharpe": -0.21
+    },
+    {
+      "threshold": 0.38,
+      "trade_count": 0,
+      "selectivity_pct": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": 0.0,
+      "mean_net_return": 0.0,
+      "daily_portfolio_sharpe": 0.0
+    },
+    {
+      "threshold": 0.4,
+      "trade_count": 0,
+      "selectivity_pct": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": 0.0,
+      "mean_net_return": 0.0,
+      "daily_portfolio_sharpe": 0.0
+    }
+  ]
+}

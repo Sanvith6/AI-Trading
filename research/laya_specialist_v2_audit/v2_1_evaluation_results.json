@@ -1,0 +1,80 @@
+{
+  "model_version": "laya-financial-us-v2.1",
+  "frozen": true,
+  "checkpoint_dir": "/mnt/c/GRAG/AI/ai-trading/data_lake/laya_specialist/checkpoints/laya-financial-us-v2.1",
+  "training_seeds": {
+    "seed_42": {
+      "seed": 42,
+      "train_loss": 1.4361,
+      "val_loss": 1.0949,
+      "duration_sec": 322.4,
+      "peak_vram_mb": 3994.5
+    },
+    "seed_123": {
+      "seed": 123,
+      "train_loss": 1.5571,
+      "val_loss": 1.1411,
+      "duration_sec": 60.1,
+      "peak_vram_mb": 3994.5
+    },
+    "seed_2026": {
+      "seed": 2026,
+      "train_loss": 1.5592,
+      "val_loss": 1.1426,
+      "duration_sec": 93.6,
+      "peak_vram_mb": 3994.5
+    }
+  },
+  "calibrated_temperature": 3.0,
+  "baseline_metrics": {
+    "candidate_count": 412,
+    "win_rate": 0.5146,
+    "profit_factor": 1.23,
+    "mean_net_return": 0.00605,
+    "daily_portfolio_sharpe": 5.31
+  },
+  "v2_1_holdout_metrics": {
+    "candidate_count": 412,
+    "approved_trades": 412,
+    "selectivity_pct": 100.0,
+    "win_rate": 0.5146,
+    "profit_factor": 1.23,
+    "mean_net_return": 0.00605,
+    "daily_portfolio_sharpe": 5.29,
+    "holding_cycle_sharpe": 0.39,
+    "max_drawdown": -0.0377
+  },
+  "permutation_null_test": {
+    "null_pf_mean": 1.23,
+    "null_pf_std": 0.0,
+    "p_value_pf": 1.0,
+    "p_value_wr": 0.0,
+    "statistically_significant": false
+  },
+  "friction_stress_tests": {
+    "1.0x_friction": {
+      "friction_bps": 15,
+      "win_rate": 0.5146,
+      "profit_factor": 1.23,
+      "mean_net_return": 0.00605
+    },
+    "2.0x_friction": {
+      "friction_bps": 30,
+      "win_rate": 0.5049,
+      "profit_factor": 1.17,
+      "mean_net_return": 0.00455
+    },
+    "3.0x_friction": {
+      "friction_bps": 45,
+      "win_rate": 0.4951,
+      "profit_factor": 1.11,
+      "mean_net_return": 0.00305
+    },
+    "5.0x_friction": {
+      "friction_bps": 75,
+      "win_rate": 0.4879,
+      "profit_factor": 1.0,
+      "mean_net_return": 5e-05
+    }
+  }
+}

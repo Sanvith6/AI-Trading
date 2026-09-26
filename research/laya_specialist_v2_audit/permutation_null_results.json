@@ -1,0 +1,79 @@
+{
+  "num_permutations": 1000,
+  "observed_laya_v2": {
+    "profit_factor": 3.01,
+    "daily_all_sharpe": 4.04,
+    "cycle_sharpe": 2.09,
+    "win_rate": 0.7143,
+    "mean_net_return": 0.03555
+  },
+  "empirical_p_values": {
+    "profit_factor_p_value": 0.036,
+    "daily_sharpe_p_value": 0.069,
+    "cycle_sharpe_p_value": 0.034,
+    "win_rate_p_value": 0.019,
+    "mean_net_return_p_value": 0.015
+  },
+  "null_distributions": {
+    "profit_factor": {
+      "mean": 1.4572,
+      "median": 1.2963,
+      "std": 0.8126,
+      "p95": 2.7985,
+      "p99": 4.461,
+      "p99_5": 5.9464,
+      "p99_9": 7.3896,
+      "max": 8.0475
+    },
+    "daily_all_sharpe": {
+      "mean": 0.6965,
+      "median": 0.7022,
+      "std": 2.3726,
+      "p95": 4.5693,
+      "p99": 6.31,
+      "p99_5": 6.8016,
+      "p99_9": 7.3278,
+      "max": 7.5411
+    },
+    "cycle_sharpe": {
+      "mean": 0.4884,
+      "median": 0.5031,
+      "std": 0.9389,
+      "p95": 1.9543,
+      "p99": 2.8269,
+      "p99_5": 3.3937,
+      "p99_9": 3.6675,
+      "max": 3.6691
+    },
+    "win_rate": {
+      "mean": 0.5288,
+      "median": 0.5357,
+      "std": 0.0884,
+      "p95": 0.6786,
+      "p99": 0.7143,
+      "p99_5": 0.7502,
+      "p99_9": 0.8215,
+      "max": 0.8571
+    },
+    "mean_net_return": {
+      "mean": 0.0069,
+      "median": 0.0068,
+      "std": 0.0129,
+      "p95": 0.0276,
+      "p99": 0.0388,
+      "p99_5": 0.043,
+      "p99_9": 0.0473,
+      "max": 0.0521
+    },
+    "max_drawdown": {
+      "mean": -0.2166,
+      "median": -0.2041,
+      "std": 0.0986,
+      "p95": -0.0802,
+      "p99": -0.0477,
+      "p99_5": -0.0381,
+      "p99_9": -0.0152,
+      "max": -0.0096
+    }
+  }
+}
