@@ -25,7 +25,13 @@ LEGAL_BOUNDS = {
     "zscore_threshold": (1.0, 3.0),
     "min_confidence": (0.50, 0.85),
     "turnover_penalty_weight": (0.01, 0.20),
+    # Laya Task-Specific Threshold Bounds (Directives 3 & 12)
+    "laya_trade_quality_threshold": (0.40, 0.90),
+    "laya_risk_threshold": (0.45, 0.90),
+    "laya_regime_threshold": (0.35, 0.85),
 }
+
+LEGAL_DISAGREEMENT_POLICIES = ["BASELINE_WINS", "REDUCE_CONFIDENCE", "HALVE_SIZE"]
 
 AVAILABLE_ALPHAS = [
     "TrendAlpha", "MomentumAlpha", "MeanReversionAlpha", "BreakoutAlpha",
@@ -94,6 +100,18 @@ class StrategyDNA:
     is_alive: bool = True
     death_reason: Optional[str] = None
 
+    # 10. Laya Challenger Intelligence Genes (Directives 3 & 12)
+    laya_enabled: bool = False
+    laya_trade_quality_enabled: bool = False
+    laya_risk_action_enabled: bool = False
+    laya_regime_opinion_enabled: bool = False
+
+    laya_trade_quality_threshold: float = 0.60
+    laya_risk_threshold: float = 0.65
+    laya_regime_threshold: float = 0.50
+
+    laya_disagreement_policy: str = "BASELINE_WINS"  # BASELINE_WINS | REDUCE_CONFIDENCE | HALVE_SIZE
+
     def validate_bounds(self) -> bool:
         """Enforces that all numeric parameters remain strictly within legal limits."""
         for param, (low, high) in LEGAL_BOUNDS.items():
@@ -101,6 +119,15 @@ class StrategyDNA:
                 val = getattr(self, param)
                 if not (low <= val <= high):
                     setattr(self, param, max(low, min(high, val)))
+
+        # Directive 12: Ensure legal disagreement policy
+        if self.laya_disagreement_policy not in LEGAL_DISAGREEMENT_POLICIES:
+            self.laya_disagreement_policy = "BASELINE_WINS"
+
+        # Directive 12 Invariant: "Laya overrides risk" is ILLEGAL under all circumstances
+        if hasattr(self, "laya_overrides_risk"):
+            delattr(self, "laya_overrides_risk")
+
         return True
 
     def to_dict(self) -> Dict[str, Any]:
@@ -148,6 +175,18 @@ def mutate_dna(parent: StrategyDNA, generation: int, mutation_rate: float = 0.20
         weights = [random.random() for _ in range(k)]
         tot = sum(weights)
         child_data["alpha_weights"] = {a: round(w / tot, 2) for a, w in zip(alphas, weights)}
+
+    # Mutate Laya genes (Directive 12)
+    if random.random() < mutation_rate:
+        child_data["laya_enabled"] = not child_data.get("laya_enabled", False)
+    if random.random() < mutation_rate:
+        child_data["laya_trade_quality_enabled"] = not child_data.get("laya_trade_quality_enabled", False)
+    if random.random() < mutation_rate:
+        child_data["laya_risk_action_enabled"] = not child_data.get("laya_risk_action_enabled", False)
+    if random.random() < mutation_rate:
+        child_data["laya_regime_opinion_enabled"] = not child_data.get("laya_regime_opinion_enabled", False)
+    if random.random() < mutation_rate:
+        child_data["laya_disagreement_policy"] = random.choice(LEGAL_DISAGREEMENT_POLICIES)
 
     child = StrategyDNA.from_dict(child_data)
     child.validate_bounds()

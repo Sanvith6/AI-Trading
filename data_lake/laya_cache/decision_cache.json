@@ -1,0 +1,2952 @@
+{
+  "942bb9d8d620cfc027ea42723ed392b51c6aac1e641062385bc80ea6741a80e2_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6517,
+    "selected_choice_probability": 0.6517,
+    "probabilities": {
+      "ENTER": 0.2101,
+      "WAIT": 0.1381,
+      "REJECT": 0.6517
+    },
+    "confidence": 0.1987,
+    "latency_ms": 432.36,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "942bb9d8d620cfc027ea42723ed392b51c6aac1e641062385bc80ea6741a80e2",
+    "timestamp": "2026-09-26T06:48:40.920193",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "942bb9d8d620cfc027ea42723ed392b51c6aac1e641062385bc80ea6741a80e2_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5107,
+    "selected_choice_probability": 0.5107,
+    "probabilities": {
+      "NORMAL": 0.5107,
+      "REDUCE_POSITION": 0.319,
+      "BLOCK": 0.1702
+    },
+    "confidence": 0.0815,
+    "latency_ms": 432.36,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "942bb9d8d620cfc027ea42723ed392b51c6aac1e641062385bc80ea6741a80e2",
+    "timestamp": "2026-09-26T06:48:40.920193",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "942bb9d8d620cfc027ea42723ed392b51c6aac1e641062385bc80ea6741a80e2_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3825,
+    "selected_choice_probability": 0.3825,
+    "probabilities": {
+      "TRENDING": 0.3825,
+      "RANGE_BOUND": 0.0833,
+      "HIGH_VOLATILITY": 0.1692,
+      "RISK_OFF": 0.2443,
+      "UNCERTAIN": 0.1206
+    },
+    "confidence": 0.0837,
+    "latency_ms": 432.36,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "942bb9d8d620cfc027ea42723ed392b51c6aac1e641062385bc80ea6741a80e2",
+    "timestamp": "2026-09-26T06:48:40.920193",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "c8a58978e5aad59555f983ea7cbdb37f7967d4c51e939e9162a302d049593002_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.5722,
+    "selected_choice_probability": 0.5722,
+    "probabilities": {
+      "ENTER": 0.294,
+      "WAIT": 0.1337,
+      "REJECT": 0.5722
+    },
+    "confidence": 0.1367,
+    "latency_ms": 106.9,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "c8a58978e5aad59555f983ea7cbdb37f7967d4c51e939e9162a302d049593002",
+    "timestamp": "2026-09-26T06:48:41.086905",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "c8a58978e5aad59555f983ea7cbdb37f7967d4c51e939e9162a302d049593002_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4846,
+    "selected_choice_probability": 0.4846,
+    "probabilities": {
+      "NORMAL": 0.4846,
+      "REDUCE_POSITION": 0.3323,
+      "BLOCK": 0.1831
+    },
+    "confidence": 0.0642,
+    "latency_ms": 106.9,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "c8a58978e5aad59555f983ea7cbdb37f7967d4c51e939e9162a302d049593002",
+    "timestamp": "2026-09-26T06:48:41.086905",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "c8a58978e5aad59555f983ea7cbdb37f7967d4c51e939e9162a302d049593002_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3723,
+    "selected_choice_probability": 0.3723,
+    "probabilities": {
+      "TRENDING": 0.3723,
+      "RANGE_BOUND": 0.0926,
+      "HIGH_VOLATILITY": 0.1747,
+      "RISK_OFF": 0.227,
+      "UNCERTAIN": 0.1335
+    },
+    "confidence": 0.069,
+    "latency_ms": 106.9,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "c8a58978e5aad59555f983ea7cbdb37f7967d4c51e939e9162a302d049593002",
+    "timestamp": "2026-09-26T06:48:41.086905",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f34b900101c9c486a9856563ee3d8f2e0ad9abf06f4eeb76e52d148a80179125_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.5805,
+    "selected_choice_probability": 0.5805,
+    "probabilities": {
+      "ENTER": 0.276,
+      "WAIT": 0.1436,
+      "REJECT": 0.5805
+    },
+    "confidence": 0.1356,
+    "latency_ms": 108.52,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f34b900101c9c486a9856563ee3d8f2e0ad9abf06f4eeb76e52d148a80179125",
+    "timestamp": "2026-09-26T06:48:41.247710",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f34b900101c9c486a9856563ee3d8f2e0ad9abf06f4eeb76e52d148a80179125_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4966,
+    "selected_choice_probability": 0.4966,
+    "probabilities": {
+      "NORMAL": 0.4966,
+      "REDUCE_POSITION": 0.32,
+      "BLOCK": 0.1833
+    },
+    "confidence": 0.0686,
+    "latency_ms": 108.52,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f34b900101c9c486a9856563ee3d8f2e0ad9abf06f4eeb76e52d148a80179125",
+    "timestamp": "2026-09-26T06:48:41.247710",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f34b900101c9c486a9856563ee3d8f2e0ad9abf06f4eeb76e52d148a80179125_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.4003,
+    "selected_choice_probability": 0.4003,
+    "probabilities": {
+      "TRENDING": 0.4003,
+      "RANGE_BOUND": 0.0849,
+      "HIGH_VOLATILITY": 0.1912,
+      "RISK_OFF": 0.2021,
+      "UNCERTAIN": 0.1216
+    },
+    "confidence": 0.0857,
+    "latency_ms": 108.52,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f34b900101c9c486a9856563ee3d8f2e0ad9abf06f4eeb76e52d148a80179125",
+    "timestamp": "2026-09-26T06:48:41.247710",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "95eeaacbf11154caa756d36dd50e8e04db78ff4d62b3ce8b08490747c33fefda_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.5395,
+    "selected_choice_probability": 0.5395,
+    "probabilities": {
+      "ENTER": 0.3296,
+      "WAIT": 0.1309,
+      "REJECT": 0.5395
+    },
+    "confidence": 0.1217,
+    "latency_ms": 126.62,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "95eeaacbf11154caa756d36dd50e8e04db78ff4d62b3ce8b08490747c33fefda",
+    "timestamp": "2026-09-26T06:48:41.432676",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "95eeaacbf11154caa756d36dd50e8e04db78ff4d62b3ce8b08490747c33fefda_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.495,
+    "selected_choice_probability": 0.495,
+    "probabilities": {
+      "NORMAL": 0.495,
+      "REDUCE_POSITION": 0.3204,
+      "BLOCK": 0.1846
+    },
+    "confidence": 0.0673,
+    "latency_ms": 126.62,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "95eeaacbf11154caa756d36dd50e8e04db78ff4d62b3ce8b08490747c33fefda",
+    "timestamp": "2026-09-26T06:48:41.434681",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "95eeaacbf11154caa756d36dd50e8e04db78ff4d62b3ce8b08490747c33fefda_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.331,
+    "selected_choice_probability": 0.331,
+    "probabilities": {
+      "TRENDING": 0.331,
+      "RANGE_BOUND": 0.1074,
+      "HIGH_VOLATILITY": 0.183,
+      "RISK_OFF": 0.2514,
+      "UNCERTAIN": 0.1272
+    },
+    "confidence": 0.052,
+    "latency_ms": 126.62,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "95eeaacbf11154caa756d36dd50e8e04db78ff4d62b3ce8b08490747c33fefda",
+    "timestamp": "2026-09-26T06:48:41.434681",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f4b955c921cfec4376a6bb5d850ad6ace192e3973d38f02b7b21b08c4da953e6_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6236,
+    "selected_choice_probability": 0.6236,
+    "probabilities": {
+      "ENTER": 0.2297,
+      "WAIT": 0.1467,
+      "REJECT": 0.6236
+    },
+    "confidence": 0.1681,
+    "latency_ms": 126.05,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f4b955c921cfec4376a6bb5d850ad6ace192e3973d38f02b7b21b08c4da953e6",
+    "timestamp": "2026-09-26T06:48:41.608450",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f4b955c921cfec4376a6bb5d850ad6ace192e3973d38f02b7b21b08c4da953e6_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4751,
+    "selected_choice_probability": 0.4751,
+    "probabilities": {
+      "NORMAL": 0.4751,
+      "REDUCE_POSITION": 0.3451,
+      "BLOCK": 0.1797
+    },
+    "confidence": 0.0632,
+    "latency_ms": 126.05,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f4b955c921cfec4376a6bb5d850ad6ace192e3973d38f02b7b21b08c4da953e6",
+    "timestamp": "2026-09-26T06:48:41.608450",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f4b955c921cfec4376a6bb5d850ad6ace192e3973d38f02b7b21b08c4da953e6_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3333,
+    "selected_choice_probability": 0.3333,
+    "probabilities": {
+      "TRENDING": 0.3333,
+      "RANGE_BOUND": 0.1024,
+      "HIGH_VOLATILITY": 0.1952,
+      "RISK_OFF": 0.2368,
+      "UNCERTAIN": 0.1323
+    },
+    "confidence": 0.0511,
+    "latency_ms": 126.05,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f4b955c921cfec4376a6bb5d850ad6ace192e3973d38f02b7b21b08c4da953e6",
+    "timestamp": "2026-09-26T06:48:41.608450",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "288ce38cf17a1b2fbae537465a1d15f0c7afad11349880933b322c1b21e438d8_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6382,
+    "selected_choice_probability": 0.6382,
+    "probabilities": {
+      "ENTER": 0.2051,
+      "WAIT": 0.1566,
+      "REJECT": 0.6382
+    },
+    "confidence": 0.179,
+    "latency_ms": 120.91,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "288ce38cf17a1b2fbae537465a1d15f0c7afad11349880933b322c1b21e438d8",
+    "timestamp": "2026-09-26T06:48:41.788507",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "288ce38cf17a1b2fbae537465a1d15f0c7afad11349880933b322c1b21e438d8_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4565,
+    "selected_choice_probability": 0.4565,
+    "probabilities": {
+      "NORMAL": 0.4565,
+      "REDUCE_POSITION": 0.3436,
+      "BLOCK": 0.1999
+    },
+    "confidence": 0.0471,
+    "latency_ms": 120.91,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "288ce38cf17a1b2fbae537465a1d15f0c7afad11349880933b322c1b21e438d8",
+    "timestamp": "2026-09-26T06:48:41.788507",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "288ce38cf17a1b2fbae537465a1d15f0c7afad11349880933b322c1b21e438d8_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3635,
+    "selected_choice_probability": 0.3635,
+    "probabilities": {
+      "TRENDING": 0.3635,
+      "RANGE_BOUND": 0.0966,
+      "HIGH_VOLATILITY": 0.1651,
+      "RISK_OFF": 0.2374,
+      "UNCERTAIN": 0.1374
+    },
+    "confidence": 0.0648,
+    "latency_ms": 120.91,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "288ce38cf17a1b2fbae537465a1d15f0c7afad11349880933b322c1b21e438d8",
+    "timestamp": "2026-09-26T06:48:41.788507",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "168c1da1b44bf0151f72323dcd5e1b50796a1270f8e80dbd143286a909c26fe3_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.5283,
+    "selected_choice_probability": 0.5283,
+    "probabilities": {
+      "ENTER": 0.3389,
+      "WAIT": 0.1328,
+      "REJECT": 0.5283
+    },
+    "confidence": 0.1153,
+    "latency_ms": 118.58,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "168c1da1b44bf0151f72323dcd5e1b50796a1270f8e80dbd143286a909c26fe3",
+    "timestamp": "2026-09-26T06:48:41.968841",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "168c1da1b44bf0151f72323dcd5e1b50796a1270f8e80dbd143286a909c26fe3_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5212,
+    "selected_choice_probability": 0.5212,
+    "probabilities": {
+      "NORMAL": 0.5212,
+      "REDUCE_POSITION": 0.2996,
+      "BLOCK": 0.1792
+    },
+    "confidence": 0.0817,
+    "latency_ms": 118.58,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "168c1da1b44bf0151f72323dcd5e1b50796a1270f8e80dbd143286a909c26fe3",
+    "timestamp": "2026-09-26T06:48:41.969367",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "168c1da1b44bf0151f72323dcd5e1b50796a1270f8e80dbd143286a909c26fe3_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.4046,
+    "selected_choice_probability": 0.4046,
+    "probabilities": {
+      "TRENDING": 0.4046,
+      "RANGE_BOUND": 0.0833,
+      "HIGH_VOLATILITY": 0.1481,
+      "RISK_OFF": 0.2573,
+      "UNCERTAIN": 0.1067
+    },
+    "confidence": 0.1027,
+    "latency_ms": 118.58,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "168c1da1b44bf0151f72323dcd5e1b50796a1270f8e80dbd143286a909c26fe3",
+    "timestamp": "2026-09-26T06:48:41.970666",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "5bfae3aaab9a94741652526a566f9d27b6c25aef977f4c3aea869f07d1b24921_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6413,
+    "selected_choice_probability": 0.6413,
+    "probabilities": {
+      "ENTER": 0.2176,
+      "WAIT": 0.141,
+      "REJECT": 0.6413
+    },
+    "confidence": 0.1872,
+    "latency_ms": 123.61,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "5bfae3aaab9a94741652526a566f9d27b6c25aef977f4c3aea869f07d1b24921",
+    "timestamp": "2026-09-26T06:48:42.151089",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "5bfae3aaab9a94741652526a566f9d27b6c25aef977f4c3aea869f07d1b24921_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4798,
+    "selected_choice_probability": 0.4798,
+    "probabilities": {
+      "NORMAL": 0.4798,
+      "REDUCE_POSITION": 0.3261,
+      "BLOCK": 0.194
+    },
+    "confidence": 0.0571,
+    "latency_ms": 123.61,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "5bfae3aaab9a94741652526a566f9d27b6c25aef977f4c3aea869f07d1b24921",
+    "timestamp": "2026-09-26T06:48:42.151089",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "5bfae3aaab9a94741652526a566f9d27b6c25aef977f4c3aea869f07d1b24921_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3786,
+    "selected_choice_probability": 0.3786,
+    "probabilities": {
+      "TRENDING": 0.3786,
+      "RANGE_BOUND": 0.0933,
+      "HIGH_VOLATILITY": 0.1609,
+      "RISK_OFF": 0.2376,
+      "UNCERTAIN": 0.1295
+    },
+    "confidence": 0.0747,
+    "latency_ms": 123.61,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "5bfae3aaab9a94741652526a566f9d27b6c25aef977f4c3aea869f07d1b24921",
+    "timestamp": "2026-09-26T06:48:42.151089",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "490c335626a37869d7e676649f51aa4ea07210e53c8cfee57394e41c52d72704_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6291,
+    "selected_choice_probability": 0.6291,
+    "probabilities": {
+      "ENTER": 0.2038,
+      "WAIT": 0.1671,
+      "REJECT": 0.6291
+    },
+    "confidence": 0.1674,
+    "latency_ms": 121.48,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "490c335626a37869d7e676649f51aa4ea07210e53c8cfee57394e41c52d72704",
+    "timestamp": "2026-09-26T06:48:42.321221",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "490c335626a37869d7e676649f51aa4ea07210e53c8cfee57394e41c52d72704_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4115,
+    "selected_choice_probability": 0.4115,
+    "probabilities": {
+      "NORMAL": 0.4115,
+      "REDUCE_POSITION": 0.34,
+      "BLOCK": 0.2486
+    },
+    "confidence": 0.0186,
+    "latency_ms": 121.48,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "490c335626a37869d7e676649f51aa4ea07210e53c8cfee57394e41c52d72704",
+    "timestamp": "2026-09-26T06:48:42.321221",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "490c335626a37869d7e676649f51aa4ea07210e53c8cfee57394e41c52d72704_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3717,
+    "selected_choice_probability": 0.3717,
+    "probabilities": {
+      "TRENDING": 0.3717,
+      "RANGE_BOUND": 0.0984,
+      "HIGH_VOLATILITY": 0.1687,
+      "RISK_OFF": 0.2172,
+      "UNCERTAIN": 0.1441
+    },
+    "confidence": 0.0637,
+    "latency_ms": 121.48,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "490c335626a37869d7e676649f51aa4ea07210e53c8cfee57394e41c52d72704",
+    "timestamp": "2026-09-26T06:48:42.321221",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "af2a3b137643b6162f12aa357f3ddc996cea2e6e3a2f9030794a373badf9a40c_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.5423,
+    "selected_choice_probability": 0.5423,
+    "probabilities": {
+      "ENTER": 0.3073,
+      "WAIT": 0.1504,
+      "REJECT": 0.5423
+    },
+    "confidence": 0.1086,
+    "latency_ms": 105.58,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "af2a3b137643b6162f12aa357f3ddc996cea2e6e3a2f9030794a373badf9a40c",
+    "timestamp": "2026-09-26T06:48:42.487715",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "af2a3b137643b6162f12aa357f3ddc996cea2e6e3a2f9030794a373badf9a40c_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4903,
+    "selected_choice_probability": 0.4903,
+    "probabilities": {
+      "NORMAL": 0.4903,
+      "REDUCE_POSITION": 0.3242,
+      "BLOCK": 0.1855
+    },
+    "confidence": 0.0651,
+    "latency_ms": 105.58,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "af2a3b137643b6162f12aa357f3ddc996cea2e6e3a2f9030794a373badf9a40c",
+    "timestamp": "2026-09-26T06:48:42.487715",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "af2a3b137643b6162f12aa357f3ddc996cea2e6e3a2f9030794a373badf9a40c_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.467,
+    "selected_choice_probability": 0.467,
+    "probabilities": {
+      "TRENDING": 0.467,
+      "RANGE_BOUND": 0.0706,
+      "HIGH_VOLATILITY": 0.1595,
+      "RISK_OFF": 0.1935,
+      "UNCERTAIN": 0.1094
+    },
+    "confidence": 0.1329,
+    "latency_ms": 105.58,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "af2a3b137643b6162f12aa357f3ddc996cea2e6e3a2f9030794a373badf9a40c",
+    "timestamp": "2026-09-26T06:48:42.487715",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "602b06ab5fbe0461ccac7af05f37b7b39074a6ca6292ce20b165726bd50117bf_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.5873,
+    "selected_choice_probability": 0.5873,
+    "probabilities": {
+      "ENTER": 0.2737,
+      "WAIT": 0.139,
+      "REJECT": 0.5873
+    },
+    "confidence": 0.1431,
+    "latency_ms": 107.15,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "602b06ab5fbe0461ccac7af05f37b7b39074a6ca6292ce20b165726bd50117bf",
+    "timestamp": "2026-09-26T06:48:42.646008",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "602b06ab5fbe0461ccac7af05f37b7b39074a6ca6292ce20b165726bd50117bf_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4983,
+    "selected_choice_probability": 0.4983,
+    "probabilities": {
+      "NORMAL": 0.4983,
+      "REDUCE_POSITION": 0.3229,
+      "BLOCK": 0.1787
+    },
+    "confidence": 0.0717,
+    "latency_ms": 107.15,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "602b06ab5fbe0461ccac7af05f37b7b39074a6ca6292ce20b165726bd50117bf",
+    "timestamp": "2026-09-26T06:48:42.646008",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "602b06ab5fbe0461ccac7af05f37b7b39074a6ca6292ce20b165726bd50117bf_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.39,
+    "selected_choice_probability": 0.39,
+    "probabilities": {
+      "TRENDING": 0.39,
+      "RANGE_BOUND": 0.0878,
+      "HIGH_VOLATILITY": 0.165,
+      "RISK_OFF": 0.2415,
+      "UNCERTAIN": 0.1158
+    },
+    "confidence": 0.0861,
+    "latency_ms": 107.15,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "602b06ab5fbe0461ccac7af05f37b7b39074a6ca6292ce20b165726bd50117bf",
+    "timestamp": "2026-09-26T06:48:42.646008",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "c27bb008ef67769eb26af51354d4b29f031f19ca3eea942cd4e27e1f54bd50a8_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.5576,
+    "selected_choice_probability": 0.5576,
+    "probabilities": {
+      "ENTER": 0.2982,
+      "WAIT": 0.1442,
+      "REJECT": 0.5576
+    },
+    "confidence": 0.1209,
+    "latency_ms": 106.38,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "c27bb008ef67769eb26af51354d4b29f031f19ca3eea942cd4e27e1f54bd50a8",
+    "timestamp": "2026-09-26T06:48:42.792803",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "c27bb008ef67769eb26af51354d4b29f031f19ca3eea942cd4e27e1f54bd50a8_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4904,
+    "selected_choice_probability": 0.4904,
+    "probabilities": {
+      "NORMAL": 0.4904,
+      "REDUCE_POSITION": 0.3289,
+      "BLOCK": 0.1807
+    },
+    "confidence": 0.0677,
+    "latency_ms": 106.38,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "c27bb008ef67769eb26af51354d4b29f031f19ca3eea942cd4e27e1f54bd50a8",
+    "timestamp": "2026-09-26T06:48:42.792803",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "c27bb008ef67769eb26af51354d4b29f031f19ca3eea942cd4e27e1f54bd50a8_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3907,
+    "selected_choice_probability": 0.3907,
+    "probabilities": {
+      "TRENDING": 0.3907,
+      "RANGE_BOUND": 0.0929,
+      "HIGH_VOLATILITY": 0.1726,
+      "RISK_OFF": 0.2141,
+      "UNCERTAIN": 0.1297
+    },
+    "confidence": 0.0766,
+    "latency_ms": 106.38,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "c27bb008ef67769eb26af51354d4b29f031f19ca3eea942cd4e27e1f54bd50a8",
+    "timestamp": "2026-09-26T06:48:42.792803",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "7c9f3f28f3aecb0d66963a6f8c791c5bac890ef4e3eefb3599f58d525c5235a7_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6675,
+    "selected_choice_probability": 0.6675,
+    "probabilities": {
+      "ENTER": 0.1963,
+      "WAIT": 0.1363,
+      "REJECT": 0.6675
+    },
+    "confidence": 0.2163,
+    "latency_ms": 104.33,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "7c9f3f28f3aecb0d66963a6f8c791c5bac890ef4e3eefb3599f58d525c5235a7",
+    "timestamp": "2026-09-26T06:48:42.962808",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "7c9f3f28f3aecb0d66963a6f8c791c5bac890ef4e3eefb3599f58d525c5235a7_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4685,
+    "selected_choice_probability": 0.4685,
+    "probabilities": {
+      "NORMAL": 0.4685,
+      "REDUCE_POSITION": 0.3449,
+      "BLOCK": 0.1865
+    },
+    "confidence": 0.0574,
+    "latency_ms": 104.33,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "7c9f3f28f3aecb0d66963a6f8c791c5bac890ef4e3eefb3599f58d525c5235a7",
+    "timestamp": "2026-09-26T06:48:42.962808",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "7c9f3f28f3aecb0d66963a6f8c791c5bac890ef4e3eefb3599f58d525c5235a7_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3678,
+    "selected_choice_probability": 0.3678,
+    "probabilities": {
+      "TRENDING": 0.3678,
+      "RANGE_BOUND": 0.0899,
+      "HIGH_VOLATILITY": 0.1704,
+      "RISK_OFF": 0.2302,
+      "UNCERTAIN": 0.1417
+    },
+    "confidence": 0.0674,
+    "latency_ms": 104.33,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "7c9f3f28f3aecb0d66963a6f8c791c5bac890ef4e3eefb3599f58d525c5235a7",
+    "timestamp": "2026-09-26T06:48:42.962808",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "bd82be35376d4ea654e3485e67202fa0a48b8ace72470e5075b5e22f2c5768e9_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6445,
+    "selected_choice_probability": 0.6445,
+    "probabilities": {
+      "ENTER": 0.2106,
+      "WAIT": 0.145,
+      "REJECT": 0.6445
+    },
+    "confidence": 0.1888,
+    "latency_ms": 104.33,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "bd82be35376d4ea654e3485e67202fa0a48b8ace72470e5075b5e22f2c5768e9",
+    "timestamp": "2026-09-26T06:48:43.119986",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "bd82be35376d4ea654e3485e67202fa0a48b8ace72470e5075b5e22f2c5768e9_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4858,
+    "selected_choice_probability": 0.4858,
+    "probabilities": {
+      "NORMAL": 0.4858,
+      "REDUCE_POSITION": 0.3229,
+      "BLOCK": 0.1913
+    },
+    "confidence": 0.0605,
+    "latency_ms": 104.33,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "bd82be35376d4ea654e3485e67202fa0a48b8ace72470e5075b5e22f2c5768e9",
+    "timestamp": "2026-09-26T06:48:43.122491",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "bd82be35376d4ea654e3485e67202fa0a48b8ace72470e5075b5e22f2c5768e9_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3173,
+    "selected_choice_probability": 0.3173,
+    "probabilities": {
+      "TRENDING": 0.3173,
+      "RANGE_BOUND": 0.1039,
+      "HIGH_VOLATILITY": 0.2005,
+      "RISK_OFF": 0.2503,
+      "UNCERTAIN": 0.128
+    },
+    "confidence": 0.0484,
+    "latency_ms": 104.33,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "bd82be35376d4ea654e3485e67202fa0a48b8ace72470e5075b5e22f2c5768e9",
+    "timestamp": "2026-09-26T06:48:43.122491",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "c71d15c72c832079cd4372054786b2e97db756d8b09c831578348d12f99a8b5a_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6236,
+    "selected_choice_probability": 0.6236,
+    "probabilities": {
+      "ENTER": 0.2252,
+      "WAIT": 0.1513,
+      "REJECT": 0.6236
+    },
+    "confidence": 0.1663,
+    "latency_ms": 105.72,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "c71d15c72c832079cd4372054786b2e97db756d8b09c831578348d12f99a8b5a",
+    "timestamp": "2026-09-26T06:48:43.278964",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "c71d15c72c832079cd4372054786b2e97db756d8b09c831578348d12f99a8b5a_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4669,
+    "selected_choice_probability": 0.4669,
+    "probabilities": {
+      "NORMAL": 0.4669,
+      "REDUCE_POSITION": 0.3569,
+      "BLOCK": 0.1762
+    },
+    "confidence": 0.0631,
+    "latency_ms": 105.72,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "c71d15c72c832079cd4372054786b2e97db756d8b09c831578348d12f99a8b5a",
+    "timestamp": "2026-09-26T06:48:43.278964",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "c71d15c72c832079cd4372054786b2e97db756d8b09c831578348d12f99a8b5a_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3563,
+    "selected_choice_probability": 0.3563,
+    "probabilities": {
+      "TRENDING": 0.3563,
+      "RANGE_BOUND": 0.1012,
+      "HIGH_VOLATILITY": 0.1975,
+      "RISK_OFF": 0.2129,
+      "UNCERTAIN": 0.132
+    },
+    "confidence": 0.0577,
+    "latency_ms": 105.72,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "c71d15c72c832079cd4372054786b2e97db756d8b09c831578348d12f99a8b5a",
+    "timestamp": "2026-09-26T06:48:43.278964",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "bcb32eb4fe9664264fa26c330eaab8b13fd8d83431398e8cd7f272636eccd7dc_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6452,
+    "selected_choice_probability": 0.6452,
+    "probabilities": {
+      "ENTER": 0.2062,
+      "WAIT": 0.1486,
+      "REJECT": 0.6452
+    },
+    "confidence": 0.1884,
+    "latency_ms": 121.83,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "bcb32eb4fe9664264fa26c330eaab8b13fd8d83431398e8cd7f272636eccd7dc",
+    "timestamp": "2026-09-26T06:48:43.453717",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "bcb32eb4fe9664264fa26c330eaab8b13fd8d83431398e8cd7f272636eccd7dc_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4591,
+    "selected_choice_probability": 0.4591,
+    "probabilities": {
+      "NORMAL": 0.4591,
+      "REDUCE_POSITION": 0.3395,
+      "BLOCK": 0.2013
+    },
+    "confidence": 0.0471,
+    "latency_ms": 121.83,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "bcb32eb4fe9664264fa26c330eaab8b13fd8d83431398e8cd7f272636eccd7dc",
+    "timestamp": "2026-09-26T06:48:43.453717",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "bcb32eb4fe9664264fa26c330eaab8b13fd8d83431398e8cd7f272636eccd7dc_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3333,
+    "selected_choice_probability": 0.3333,
+    "probabilities": {
+      "TRENDING": 0.3333,
+      "RANGE_BOUND": 0.0902,
+      "HIGH_VOLATILITY": 0.1711,
+      "RISK_OFF": 0.2694,
+      "UNCERTAIN": 0.1361
+    },
+    "confidence": 0.0618,
+    "latency_ms": 121.83,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "bcb32eb4fe9664264fa26c330eaab8b13fd8d83431398e8cd7f272636eccd7dc",
+    "timestamp": "2026-09-26T06:48:43.453717",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "05d0527096f47e61b08c0049fb1afcfd549f26ab089fcabb2c5ac8eb0ad6139e_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.5764,
+    "selected_choice_probability": 0.5764,
+    "probabilities": {
+      "ENTER": 0.2777,
+      "WAIT": 0.1459,
+      "REJECT": 0.5764
+    },
+    "confidence": 0.1314,
+    "latency_ms": 125.88,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "05d0527096f47e61b08c0049fb1afcfd549f26ab089fcabb2c5ac8eb0ad6139e",
+    "timestamp": "2026-09-26T06:48:43.638458",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "05d0527096f47e61b08c0049fb1afcfd549f26ab089fcabb2c5ac8eb0ad6139e_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4904,
+    "selected_choice_probability": 0.4904,
+    "probabilities": {
+      "NORMAL": 0.4904,
+      "REDUCE_POSITION": 0.3053,
+      "BLOCK": 0.2043
+    },
+    "confidence": 0.0569,
+    "latency_ms": 125.88,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "05d0527096f47e61b08c0049fb1afcfd549f26ab089fcabb2c5ac8eb0ad6139e",
+    "timestamp": "2026-09-26T06:48:43.638458",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "05d0527096f47e61b08c0049fb1afcfd549f26ab089fcabb2c5ac8eb0ad6139e_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.4133,
+    "selected_choice_probability": 0.4133,
+    "probabilities": {
+      "TRENDING": 0.4133,
+      "RANGE_BOUND": 0.0795,
+      "HIGH_VOLATILITY": 0.1571,
+      "RISK_OFF": 0.2316,
+      "UNCERTAIN": 0.1186
+    },
+    "confidence": 0.0998,
+    "latency_ms": 125.88,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "05d0527096f47e61b08c0049fb1afcfd549f26ab089fcabb2c5ac8eb0ad6139e",
+    "timestamp": "2026-09-26T06:48:43.640458",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "43fddbd492c703185d5accd0b2c65ae07b17fe89d8c4e87c339beefc44b7289d_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.5832,
+    "selected_choice_probability": 0.5832,
+    "probabilities": {
+      "ENTER": 0.2767,
+      "WAIT": 0.1401,
+      "REJECT": 0.5832
+    },
+    "confidence": 0.1396,
+    "latency_ms": 105.89,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "43fddbd492c703185d5accd0b2c65ae07b17fe89d8c4e87c339beefc44b7289d",
+    "timestamp": "2026-09-26T06:48:43.807086",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "43fddbd492c703185d5accd0b2c65ae07b17fe89d8c4e87c339beefc44b7289d_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4861,
+    "selected_choice_probability": 0.4861,
+    "probabilities": {
+      "NORMAL": 0.4861,
+      "REDUCE_POSITION": 0.316,
+      "BLOCK": 0.1979
+    },
+    "confidence": 0.0577,
+    "latency_ms": 105.89,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "43fddbd492c703185d5accd0b2c65ae07b17fe89d8c4e87c339beefc44b7289d",
+    "timestamp": "2026-09-26T06:48:43.807086",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "43fddbd492c703185d5accd0b2c65ae07b17fe89d8c4e87c339beefc44b7289d_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3992,
+    "selected_choice_probability": 0.3992,
+    "probabilities": {
+      "TRENDING": 0.3992,
+      "RANGE_BOUND": 0.0895,
+      "HIGH_VOLATILITY": 0.1604,
+      "RISK_OFF": 0.2323,
+      "UNCERTAIN": 0.1187
+    },
+    "confidence": 0.0878,
+    "latency_ms": 105.89,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "43fddbd492c703185d5accd0b2c65ae07b17fe89d8c4e87c339beefc44b7289d",
+    "timestamp": "2026-09-26T06:48:43.807086",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "46e7588b8382d1e5979a8a8ba39fb580597229a4d5470f6269a8b1e69e248005_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.5779,
+    "selected_choice_probability": 0.5779,
+    "probabilities": {
+      "ENTER": 0.2465,
+      "WAIT": 0.1756,
+      "REJECT": 0.5779
+    },
+    "confidence": 0.1193,
+    "latency_ms": 123.08,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "46e7588b8382d1e5979a8a8ba39fb580597229a4d5470f6269a8b1e69e248005",
+    "timestamp": "2026-09-26T06:48:43.981057",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "46e7588b8382d1e5979a8a8ba39fb580597229a4d5470f6269a8b1e69e248005_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4325,
+    "selected_choice_probability": 0.4325,
+    "probabilities": {
+      "NORMAL": 0.4325,
+      "REDUCE_POSITION": 0.3403,
+      "BLOCK": 0.2272
+    },
+    "confidence": 0.0296,
+    "latency_ms": 123.08,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "46e7588b8382d1e5979a8a8ba39fb580597229a4d5470f6269a8b1e69e248005",
+    "timestamp": "2026-09-26T06:48:43.981057",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "46e7588b8382d1e5979a8a8ba39fb580597229a4d5470f6269a8b1e69e248005_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.4544,
+    "selected_choice_probability": 0.4544,
+    "probabilities": {
+      "TRENDING": 0.4544,
+      "RANGE_BOUND": 0.0862,
+      "HIGH_VOLATILITY": 0.16,
+      "RISK_OFF": 0.1766,
+      "UNCERTAIN": 0.1228
+    },
+    "confidence": 0.1136,
+    "latency_ms": 123.08,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "46e7588b8382d1e5979a8a8ba39fb580597229a4d5470f6269a8b1e69e248005",
+    "timestamp": "2026-09-26T06:48:43.982564",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "8c0bfcad7f46d8443469b8c136d12a6a06c3c0651acdd8a6d39fb5b5d0c78c84_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.593,
+    "selected_choice_probability": 0.593,
+    "probabilities": {
+      "ENTER": 0.2314,
+      "WAIT": 0.1756,
+      "REJECT": 0.593
+    },
+    "confidence": 0.1316,
+    "latency_ms": 105.63,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "8c0bfcad7f46d8443469b8c136d12a6a06c3c0651acdd8a6d39fb5b5d0c78c84",
+    "timestamp": "2026-09-26T06:48:44.143363",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "8c0bfcad7f46d8443469b8c136d12a6a06c3c0651acdd8a6d39fb5b5d0c78c84_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.481,
+    "selected_choice_probability": 0.481,
+    "probabilities": {
+      "NORMAL": 0.481,
+      "REDUCE_POSITION": 0.3365,
+      "BLOCK": 0.1826
+    },
+    "confidence": 0.0633,
+    "latency_ms": 105.63,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "8c0bfcad7f46d8443469b8c136d12a6a06c3c0651acdd8a6d39fb5b5d0c78c84",
+    "timestamp": "2026-09-26T06:48:44.143363",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "8c0bfcad7f46d8443469b8c136d12a6a06c3c0651acdd8a6d39fb5b5d0c78c84_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3644,
+    "selected_choice_probability": 0.3644,
+    "probabilities": {
+      "TRENDING": 0.3644,
+      "RANGE_BOUND": 0.0856,
+      "HIGH_VOLATILITY": 0.1815,
+      "RISK_OFF": 0.2477,
+      "UNCERTAIN": 0.1208
+    },
+    "confidence": 0.0749,
+    "latency_ms": 105.63,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "8c0bfcad7f46d8443469b8c136d12a6a06c3c0651acdd8a6d39fb5b5d0c78c84",
+    "timestamp": "2026-09-26T06:48:44.143363",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f3ccfc6007506af854132ba141808f0f65f7e80517f241b9194d42ec9cba3544_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6555,
+    "selected_choice_probability": 0.6555,
+    "probabilities": {
+      "ENTER": 0.206,
+      "WAIT": 0.1385,
+      "REJECT": 0.6555
+    },
+    "confidence": 0.2025,
+    "latency_ms": 105.91,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f3ccfc6007506af854132ba141808f0f65f7e80517f241b9194d42ec9cba3544",
+    "timestamp": "2026-09-26T06:48:44.319744",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f3ccfc6007506af854132ba141808f0f65f7e80517f241b9194d42ec9cba3544_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4631,
+    "selected_choice_probability": 0.4631,
+    "probabilities": {
+      "NORMAL": 0.4631,
+      "REDUCE_POSITION": 0.332,
+      "BLOCK": 0.2049
+    },
+    "confidence": 0.0466,
+    "latency_ms": 105.91,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f3ccfc6007506af854132ba141808f0f65f7e80517f241b9194d42ec9cba3544",
+    "timestamp": "2026-09-26T06:48:44.319744",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f3ccfc6007506af854132ba141808f0f65f7e80517f241b9194d42ec9cba3544_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3066,
+    "selected_choice_probability": 0.3066,
+    "probabilities": {
+      "TRENDING": 0.3066,
+      "RANGE_BOUND": 0.1045,
+      "HIGH_VOLATILITY": 0.1816,
+      "RISK_OFF": 0.2287,
+      "UNCERTAIN": 0.1786
+    },
+    "confidence": 0.0348,
+    "latency_ms": 105.91,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f3ccfc6007506af854132ba141808f0f65f7e80517f241b9194d42ec9cba3544",
+    "timestamp": "2026-09-26T06:48:44.319744",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "bc3aea5f624433e4aef54b31959d23cbf09ac3f649baf1af9cbd68e5c614ccd7_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6319,
+    "selected_choice_probability": 0.6319,
+    "probabilities": {
+      "ENTER": 0.2493,
+      "WAIT": 0.1188,
+      "REJECT": 0.6319
+    },
+    "confidence": 0.1903,
+    "latency_ms": 104.28,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "bc3aea5f624433e4aef54b31959d23cbf09ac3f649baf1af9cbd68e5c614ccd7",
+    "timestamp": "2026-09-26T06:48:44.481060",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "bc3aea5f624433e4aef54b31959d23cbf09ac3f649baf1af9cbd68e5c614ccd7_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4315,
+    "selected_choice_probability": 0.4315,
+    "probabilities": {
+      "NORMAL": 0.4315,
+      "REDUCE_POSITION": 0.3456,
+      "BLOCK": 0.2229
+    },
+    "confidence": 0.0311,
+    "latency_ms": 104.28,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "bc3aea5f624433e4aef54b31959d23cbf09ac3f649baf1af9cbd68e5c614ccd7",
+    "timestamp": "2026-09-26T06:48:44.481060",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "bc3aea5f624433e4aef54b31959d23cbf09ac3f649baf1af9cbd68e5c614ccd7_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3354,
+    "selected_choice_probability": 0.3354,
+    "probabilities": {
+      "TRENDING": 0.3354,
+      "RANGE_BOUND": 0.1082,
+      "HIGH_VOLATILITY": 0.1861,
+      "RISK_OFF": 0.2038,
+      "UNCERTAIN": 0.1665
+    },
+    "confidence": 0.0416,
+    "latency_ms": 104.28,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "bc3aea5f624433e4aef54b31959d23cbf09ac3f649baf1af9cbd68e5c614ccd7",
+    "timestamp": "2026-09-26T06:48:44.481060",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "0e19a1b740781afe0ab50de92b41f9f00efb4fb6f3d1fa5be64987768c700930_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6375,
+    "selected_choice_probability": 0.6375,
+    "probabilities": {
+      "ENTER": 0.2277,
+      "WAIT": 0.1348,
+      "REJECT": 0.6375
+    },
+    "confidence": 0.1862,
+    "latency_ms": 106.33,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "0e19a1b740781afe0ab50de92b41f9f00efb4fb6f3d1fa5be64987768c700930",
+    "timestamp": "2026-09-26T06:48:44.639381",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "0e19a1b740781afe0ab50de92b41f9f00efb4fb6f3d1fa5be64987768c700930_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4286,
+    "selected_choice_probability": 0.4286,
+    "probabilities": {
+      "NORMAL": 0.4286,
+      "REDUCE_POSITION": 0.3464,
+      "BLOCK": 0.2251
+    },
+    "confidence": 0.0297,
+    "latency_ms": 106.33,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "0e19a1b740781afe0ab50de92b41f9f00efb4fb6f3d1fa5be64987768c700930",
+    "timestamp": "2026-09-26T06:48:44.639381",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "0e19a1b740781afe0ab50de92b41f9f00efb4fb6f3d1fa5be64987768c700930_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3394,
+    "selected_choice_probability": 0.3394,
+    "probabilities": {
+      "TRENDING": 0.3394,
+      "RANGE_BOUND": 0.0935,
+      "HIGH_VOLATILITY": 0.2037,
+      "RISK_OFF": 0.1842,
+      "UNCERTAIN": 0.1791
+    },
+    "confidence": 0.0481,
+    "latency_ms": 106.33,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "0e19a1b740781afe0ab50de92b41f9f00efb4fb6f3d1fa5be64987768c700930",
+    "timestamp": "2026-09-26T06:48:44.639381",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "753fd0305afa495e6f824ff8b9e566bea8f4d4b35c6cd426831bca037514be15_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6113,
+    "selected_choice_probability": 0.6113,
+    "probabilities": {
+      "ENTER": 0.237,
+      "WAIT": 0.1518,
+      "REJECT": 0.6113
+    },
+    "confidence": 0.1551,
+    "latency_ms": 102.09,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "753fd0305afa495e6f824ff8b9e566bea8f4d4b35c6cd426831bca037514be15",
+    "timestamp": "2026-09-26T06:48:44.792515",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "753fd0305afa495e6f824ff8b9e566bea8f4d4b35c6cd426831bca037514be15_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4754,
+    "selected_choice_probability": 0.4754,
+    "probabilities": {
+      "NORMAL": 0.4754,
+      "REDUCE_POSITION": 0.3224,
+      "BLOCK": 0.2023
+    },
+    "confidence": 0.0518,
+    "latency_ms": 102.09,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "753fd0305afa495e6f824ff8b9e566bea8f4d4b35c6cd426831bca037514be15",
+    "timestamp": "2026-09-26T06:48:44.798798",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "753fd0305afa495e6f824ff8b9e566bea8f4d4b35c6cd426831bca037514be15_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.2788,
+    "selected_choice_probability": 0.2788,
+    "probabilities": {
+      "TRENDING": 0.2788,
+      "RANGE_BOUND": 0.1053,
+      "HIGH_VOLATILITY": 0.2085,
+      "RISK_OFF": 0.233,
+      "UNCERTAIN": 0.1745
+    },
+    "confidence": 0.0282,
+    "latency_ms": 102.09,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "753fd0305afa495e6f824ff8b9e566bea8f4d4b35c6cd426831bca037514be15",
+    "timestamp": "2026-09-26T06:48:44.798798",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "57adcdbf15179b494505ca40f880fa8d223aa09860096bd6fa9a713644c288dd_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.5906,
+    "selected_choice_probability": 0.5906,
+    "probabilities": {
+      "ENTER": 0.2759,
+      "WAIT": 0.1335,
+      "REJECT": 0.5906
+    },
+    "confidence": 0.1488,
+    "latency_ms": 123.06,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "57adcdbf15179b494505ca40f880fa8d223aa09860096bd6fa9a713644c288dd",
+    "timestamp": "2026-09-26T06:48:44.984369",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "57adcdbf15179b494505ca40f880fa8d223aa09860096bd6fa9a713644c288dd_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5007,
+    "selected_choice_probability": 0.5007,
+    "probabilities": {
+      "NORMAL": 0.5007,
+      "REDUCE_POSITION": 0.3149,
+      "BLOCK": 0.1844
+    },
+    "confidence": 0.0697,
+    "latency_ms": 123.06,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "57adcdbf15179b494505ca40f880fa8d223aa09860096bd6fa9a713644c288dd",
+    "timestamp": "2026-09-26T06:48:44.984369",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "57adcdbf15179b494505ca40f880fa8d223aa09860096bd6fa9a713644c288dd_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3344,
+    "selected_choice_probability": 0.3344,
+    "probabilities": {
+      "TRENDING": 0.3344,
+      "RANGE_BOUND": 0.0998,
+      "HIGH_VOLATILITY": 0.1851,
+      "RISK_OFF": 0.2075,
+      "UNCERTAIN": 0.1732
+    },
+    "confidence": 0.0441,
+    "latency_ms": 123.06,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "57adcdbf15179b494505ca40f880fa8d223aa09860096bd6fa9a713644c288dd",
+    "timestamp": "2026-09-26T06:48:44.984369",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "88e11b727946b98eff9a40cea3ebc8042f78b5c0541d45c31d7ab5979712e0ab_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6659,
+    "selected_choice_probability": 0.6659,
+    "probabilities": {
+      "ENTER": 0.1969,
+      "WAIT": 0.1371,
+      "REJECT": 0.6659
+    },
+    "confidence": 0.2143,
+    "latency_ms": 130.12,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "88e11b727946b98eff9a40cea3ebc8042f78b5c0541d45c31d7ab5979712e0ab",
+    "timestamp": "2026-09-26T06:48:45.161745",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "88e11b727946b98eff9a40cea3ebc8042f78b5c0541d45c31d7ab5979712e0ab_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4478,
+    "selected_choice_probability": 0.4478,
+    "probabilities": {
+      "NORMAL": 0.4478,
+      "REDUCE_POSITION": 0.3289,
+      "BLOCK": 0.2233
+    },
+    "confidence": 0.0349,
+    "latency_ms": 130.12,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "88e11b727946b98eff9a40cea3ebc8042f78b5c0541d45c31d7ab5979712e0ab",
+    "timestamp": "2026-09-26T06:48:45.161745",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "88e11b727946b98eff9a40cea3ebc8042f78b5c0541d45c31d7ab5979712e0ab_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.2939,
+    "selected_choice_probability": 0.2939,
+    "probabilities": {
+      "TRENDING": 0.2939,
+      "RANGE_BOUND": 0.1026,
+      "HIGH_VOLATILITY": 0.2042,
+      "RISK_OFF": 0.2144,
+      "UNCERTAIN": 0.1848
+    },
+    "confidence": 0.0306,
+    "latency_ms": 130.12,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "88e11b727946b98eff9a40cea3ebc8042f78b5c0541d45c31d7ab5979712e0ab",
+    "timestamp": "2026-09-26T06:48:45.161745",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "840fa67741f3d49361075d2095ba5bef1dd3eee48a75d24b0dc6a54e95fb6453_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6609,
+    "selected_choice_probability": 0.6609,
+    "probabilities": {
+      "ENTER": 0.2043,
+      "WAIT": 0.1348,
+      "REJECT": 0.6609
+    },
+    "confidence": 0.2097,
+    "latency_ms": 104.22,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "840fa67741f3d49361075d2095ba5bef1dd3eee48a75d24b0dc6a54e95fb6453",
+    "timestamp": "2026-09-26T06:48:45.330165",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "840fa67741f3d49361075d2095ba5bef1dd3eee48a75d24b0dc6a54e95fb6453_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4534,
+    "selected_choice_probability": 0.4534,
+    "probabilities": {
+      "NORMAL": 0.4534,
+      "REDUCE_POSITION": 0.3309,
+      "BLOCK": 0.2157
+    },
+    "confidence": 0.0393,
+    "latency_ms": 104.22,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "840fa67741f3d49361075d2095ba5bef1dd3eee48a75d24b0dc6a54e95fb6453",
+    "timestamp": "2026-09-26T06:48:45.330165",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "840fa67741f3d49361075d2095ba5bef1dd3eee48a75d24b0dc6a54e95fb6453_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.2828,
+    "selected_choice_probability": 0.2828,
+    "probabilities": {
+      "TRENDING": 0.2828,
+      "RANGE_BOUND": 0.0968,
+      "HIGH_VOLATILITY": 0.1952,
+      "RISK_OFF": 0.2341,
+      "UNCERTAIN": 0.1911
+    },
+    "confidence": 0.0318,
+    "latency_ms": 104.22,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "840fa67741f3d49361075d2095ba5bef1dd3eee48a75d24b0dc6a54e95fb6453",
+    "timestamp": "2026-09-26T06:48:45.333690",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "ad427e1e5243298aa91d724d72fa54d0436b3a566111f7eea3b65f616c94b661_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6094,
+    "selected_choice_probability": 0.6094,
+    "probabilities": {
+      "ENTER": 0.2525,
+      "WAIT": 0.1381,
+      "REJECT": 0.6094
+    },
+    "confidence": 0.1601,
+    "latency_ms": 103.6,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "ad427e1e5243298aa91d724d72fa54d0436b3a566111f7eea3b65f616c94b661",
+    "timestamp": "2026-09-26T06:48:45.492850",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "ad427e1e5243298aa91d724d72fa54d0436b3a566111f7eea3b65f616c94b661_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.444,
+    "selected_choice_probability": 0.444,
+    "probabilities": {
+      "NORMAL": 0.444,
+      "REDUCE_POSITION": 0.3331,
+      "BLOCK": 0.2229
+    },
+    "confidence": 0.034,
+    "latency_ms": 103.6,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "ad427e1e5243298aa91d724d72fa54d0436b3a566111f7eea3b65f616c94b661",
+    "timestamp": "2026-09-26T06:48:45.492850",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "ad427e1e5243298aa91d724d72fa54d0436b3a566111f7eea3b65f616c94b661_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3061,
+    "selected_choice_probability": 0.3061,
+    "probabilities": {
+      "TRENDING": 0.3061,
+      "RANGE_BOUND": 0.1131,
+      "HIGH_VOLATILITY": 0.1966,
+      "RISK_OFF": 0.2113,
+      "UNCERTAIN": 0.1729
+    },
+    "confidence": 0.0304,
+    "latency_ms": 103.6,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "ad427e1e5243298aa91d724d72fa54d0436b3a566111f7eea3b65f616c94b661",
+    "timestamp": "2026-09-26T06:48:45.492850",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "723968937bd4d32aed8afba1f6212f5d32218287815ade1b6834925e73bed4ee_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6647,
+    "selected_choice_probability": 0.6647,
+    "probabilities": {
+      "ENTER": 0.1882,
+      "WAIT": 0.1471,
+      "REJECT": 0.6647
+    },
+    "confidence": 0.2102,
+    "latency_ms": 104.54,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "723968937bd4d32aed8afba1f6212f5d32218287815ade1b6834925e73bed4ee",
+    "timestamp": "2026-09-26T06:48:45.656783",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "723968937bd4d32aed8afba1f6212f5d32218287815ade1b6834925e73bed4ee_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4075,
+    "selected_choice_probability": 0.4075,
+    "probabilities": {
+      "NORMAL": 0.4075,
+      "REDUCE_POSITION": 0.3473,
+      "BLOCK": 0.2451
+    },
+    "confidence": 0.019,
+    "latency_ms": 104.54,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "723968937bd4d32aed8afba1f6212f5d32218287815ade1b6834925e73bed4ee",
+    "timestamp": "2026-09-26T06:48:45.656783",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "723968937bd4d32aed8afba1f6212f5d32218287815ade1b6834925e73bed4ee_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.2745,
+    "selected_choice_probability": 0.2745,
+    "probabilities": {
+      "TRENDING": 0.2745,
+      "RANGE_BOUND": 0.1061,
+      "HIGH_VOLATILITY": 0.1946,
+      "RISK_OFF": 0.2204,
+      "UNCERTAIN": 0.2044
+    },
+    "confidence": 0.025,
+    "latency_ms": 104.54,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "723968937bd4d32aed8afba1f6212f5d32218287815ade1b6834925e73bed4ee",
+    "timestamp": "2026-09-26T06:48:45.656783",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "87f319897c7d8a3e38c4a89a472263684aa65c92ff6d26020050439470c1d030_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6048,
+    "selected_choice_probability": 0.6048,
+    "probabilities": {
+      "ENTER": 0.2462,
+      "WAIT": 0.149,
+      "REJECT": 0.6048
+    },
+    "confidence": 0.1509,
+    "latency_ms": 103.19,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "87f319897c7d8a3e38c4a89a472263684aa65c92ff6d26020050439470c1d030",
+    "timestamp": "2026-09-26T06:48:45.822616",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "87f319897c7d8a3e38c4a89a472263684aa65c92ff6d26020050439470c1d030_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4606,
+    "selected_choice_probability": 0.4606,
+    "probabilities": {
+      "NORMAL": 0.4606,
+      "REDUCE_POSITION": 0.3331,
+      "BLOCK": 0.2063
+    },
+    "confidence": 0.0453,
+    "latency_ms": 103.19,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "87f319897c7d8a3e38c4a89a472263684aa65c92ff6d26020050439470c1d030",
+    "timestamp": "2026-09-26T06:48:45.822616",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "87f319897c7d8a3e38c4a89a472263684aa65c92ff6d26020050439470c1d030_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3302,
+    "selected_choice_probability": 0.3302,
+    "probabilities": {
+      "TRENDING": 0.3302,
+      "RANGE_BOUND": 0.0896,
+      "HIGH_VOLATILITY": 0.19,
+      "RISK_OFF": 0.2186,
+      "UNCERTAIN": 0.1716
+    },
+    "confidence": 0.0479,
+    "latency_ms": 103.19,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "87f319897c7d8a3e38c4a89a472263684aa65c92ff6d26020050439470c1d030",
+    "timestamp": "2026-09-26T06:48:45.822616",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "5872d8033b39a3a23001371016532141a79bc82f80fa3216d2a7dfa45ae9df16_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7039,
+    "selected_choice_probability": 0.7039,
+    "probabilities": {
+      "ENTER": 0.1673,
+      "WAIT": 0.1289,
+      "REJECT": 0.7039
+    },
+    "confidence": 0.2624,
+    "latency_ms": 126.59,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "5872d8033b39a3a23001371016532141a79bc82f80fa3216d2a7dfa45ae9df16",
+    "timestamp": "2026-09-26T06:48:46.003441",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "5872d8033b39a3a23001371016532141a79bc82f80fa3216d2a7dfa45ae9df16_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5559,
+    "selected_choice_probability": 0.5559,
+    "probabilities": {
+      "NORMAL": 0.5559,
+      "REDUCE_POSITION": 0.3003,
+      "BLOCK": 0.1439
+    },
+    "confidence": 0.1201,
+    "latency_ms": 126.59,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "5872d8033b39a3a23001371016532141a79bc82f80fa3216d2a7dfa45ae9df16",
+    "timestamp": "2026-09-26T06:48:46.003441",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "5872d8033b39a3a23001371016532141a79bc82f80fa3216d2a7dfa45ae9df16_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "HIGH_VOLATILITY",
+    "decision_probability": 0.3007,
+    "selected_choice_probability": 0.3007,
+    "probabilities": {
+      "TRENDING": 0.2495,
+      "RANGE_BOUND": 0.0934,
+      "HIGH_VOLATILITY": 0.3007,
+      "RISK_OFF": 0.1753,
+      "UNCERTAIN": 0.1811
+    },
+    "confidence": 0.0408,
+    "latency_ms": 126.59,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "5872d8033b39a3a23001371016532141a79bc82f80fa3216d2a7dfa45ae9df16",
+    "timestamp": "2026-09-26T06:48:46.003441",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f409c3a1f8005416b73cc99ccca2520a08cd23209f6e3d4f879ec0ce2af4fd9e_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7025,
+    "selected_choice_probability": 0.7025,
+    "probabilities": {
+      "ENTER": 0.1892,
+      "WAIT": 0.1083,
+      "REJECT": 0.7025
+    },
+    "confidence": 0.2683,
+    "latency_ms": 120.94,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f409c3a1f8005416b73cc99ccca2520a08cd23209f6e3d4f879ec0ce2af4fd9e",
+    "timestamp": "2026-09-26T06:48:46.181420",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f409c3a1f8005416b73cc99ccca2520a08cd23209f6e3d4f879ec0ce2af4fd9e_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5454,
+    "selected_choice_probability": 0.5454,
+    "probabilities": {
+      "NORMAL": 0.5454,
+      "REDUCE_POSITION": 0.309,
+      "BLOCK": 0.1456
+    },
+    "confidence": 0.1133,
+    "latency_ms": 120.94,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f409c3a1f8005416b73cc99ccca2520a08cd23209f6e3d4f879ec0ce2af4fd9e",
+    "timestamp": "2026-09-26T06:48:46.181420",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "f409c3a1f8005416b73cc99ccca2520a08cd23209f6e3d4f879ec0ce2af4fd9e_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "HIGH_VOLATILITY",
+    "decision_probability": 0.3086,
+    "selected_choice_probability": 0.3086,
+    "probabilities": {
+      "TRENDING": 0.2774,
+      "RANGE_BOUND": 0.0852,
+      "HIGH_VOLATILITY": 0.3086,
+      "RISK_OFF": 0.1595,
+      "UNCERTAIN": 0.1693
+    },
+    "confidence": 0.0544,
+    "latency_ms": 120.94,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "f409c3a1f8005416b73cc99ccca2520a08cd23209f6e3d4f879ec0ce2af4fd9e",
+    "timestamp": "2026-09-26T06:48:46.181420",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "0a62ca149df4f479ddd2ee168c918e9ff7394bf3f23fff17f45a2234f94406d1_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7234,
+    "selected_choice_probability": 0.7234,
+    "probabilities": {
+      "ENTER": 0.1678,
+      "WAIT": 0.1088,
+      "REJECT": 0.7234
+    },
+    "confidence": 0.2945,
+    "latency_ms": 119.73,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "0a62ca149df4f479ddd2ee168c918e9ff7394bf3f23fff17f45a2234f94406d1",
+    "timestamp": "2026-09-26T06:48:46.350895",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "0a62ca149df4f479ddd2ee168c918e9ff7394bf3f23fff17f45a2234f94406d1_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5734,
+    "selected_choice_probability": 0.5734,
+    "probabilities": {
+      "NORMAL": 0.5734,
+      "REDUCE_POSITION": 0.284,
+      "BLOCK": 0.1426
+    },
+    "confidence": 0.1315,
+    "latency_ms": 119.73,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "0a62ca149df4f479ddd2ee168c918e9ff7394bf3f23fff17f45a2234f94406d1",
+    "timestamp": "2026-09-26T06:48:46.350895",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "0a62ca149df4f479ddd2ee168c918e9ff7394bf3f23fff17f45a2234f94406d1_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "HIGH_VOLATILITY",
+    "decision_probability": 0.3044,
+    "selected_choice_probability": 0.3044,
+    "probabilities": {
+      "TRENDING": 0.2411,
+      "RANGE_BOUND": 0.0873,
+      "HIGH_VOLATILITY": 0.3044,
+      "RISK_OFF": 0.1835,
+      "UNCERTAIN": 0.1837
+    },
+    "confidence": 0.043,
+    "latency_ms": 119.73,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "0a62ca149df4f479ddd2ee168c918e9ff7394bf3f23fff17f45a2234f94406d1",
+    "timestamp": "2026-09-26T06:48:46.350895",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "005c77abb30ab949118c4c55a0cdc8b0fab12823e5cb4478333c1fa27c29c5fd_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.765,
+    "selected_choice_probability": 0.765,
+    "probabilities": {
+      "ENTER": 0.1341,
+      "WAIT": 0.1009,
+      "REJECT": 0.765
+    },
+    "confidence": 0.3576,
+    "latency_ms": 106.89,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "005c77abb30ab949118c4c55a0cdc8b0fab12823e5cb4478333c1fa27c29c5fd",
+    "timestamp": "2026-09-26T06:48:46.506911",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "005c77abb30ab949118c4c55a0cdc8b0fab12823e5cb4478333c1fa27c29c5fd_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5484,
+    "selected_choice_probability": 0.5484,
+    "probabilities": {
+      "NORMAL": 0.5484,
+      "REDUCE_POSITION": 0.3039,
+      "BLOCK": 0.1477
+    },
+    "confidence": 0.1135,
+    "latency_ms": 106.89,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "005c77abb30ab949118c4c55a0cdc8b0fab12823e5cb4478333c1fa27c29c5fd",
+    "timestamp": "2026-09-26T06:48:46.512492",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "005c77abb30ab949118c4c55a0cdc8b0fab12823e5cb4478333c1fa27c29c5fd_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.289,
+    "selected_choice_probability": 0.289,
+    "probabilities": {
+      "TRENDING": 0.289,
+      "RANGE_BOUND": 0.1062,
+      "HIGH_VOLATILITY": 0.2716,
+      "RISK_OFF": 0.1934,
+      "UNCERTAIN": 0.1399
+    },
+    "confidence": 0.0408,
+    "latency_ms": 106.89,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "005c77abb30ab949118c4c55a0cdc8b0fab12823e5cb4478333c1fa27c29c5fd",
+    "timestamp": "2026-09-26T06:48:46.512492",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "9fcdfa65899c63c104898695bb3aa72469865a6fc7f26c2beb7335abbf86bd22_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7298,
+    "selected_choice_probability": 0.7298,
+    "probabilities": {
+      "ENTER": 0.1779,
+      "WAIT": 0.0922,
+      "REJECT": 0.7298
+    },
+    "confidence": 0.3111,
+    "latency_ms": 122.63,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "9fcdfa65899c63c104898695bb3aa72469865a6fc7f26c2beb7335abbf86bd22",
+    "timestamp": "2026-09-26T06:48:46.682359",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "9fcdfa65899c63c104898695bb3aa72469865a6fc7f26c2beb7335abbf86bd22_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5327,
+    "selected_choice_probability": 0.5327,
+    "probabilities": {
+      "NORMAL": 0.5327,
+      "REDUCE_POSITION": 0.3155,
+      "BLOCK": 0.1517
+    },
+    "confidence": 0.1029,
+    "latency_ms": 122.63,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "9fcdfa65899c63c104898695bb3aa72469865a6fc7f26c2beb7335abbf86bd22",
+    "timestamp": "2026-09-26T06:48:46.682359",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "9fcdfa65899c63c104898695bb3aa72469865a6fc7f26c2beb7335abbf86bd22_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3107,
+    "selected_choice_probability": 0.3107,
+    "probabilities": {
+      "TRENDING": 0.3107,
+      "RANGE_BOUND": 0.0978,
+      "HIGH_VOLATILITY": 0.2818,
+      "RISK_OFF": 0.1529,
+      "UNCERTAIN": 0.1569
+    },
+    "confidence": 0.0524,
+    "latency_ms": 122.63,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "9fcdfa65899c63c104898695bb3aa72469865a6fc7f26c2beb7335abbf86bd22",
+    "timestamp": "2026-09-26T06:48:46.682359",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "caa84cfb6fa8f7d385991c855d7a4c5d9ea266b1e45288e24ce927ba6079acc0_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7098,
+    "selected_choice_probability": 0.7098,
+    "probabilities": {
+      "ENTER": 0.1862,
+      "WAIT": 0.104,
+      "REJECT": 0.7098
+    },
+    "confidence": 0.2794,
+    "latency_ms": 104.69,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "caa84cfb6fa8f7d385991c855d7a4c5d9ea266b1e45288e24ce927ba6079acc0",
+    "timestamp": "2026-09-26T06:48:46.841701",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "caa84cfb6fa8f7d385991c855d7a4c5d9ea266b1e45288e24ce927ba6079acc0_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5333,
+    "selected_choice_probability": 0.5333,
+    "probabilities": {
+      "NORMAL": 0.5333,
+      "REDUCE_POSITION": 0.3124,
+      "BLOCK": 0.1543
+    },
+    "confidence": 0.1015,
+    "latency_ms": 104.69,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "caa84cfb6fa8f7d385991c855d7a4c5d9ea266b1e45288e24ce927ba6079acc0",
+    "timestamp": "2026-09-26T06:48:46.841701",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "caa84cfb6fa8f7d385991c855d7a4c5d9ea266b1e45288e24ce927ba6079acc0_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.2844,
+    "selected_choice_probability": 0.2844,
+    "probabilities": {
+      "TRENDING": 0.2844,
+      "RANGE_BOUND": 0.0837,
+      "HIGH_VOLATILITY": 0.2745,
+      "RISK_OFF": 0.1795,
+      "UNCERTAIN": 0.1779
+    },
+    "confidence": 0.0459,
+    "latency_ms": 104.69,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "caa84cfb6fa8f7d385991c855d7a4c5d9ea266b1e45288e24ce927ba6079acc0",
+    "timestamp": "2026-09-26T06:48:46.841701",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "a39ccea4beb3ae6914945f84d27cd2b98db77765507f734fd43a6eb9d1a0652f_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7058,
+    "selected_choice_probability": 0.7058,
+    "probabilities": {
+      "ENTER": 0.1839,
+      "WAIT": 0.1103,
+      "REJECT": 0.7058
+    },
+    "confidence": 0.2714,
+    "latency_ms": 105.01,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "a39ccea4beb3ae6914945f84d27cd2b98db77765507f734fd43a6eb9d1a0652f",
+    "timestamp": "2026-09-26T06:48:46.995440",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "a39ccea4beb3ae6914945f84d27cd2b98db77765507f734fd43a6eb9d1a0652f_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5703,
+    "selected_choice_probability": 0.5703,
+    "probabilities": {
+      "NORMAL": 0.5703,
+      "REDUCE_POSITION": 0.2834,
+      "BLOCK": 0.1463
+    },
+    "confidence": 0.1272,
+    "latency_ms": 105.01,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "a39ccea4beb3ae6914945f84d27cd2b98db77765507f734fd43a6eb9d1a0652f",
+    "timestamp": "2026-09-26T06:48:46.995440",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "a39ccea4beb3ae6914945f84d27cd2b98db77765507f734fd43a6eb9d1a0652f_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.315,
+    "selected_choice_probability": 0.315,
+    "probabilities": {
+      "TRENDING": 0.315,
+      "RANGE_BOUND": 0.0814,
+      "HIGH_VOLATILITY": 0.2523,
+      "RISK_OFF": 0.1781,
+      "UNCERTAIN": 0.1732
+    },
+    "confidence": 0.0516,
+    "latency_ms": 105.01,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "a39ccea4beb3ae6914945f84d27cd2b98db77765507f734fd43a6eb9d1a0652f",
+    "timestamp": "2026-09-26T06:48:46.999453",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "7d085c0cb2264b724931b9d1810288d1a81a0171985a04e82c37d400c71f2a05_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6176,
+    "selected_choice_probability": 0.6176,
+    "probabilities": {
+      "ENTER": 0.2576,
+      "WAIT": 0.1248,
+      "REJECT": 0.6176
+    },
+    "confidence": 0.1746,
+    "latency_ms": 120.38,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "7d085c0cb2264b724931b9d1810288d1a81a0171985a04e82c37d400c71f2a05",
+    "timestamp": "2026-09-26T06:48:47.182579",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "7d085c0cb2264b724931b9d1810288d1a81a0171985a04e82c37d400c71f2a05_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5453,
+    "selected_choice_probability": 0.5453,
+    "probabilities": {
+      "NORMAL": 0.5453,
+      "REDUCE_POSITION": 0.3035,
+      "BLOCK": 0.1512
+    },
+    "confidence": 0.1096,
+    "latency_ms": 120.38,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "7d085c0cb2264b724931b9d1810288d1a81a0171985a04e82c37d400c71f2a05",
+    "timestamp": "2026-09-26T06:48:47.183622",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "7d085c0cb2264b724931b9d1810288d1a81a0171985a04e82c37d400c71f2a05_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.2971,
+    "selected_choice_probability": 0.2971,
+    "probabilities": {
+      "TRENDING": 0.2971,
+      "RANGE_BOUND": 0.0918,
+      "HIGH_VOLATILITY": 0.2623,
+      "RISK_OFF": 0.1929,
+      "UNCERTAIN": 0.1559
+    },
+    "confidence": 0.0444,
+    "latency_ms": 120.38,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "7d085c0cb2264b724931b9d1810288d1a81a0171985a04e82c37d400c71f2a05",
+    "timestamp": "2026-09-26T06:48:47.183622",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "76603b5f4ef2c2ed2e4496ec831f211fbc1603cbc78f9e9f73b170a0ad243201_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6715,
+    "selected_choice_probability": 0.6715,
+    "probabilities": {
+      "ENTER": 0.1852,
+      "WAIT": 0.1433,
+      "REJECT": 0.6715
+    },
+    "confidence": 0.2189,
+    "latency_ms": 134.01,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "76603b5f4ef2c2ed2e4496ec831f211fbc1603cbc78f9e9f73b170a0ad243201",
+    "timestamp": "2026-09-26T06:48:47.366036",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "76603b5f4ef2c2ed2e4496ec831f211fbc1603cbc78f9e9f73b170a0ad243201_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.547,
+    "selected_choice_probability": 0.547,
+    "probabilities": {
+      "NORMAL": 0.547,
+      "REDUCE_POSITION": 0.2965,
+      "BLOCK": 0.1565
+    },
+    "confidence": 0.1073,
+    "latency_ms": 134.01,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "76603b5f4ef2c2ed2e4496ec831f211fbc1603cbc78f9e9f73b170a0ad243201",
+    "timestamp": "2026-09-26T06:48:47.366538",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "76603b5f4ef2c2ed2e4496ec831f211fbc1603cbc78f9e9f73b170a0ad243201_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "HIGH_VOLATILITY",
+    "decision_probability": 0.2977,
+    "selected_choice_probability": 0.2977,
+    "probabilities": {
+      "TRENDING": 0.2786,
+      "RANGE_BOUND": 0.0929,
+      "HIGH_VOLATILITY": 0.2977,
+      "RISK_OFF": 0.1668,
+      "UNCERTAIN": 0.164
+    },
+    "confidence": 0.0477,
+    "latency_ms": 134.01,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "76603b5f4ef2c2ed2e4496ec831f211fbc1603cbc78f9e9f73b170a0ad243201",
+    "timestamp": "2026-09-26T06:48:47.366538",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "2d2fe6a46b8a8f284edf9906473c806ab0bd9c910215674166caa9e5ac390f6a_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.71,
+    "selected_choice_probability": 0.71,
+    "probabilities": {
+      "ENTER": 0.1541,
+      "WAIT": 0.1359,
+      "REJECT": 0.71
+    },
+    "confidence": 0.2695,
+    "latency_ms": 103.99,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "2d2fe6a46b8a8f284edf9906473c806ab0bd9c910215674166caa9e5ac390f6a",
+    "timestamp": "2026-09-26T06:48:47.532687",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "2d2fe6a46b8a8f284edf9906473c806ab0bd9c910215674166caa9e5ac390f6a_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.5968,
+    "selected_choice_probability": 0.5968,
+    "probabilities": {
+      "NORMAL": 0.5968,
+      "REDUCE_POSITION": 0.273,
+      "BLOCK": 0.1302
+    },
+    "confidence": 0.1554,
+    "latency_ms": 103.99,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "2d2fe6a46b8a8f284edf9906473c806ab0bd9c910215674166caa9e5ac390f6a",
+    "timestamp": "2026-09-26T06:48:47.532687",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "2d2fe6a46b8a8f284edf9906473c806ab0bd9c910215674166caa9e5ac390f6a_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "HIGH_VOLATILITY",
+    "decision_probability": 0.2684,
+    "selected_choice_probability": 0.2684,
+    "probabilities": {
+      "TRENDING": 0.2413,
+      "RANGE_BOUND": 0.0837,
+      "HIGH_VOLATILITY": 0.2684,
+      "RISK_OFF": 0.2107,
+      "UNCERTAIN": 0.1959
+    },
+    "confidence": 0.0362,
+    "latency_ms": 103.99,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "2d2fe6a46b8a8f284edf9906473c806ab0bd9c910215674166caa9e5ac390f6a",
+    "timestamp": "2026-09-26T06:48:47.532687",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "b3d7449f04f2d99ce5ff5238b1b4eaa89f4f4ac8c33f9de267b05aa9d34af642_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7574,
+    "selected_choice_probability": 0.7574,
+    "probabilities": {
+      "ENTER": 0.1469,
+      "WAIT": 0.0957,
+      "REJECT": 0.7574
+    },
+    "confidence": 0.3475,
+    "latency_ms": 123.04,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "b3d7449f04f2d99ce5ff5238b1b4eaa89f4f4ac8c33f9de267b05aa9d34af642",
+    "timestamp": "2026-09-26T06:48:47.722698",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "b3d7449f04f2d99ce5ff5238b1b4eaa89f4f4ac8c33f9de267b05aa9d34af642_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4475,
+    "selected_choice_probability": 0.4475,
+    "probabilities": {
+      "NORMAL": 0.4475,
+      "REDUCE_POSITION": 0.3137,
+      "BLOCK": 0.2388
+    },
+    "confidence": 0.0301,
+    "latency_ms": 123.04,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "b3d7449f04f2d99ce5ff5238b1b4eaa89f4f4ac8c33f9de267b05aa9d34af642",
+    "timestamp": "2026-09-26T06:48:47.722698",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "b3d7449f04f2d99ce5ff5238b1b4eaa89f4f4ac8c33f9de267b05aa9d34af642_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.324,
+    "selected_choice_probability": 0.324,
+    "probabilities": {
+      "TRENDING": 0.324,
+      "RANGE_BOUND": 0.0988,
+      "HIGH_VOLATILITY": 0.1783,
+      "RISK_OFF": 0.2533,
+      "UNCERTAIN": 0.1456
+    },
+    "confidence": 0.0496,
+    "latency_ms": 123.04,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "b3d7449f04f2d99ce5ff5238b1b4eaa89f4f4ac8c33f9de267b05aa9d34af642",
+    "timestamp": "2026-09-26T06:48:47.722698",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "3eccf74783485010e2b69bdea2ab82a87513ccfff61cd88e44be44b64213d675_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7238,
+    "selected_choice_probability": 0.7238,
+    "probabilities": {
+      "ENTER": 0.1769,
+      "WAIT": 0.0993,
+      "REJECT": 0.7238
+    },
+    "confidence": 0.2994,
+    "latency_ms": 129.94,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "3eccf74783485010e2b69bdea2ab82a87513ccfff61cd88e44be44b64213d675",
+    "timestamp": "2026-09-26T06:48:47.905901",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "3eccf74783485010e2b69bdea2ab82a87513ccfff61cd88e44be44b64213d675_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4389,
+    "selected_choice_probability": 0.4389,
+    "probabilities": {
+      "NORMAL": 0.4389,
+      "REDUCE_POSITION": 0.3303,
+      "BLOCK": 0.2308
+    },
+    "confidence": 0.0299,
+    "latency_ms": 129.94,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "3eccf74783485010e2b69bdea2ab82a87513ccfff61cd88e44be44b64213d675",
+    "timestamp": "2026-09-26T06:48:47.905901",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "3eccf74783485010e2b69bdea2ab82a87513ccfff61cd88e44be44b64213d675_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3788,
+    "selected_choice_probability": 0.3788,
+    "probabilities": {
+      "TRENDING": 0.3788,
+      "RANGE_BOUND": 0.0872,
+      "HIGH_VOLATILITY": 0.1469,
+      "RISK_OFF": 0.2367,
+      "UNCERTAIN": 0.1504
+    },
+    "confidence": 0.0753,
+    "latency_ms": 129.94,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "3eccf74783485010e2b69bdea2ab82a87513ccfff61cd88e44be44b64213d675",
+    "timestamp": "2026-09-26T06:48:47.905901",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "b4bc4548451baac1a893e424e6601c43272bd50bcfcb685d7941685ab7221757_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6187,
+    "selected_choice_probability": 0.6187,
+    "probabilities": {
+      "ENTER": 0.2564,
+      "WAIT": 0.1249,
+      "REJECT": 0.6187
+    },
+    "confidence": 0.1755,
+    "latency_ms": 104.11,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "b4bc4548451baac1a893e424e6601c43272bd50bcfcb685d7941685ab7221757",
+    "timestamp": "2026-09-26T06:48:48.057288",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "b4bc4548451baac1a893e424e6601c43272bd50bcfcb685d7941685ab7221757_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4556,
+    "selected_choice_probability": 0.4556,
+    "probabilities": {
+      "NORMAL": 0.4556,
+      "REDUCE_POSITION": 0.3194,
+      "BLOCK": 0.225
+    },
+    "confidence": 0.0367,
+    "latency_ms": 104.11,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "b4bc4548451baac1a893e424e6601c43272bd50bcfcb685d7941685ab7221757",
+    "timestamp": "2026-09-26T06:48:48.057288",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "b4bc4548451baac1a893e424e6601c43272bd50bcfcb685d7941685ab7221757_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3601,
+    "selected_choice_probability": 0.3601,
+    "probabilities": {
+      "TRENDING": 0.3601,
+      "RANGE_BOUND": 0.0903,
+      "HIGH_VOLATILITY": 0.1814,
+      "RISK_OFF": 0.2351,
+      "UNCERTAIN": 0.1331
+    },
+    "confidence": 0.0659,
+    "latency_ms": 104.11,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "b4bc4548451baac1a893e424e6601c43272bd50bcfcb685d7941685ab7221757",
+    "timestamp": "2026-09-26T06:48:48.057288",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "18487fefb03b785aa4ea4f304bb4a7b7a862caf55eba47aa13c1a901b82bb3d1_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7553,
+    "selected_choice_probability": 0.7553,
+    "probabilities": {
+      "ENTER": 0.1365,
+      "WAIT": 0.1082,
+      "REJECT": 0.7553
+    },
+    "confidence": 0.3406,
+    "latency_ms": 104.29,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "18487fefb03b785aa4ea4f304bb4a7b7a862caf55eba47aa13c1a901b82bb3d1",
+    "timestamp": "2026-09-26T06:48:48.217495",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "18487fefb03b785aa4ea4f304bb4a7b7a862caf55eba47aa13c1a901b82bb3d1_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4569,
+    "selected_choice_probability": 0.4569,
+    "probabilities": {
+      "NORMAL": 0.4569,
+      "REDUCE_POSITION": 0.3316,
+      "BLOCK": 0.2115
+    },
+    "confidence": 0.042,
+    "latency_ms": 104.29,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "18487fefb03b785aa4ea4f304bb4a7b7a862caf55eba47aa13c1a901b82bb3d1",
+    "timestamp": "2026-09-26T06:48:48.227517",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "18487fefb03b785aa4ea4f304bb4a7b7a862caf55eba47aa13c1a901b82bb3d1_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3515,
+    "selected_choice_probability": 0.3515,
+    "probabilities": {
+      "TRENDING": 0.3515,
+      "RANGE_BOUND": 0.0949,
+      "HIGH_VOLATILITY": 0.1535,
+      "RISK_OFF": 0.2705,
+      "UNCERTAIN": 0.1296
+    },
+    "confidence": 0.0698,
+    "latency_ms": 104.29,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "18487fefb03b785aa4ea4f304bb4a7b7a862caf55eba47aa13c1a901b82bb3d1",
+    "timestamp": "2026-09-26T06:48:48.227517",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "8106c71b2fb06a02916efa00944d398675f2351420b20e109fae537d014da9a3_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.6395,
+    "selected_choice_probability": 0.6395,
+    "probabilities": {
+      "ENTER": 0.233,
+      "WAIT": 0.1275,
+      "REJECT": 0.6395
+    },
+    "confidence": 0.1918,
+    "latency_ms": 123.7,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "8106c71b2fb06a02916efa00944d398675f2351420b20e109fae537d014da9a3",
+    "timestamp": "2026-09-26T06:48:48.411105",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "8106c71b2fb06a02916efa00944d398675f2351420b20e109fae537d014da9a3_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4418,
+    "selected_choice_probability": 0.4418,
+    "probabilities": {
+      "NORMAL": 0.4418,
+      "REDUCE_POSITION": 0.3469,
+      "BLOCK": 0.2113
+    },
+    "confidence": 0.0382,
+    "latency_ms": 123.7,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "8106c71b2fb06a02916efa00944d398675f2351420b20e109fae537d014da9a3",
+    "timestamp": "2026-09-26T06:48:48.411105",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "8106c71b2fb06a02916efa00944d398675f2351420b20e109fae537d014da9a3_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3716,
+    "selected_choice_probability": 0.3716,
+    "probabilities": {
+      "TRENDING": 0.3716,
+      "RANGE_BOUND": 0.093,
+      "HIGH_VOLATILITY": 0.1577,
+      "RISK_OFF": 0.2221,
+      "UNCERTAIN": 0.1555
+    },
+    "confidence": 0.0657,
+    "latency_ms": 123.7,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "8106c71b2fb06a02916efa00944d398675f2351420b20e109fae537d014da9a3",
+    "timestamp": "2026-09-26T06:48:48.411105",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "62b0fd5e8c9353b693c1016cb39b6d990e61e240b4c9e045e12cf5f5a1beca9d_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.8052,
+    "selected_choice_probability": 0.8052,
+    "probabilities": {
+      "ENTER": 0.1215,
+      "WAIT": 0.0733,
+      "REJECT": 0.8052
+    },
+    "confidence": 0.4337,
+    "latency_ms": 103.55,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "62b0fd5e8c9353b693c1016cb39b6d990e61e240b4c9e045e12cf5f5a1beca9d",
+    "timestamp": "2026-09-26T06:48:48.573480",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "62b0fd5e8c9353b693c1016cb39b6d990e61e240b4c9e045e12cf5f5a1beca9d_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4314,
+    "selected_choice_probability": 0.4314,
+    "probabilities": {
+      "NORMAL": 0.4314,
+      "REDUCE_POSITION": 0.3226,
+      "BLOCK": 0.2461
+    },
+    "confidence": 0.0236,
+    "latency_ms": 103.55,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "62b0fd5e8c9353b693c1016cb39b6d990e61e240b4c9e045e12cf5f5a1beca9d",
+    "timestamp": "2026-09-26T06:48:48.573480",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "62b0fd5e8c9353b693c1016cb39b6d990e61e240b4c9e045e12cf5f5a1beca9d_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3224,
+    "selected_choice_probability": 0.3224,
+    "probabilities": {
+      "TRENDING": 0.3224,
+      "RANGE_BOUND": 0.0878,
+      "HIGH_VOLATILITY": 0.1699,
+      "RISK_OFF": 0.267,
+      "UNCERTAIN": 0.1529
+    },
+    "confidence": 0.0559,
+    "latency_ms": 103.55,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "62b0fd5e8c9353b693c1016cb39b6d990e61e240b4c9e045e12cf5f5a1beca9d",
+    "timestamp": "2026-09-26T06:48:48.573480",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "5599fbcb6a879622a11ba796e59576033df2c95914bdd811a2b5efa766c9de63_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7621,
+    "selected_choice_probability": 0.7621,
+    "probabilities": {
+      "ENTER": 0.1447,
+      "WAIT": 0.0932,
+      "REJECT": 0.7621
+    },
+    "confidence": 0.3556,
+    "latency_ms": 124.81,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "5599fbcb6a879622a11ba796e59576033df2c95914bdd811a2b5efa766c9de63",
+    "timestamp": "2026-09-26T06:48:48.753698",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "5599fbcb6a879622a11ba796e59576033df2c95914bdd811a2b5efa766c9de63_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.428,
+    "selected_choice_probability": 0.428,
+    "probabilities": {
+      "NORMAL": 0.428,
+      "REDUCE_POSITION": 0.3151,
+      "BLOCK": 0.2569
+    },
+    "confidence": 0.0203,
+    "latency_ms": 124.81,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "5599fbcb6a879622a11ba796e59576033df2c95914bdd811a2b5efa766c9de63",
+    "timestamp": "2026-09-26T06:48:48.753698",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "5599fbcb6a879622a11ba796e59576033df2c95914bdd811a2b5efa766c9de63_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3077,
+    "selected_choice_probability": 0.3077,
+    "probabilities": {
+      "TRENDING": 0.3077,
+      "RANGE_BOUND": 0.1008,
+      "HIGH_VOLATILITY": 0.1714,
+      "RISK_OFF": 0.2766,
+      "UNCERTAIN": 0.1436
+    },
+    "confidence": 0.0491,
+    "latency_ms": 124.81,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "5599fbcb6a879622a11ba796e59576033df2c95914bdd811a2b5efa766c9de63",
+    "timestamp": "2026-09-26T06:48:48.758710",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "efdcf30fe4f43a9a7d0b6e94bc5c0e618c3d6b2234b9b9bf5b4cd79ecd23245c_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7389,
+    "selected_choice_probability": 0.7389,
+    "probabilities": {
+      "ENTER": 0.1621,
+      "WAIT": 0.0989,
+      "REJECT": 0.7389
+    },
+    "confidence": 0.3197,
+    "latency_ms": 124.91,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "efdcf30fe4f43a9a7d0b6e94bc5c0e618c3d6b2234b9b9bf5b4cd79ecd23245c",
+    "timestamp": "2026-09-26T06:48:48.940143",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "efdcf30fe4f43a9a7d0b6e94bc5c0e618c3d6b2234b9b9bf5b4cd79ecd23245c_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4453,
+    "selected_choice_probability": 0.4453,
+    "probabilities": {
+      "NORMAL": 0.4453,
+      "REDUCE_POSITION": 0.3351,
+      "BLOCK": 0.2196
+    },
+    "confidence": 0.0356,
+    "latency_ms": 124.91,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "efdcf30fe4f43a9a7d0b6e94bc5c0e618c3d6b2234b9b9bf5b4cd79ecd23245c",
+    "timestamp": "2026-09-26T06:48:48.940143",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "efdcf30fe4f43a9a7d0b6e94bc5c0e618c3d6b2234b9b9bf5b4cd79ecd23245c_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3408,
+    "selected_choice_probability": 0.3408,
+    "probabilities": {
+      "TRENDING": 0.3408,
+      "RANGE_BOUND": 0.0966,
+      "HIGH_VOLATILITY": 0.1796,
+      "RISK_OFF": 0.2438,
+      "UNCERTAIN": 0.1392
+    },
+    "confidence": 0.0558,
+    "latency_ms": 124.91,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "efdcf30fe4f43a9a7d0b6e94bc5c0e618c3d6b2234b9b9bf5b4cd79ecd23245c",
+    "timestamp": "2026-09-26T06:48:48.940143",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "37c7505a2f8083afe55084f31d3b498f9fc15ae5552eb8dc4faeaaed30dc607c_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.835,
+    "selected_choice_probability": 0.835,
+    "probabilities": {
+      "ENTER": 0.0789,
+      "WAIT": 0.0861,
+      "REJECT": 0.835
+    },
+    "confidence": 0.4883,
+    "latency_ms": 104.73,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "37c7505a2f8083afe55084f31d3b498f9fc15ae5552eb8dc4faeaaed30dc607c",
+    "timestamp": "2026-09-26T06:48:49.093772",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "37c7505a2f8083afe55084f31d3b498f9fc15ae5552eb8dc4faeaaed30dc607c_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.3731,
+    "selected_choice_probability": 0.3731,
+    "probabilities": {
+      "NORMAL": 0.3731,
+      "REDUCE_POSITION": 0.3498,
+      "BLOCK": 0.2771
+    },
+    "confidence": 0.007,
+    "latency_ms": 104.73,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "37c7505a2f8083afe55084f31d3b498f9fc15ae5552eb8dc4faeaaed30dc607c",
+    "timestamp": "2026-09-26T06:48:49.093772",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "37c7505a2f8083afe55084f31d3b498f9fc15ae5552eb8dc4faeaaed30dc607c_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.3068,
+    "selected_choice_probability": 0.3068,
+    "probabilities": {
+      "TRENDING": 0.3068,
+      "RANGE_BOUND": 0.1014,
+      "HIGH_VOLATILITY": 0.1653,
+      "RISK_OFF": 0.2795,
+      "UNCERTAIN": 0.147
+    },
+    "confidence": 0.0492,
+    "latency_ms": 104.73,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "37c7505a2f8083afe55084f31d3b498f9fc15ae5552eb8dc4faeaaed30dc607c",
+    "timestamp": "2026-09-26T06:48:49.093772",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "eb7ea7ee1e9324ad0912680aecb5c3b02d62d081a27799aa17d409e813b65ca7_TRADE_QUALITY_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "TRADE_QUALITY",
+    "choice": "REJECT",
+    "decision_probability": 0.7038,
+    "selected_choice_probability": 0.7038,
+    "probabilities": {
+      "ENTER": 0.1879,
+      "WAIT": 0.1083,
+      "REJECT": 0.7038
+    },
+    "confidence": 0.2699,
+    "latency_ms": 126.21,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "eb7ea7ee1e9324ad0912680aecb5c3b02d62d081a27799aa17d409e813b65ca7",
+    "timestamp": "2026-09-26T06:48:49.273017",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "eb7ea7ee1e9324ad0912680aecb5c3b02d62d081a27799aa17d409e813b65ca7_RISK_ACTION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "RISK_ACTION",
+    "choice": "NORMAL",
+    "decision_probability": 0.4594,
+    "selected_choice_probability": 0.4594,
+    "probabilities": {
+      "NORMAL": 0.4594,
+      "REDUCE_POSITION": 0.3308,
+      "BLOCK": 0.2099
+    },
+    "confidence": 0.0434,
+    "latency_ms": 126.21,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "eb7ea7ee1e9324ad0912680aecb5c3b02d62d081a27799aa17d409e813b65ca7",
+    "timestamp": "2026-09-26T06:48:49.273017",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  },
+  "eb7ea7ee1e9324ad0912680aecb5c3b02d62d081a27799aa17d409e813b65ca7_REGIME_OPINION_convaiinnovations/laya-rl-agent_v1.0": {
+    "task": "REGIME_OPINION",
+    "choice": "TRENDING",
+    "decision_probability": 0.358,
+    "selected_choice_probability": 0.358,
+    "probabilities": {
+      "TRENDING": 0.358,
+      "RANGE_BOUND": 0.0806,
+      "HIGH_VOLATILITY": 0.1596,
+      "RISK_OFF": 0.2659,
+      "UNCERTAIN": 0.1358
+    },
+    "confidence": 0.0761,
+    "latency_ms": 126.21,
+    "model_version": "convaiinnovations/laya-rl-agent",
+    "state_hash": "eb7ea7ee1e9324ad0912680aecb5c3b02d62d081a27799aa17d409e813b65ca7",
+    "timestamp": "2026-09-26T06:48:49.273017",
+    "is_valid": true,
+    "fallback_triggered": false,
+    "validation_error": null
+  }
+}

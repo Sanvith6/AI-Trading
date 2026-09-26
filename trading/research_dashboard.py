@@ -86,6 +86,7 @@ def render_institutional_research_dashboard():
         "🚨 Drift Monitor",
         "⏪ Trade Replay",
         "🎯 Golden Regression",
+        "🤖 Laya Intelligence",
     ])
 
     # ── TAB 1: MARKET & UNIVERSE ─────────────────────────────────────────────
@@ -364,7 +365,66 @@ def render_institutional_research_dashboard():
         bms = [b for b in gbs.baselines.values()]
         st.dataframe(pd.DataFrame(bms), use_container_width=True, hide_index=True)
 
+    # ── TAB 21: LAYA INTELLIGENCE ───────────────────────────────────────────
+    with tabs[20]:
+        st.markdown("### 🤖 Laya Challenger Neural Intelligence Observatory")
+        st.caption("Point-in-time secondary intelligence, bounded risk policy, calibration, and forward shadow validation.")
+
+        from trading.laya import gpu_monitor, laya_client, laya_config, laya_forward_shadow
+
+        # Status & GPU Telemetry
+        gpu = gpu_monitor.check_telemetry()
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("Operational Mode", laya_config.mode.upper(), help="Shadow: Non-interfering baseline preservation")
+        c2.metric("GPU Device", gpu.device_name.split()[0] if gpu.is_available else "N/A")
+        c3.metric("VRAM Usage", f"{gpu.vram_used_mb:.0f} / {gpu.vram_total_mb:.0f} MiB", delta=f"{gpu.gpu_util_pct:.0f}% Util")
+        c4.metric("GPU Temperature", f"{gpu.temperature_c:.0f} °C", delta="Healthy" if gpu.is_safe else "High Temp", delta_color="normal" if gpu.is_safe else "inverse")
+
+        # Load Evaluation Summary
+        eval_path = Path(__file__).parent.parent / "data_lake" / "laya_evaluation_summary.json"
+        if eval_path.exists():
+            try:
+                eval_data = json.loads(eval_path.read_text(encoding="utf-8"))
+
+                st.markdown("#### ⚖️ Historical 5-Arm A/B Results vs Baseline")
+                arms = eval_data.get("historical_ab", {}).get("arms", {})
+                arms_df = pd.DataFrame(list(arms.values()))
+                if not arms_df.empty:
+                    display_cols = ["arm_name", "total_return", "cagr", "sharpe", "sortino", "max_drawdown", "win_rate", "trade_count", "incremental_sharpe"]
+                    st.dataframe(arms_df[[c for c in display_cols if c in arms_df.columns]], use_container_width=True, hide_index=True)
+
+                st.markdown("#### 🎯 Calibration & Decision Quality")
+                q1, q2 = st.columns(2)
+                with q1:
+                    cal = eval_data.get("calibration", {})
+                    st.write(f"**Brier Score:** {cal.get('brier_score', 0):.4f}")
+                    st.write(f"**Log Loss:** {cal.get('log_loss', 0):.4f}")
+                    st.write(f"**Expected Calibration Error (ECE):** {cal.get('expected_calibration_error', 0):.4f}")
+                    st.info(cal.get("methodology_note", ""))
+
+                with q2:
+                    dq = eval_data.get("decision_quality", {})
+                    st.write(f"**Disagreement Rate:** {dq.get('disagreement_rate', 0)*100:.1f}%")
+                    st.write(f"**Bad Trades Avoided:** {dq.get('bad_trades_avoided_count', 0)} (Positive Save)")
+                    st.write(f"**Good Trades Missed:** {dq.get('good_trades_missed_count', 0)} (Opportunity Cost)")
+                    st.write(f"**False Rejection Rate:** {dq.get('false_rejection_rate', 0)*100:.1f}%")
+
+                st.markdown("#### ⚡ Latency Budget & Execution Timers")
+                lat = eval_data.get("latency_percentiles", {}).get("total_decision_path", {})
+                lc1, lc2, lc3 = st.columns(3)
+                lc1.metric("P50 Latency", f"{lat.get('p50', 0):.2f} ms")
+                lc2.metric("P95 Latency", f"{lat.get('p95', 0):.2f} ms")
+                lc3.metric("P99 Latency", f"{lat.get('p99', 0):.2f} ms")
+
+                st.markdown("#### 🛡️ Final Architectural Determination")
+                st.warning("Recommendation: **KEEP AS SHADOW**. Pretrained model demonstrates technical integration and zero-leakage stability, but requires financial fine-tuning before gating authority.")
+            except Exception as e:
+                st.error(f"Error rendering Laya evaluation: {e}")
+        else:
+            st.info("Run `python trading/research/run_laya_evaluation.py` to populate Laya evaluation data.")
+
 
 if __name__ == "__main__":
     st.set_page_config(page_title="Quantitative Research Laboratory", layout="wide")
     render_institutional_research_dashboard()
+

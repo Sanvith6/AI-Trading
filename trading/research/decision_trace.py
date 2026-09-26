@@ -50,6 +50,7 @@ class TradeDecisionTrace:
     target_weight: float
     execution_assumption: Dict[str, float]  # slippage, fee
     final_decision_reason: str
+    laya_evaluation: Optional[Dict[str, Any]] = None  # Laya secondary intelligence evaluation
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
