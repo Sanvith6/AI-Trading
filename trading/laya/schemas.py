@@ -9,7 +9,7 @@ Defines:
 """
 
 from dataclasses import dataclass, asdict, field
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any, List, Optional
 import json
 import hashlib
@@ -110,7 +110,7 @@ class ResponseValidator:
         Validates raw response dictionary from Laya service.
         Rejects NaNs, infinities, out-of-range probabilities, or invalid choices.
         """
-        now_ts = datetime.utcnow().isoformat()
+        now_ts = datetime.now(timezone.utc).isoformat()
         expected_choices = cls.VALID_CHOICES_BY_TASK.get(task, set())
 
         if not isinstance(raw_answer, dict):

@@ -1,5 +1,12 @@
-# Environment variables (contains secret API keys)
+# Environment variables & secrets (never commit API keys)
 .env
+.env.*
+!.env.example
+!.env.*.example
+*.key
+*.pem
+credentials*.json
+scratch/
 
 # Python cache & build artifacts
 __pycache__/
@@ -23,6 +30,8 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.pytest_cache/
+.hypothesis/
 
 # Virtual environments
 venv/
@@ -33,3 +42,27 @@ ENV/
 
 # Streamlit config/cache
 .streamlit/secrets.toml
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large model weights & training datasets (>100MB or binary weights)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+data_lake/**/financial_specialist_v*.json
+
+# Runtime cache, simulation logs, and local journals
+trading/data_cache/[0-9a-f]*.*
+trading/data_cache/alpaca_paper_state.json
+trading/data_cache/test_exp/exp_179*.*
+trading/paper_journal/
+trading/paper_broker_journal/
+trading/laya_shadow_journal/
+trading/paper_portfolio.json
+trading/trade_log.csv

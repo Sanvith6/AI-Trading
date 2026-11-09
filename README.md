@@ -1,181 +1,318 @@
-# 📈 AI Trading Platform — NSE/BSE India (Paper-Trading, FREE data)
+<div align="center">
 
-Autonomous AI trading stack: technical analysis (RSI/MACD/Bollinger/EMA/volume),
-paper order manager with real ledger, risk manager, single trading agent,
-Darwinian swarm arena, Streamlit dashboard, and backtester — all on **FREE Yahoo
-Finance data by default. No broker keys needed.**
+# 📈 AI-Trading
+### Autonomous Institutional-Grade Quantitative Trading & Research Platform
 
-## Broker API decision (checked properly)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/)
+[![Tests Passing](https://img.shields.io/badge/tests-218%20passed%20%2F%20100%25-brightgreen.svg)](trading/tests)
+[![Preflight Safety](https://img.shields.io/badge/safety%20gates-15%2F15%20passed-success.svg)](trading/runtime/guards.py)
+[![Market Coverage](https://img.shields.io/badge/markets-US%20%26%20India%20(NSE%2FBSE)-orange.svg)](docs/US_PAPER_LIVE_TRADING.md)
+[![Execution](https://img.shields.io/badge/execution-Alpaca%20%7C%20Paper%20%7C%20Angel%20%7C%20Zerodha-purple.svg)](trading/brokers)
+[![Data Lake](https://img.shields.io/badge/storage-DuckDB%20%2B%20Parquet-informational.svg)](trading/storage)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-| Option | Cost | Auto-login | Verdict |
-|---|---|---|---|
-| Angel One SmartAPI | FREE | Official TOTP `generateSession` — stable | Good **optional** live broker |
-| Zerodha Kite Connect | ~₹2000/mo + GST (+₹500/mo historical) | No official auto-login; daily manual login ~7:30am; TOTP-screen-scrape breaks on every login-flow change | Keep as **optional manual-token** module only |
+*A production-hardened quantitative research laboratory and autonomous multi-market execution engine governed by portfolio mathematics, deep risk controls, and neural intelligence.*
 
-**This project now defaults to `BROKER=paper`**: Yahoo Finance quotes/OHLCV +
-simulated fills in `trading/paper_portfolio.json` + CSV log in
-`trading/trade_log.csv`. Set `BROKER=angel` (+ Angel keys in `.env`) to route
-quotes/orders to Angel One; `trading/kite_auth.py` remains for Zerodha manual-token use.
+[Quick Start](#-quick-start-in-60-seconds) • [Architecture](#-system-architecture) • [Key Features](#-core-capabilities) • [CLI & Daemons](#-cli-reference--automation) • [Empirical Audits](#-empirical-research--audits) • [Contributing](#-contributing)
 
-## ⚡ Quick Start (paper, no keys)
+</div>
 
+---
+
+## 🌟 Overview
+
+**AI-Trading** is an institutional quantitative trading platform built on a core scientific foundation:
+
+> **"The LLM is a RESEARCH ORCHESTRATOR — not an unchecked trader."**
+> Capital allocation, risk boundaries, and trade execution are strictly governed by empirical portfolio theory, Ledoit-Wolf covariance shrinkage, Conditional Value-at-Risk (CVaR), and the fractional Kelly Criterion.
+
+Designed for both **US Equities** and **Indian Equities (NSE/BSE)**, AI-Trading defaults to **100% Free Paper-Trading** out-of-the-box — allowing users and developers to research, backtest, simulate, and monitor algorithmic strategies without requiring broker API keys or risking real capital.
+
+---
+
+## 🏛️ System Architecture
+
+```mermaid
+flowchart TD
+    subgraph DataLayer ["1. Data Lake & Market Feeds"]
+        MKT["Real-Time Feeds<br/>(Alpaca WebSocket / IEX / Yahoo Finance)"]
+        LAKE["Point-in-Time Data Lake<br/>(Parquet Store + DuckDB Engine)"]
+        MKT --> LAKE
+    end
+
+    subgraph AlphaLayer ["2. Alpha Generation & Regime Detection"]
+        ALPHAS["12 Alpha Families<br/>(Technical, Momentum, Volatility, Mean-Reversion)"]
+        REGIME["Regime Engine<br/>(BULL, BEAR, HIGH_VOL, SIDEWAYS)"]
+        LAKE --> ALPHAS
+        LAKE --> REGIME
+    end
+
+    subgraph IntelligenceLayer ["3. Neural Meta-Decision Model"]
+        LAYA["Laya Specialist v2.1<br/>(Financial LLM + RL Policy)"]
+        META["Calibrated Ensemble Meta-Model<br/>(Platt Scaled Probability Floor >= 0.60)"]
+        ALPHAS & REGIME --> LAYA
+        ALPHAS & REGIME --> META
+    end
+
+    subgraph PortfolioLayer ["4. Institutional Portfolio Optimization"]
+        COV["Covariance Shrinkage<br/>(Ledoit-Wolf)"]
+        CVAR["Risk Optimization<br/>(CVaR & Max Drawdown Caps)"]
+        KELLY["Position Sizing<br/>(Fractional Kelly Criterion)"]
+        LAYA & META --> COV --> CVAR --> KELLY
+    end
+
+    subgraph SafetyGate ["5. 15-Condition Safety Air-Gap"]
+        GATE{"Preflight Safety Audit<br/>(Kill Switch, Loss Caps, Slippage, Margin)"}
+        KELLY --> GATE
+    end
+
+    subgraph ExecutionLayer ["6. Execution Adapters & Monitoring"]
+        PAPER["Local Paper Ledger<br/>(Zero-Key Simulation)"]
+        ALPACA["Alpaca Paper / Live<br/>(US Equities)"]
+        INDIAN["Angel One / Zerodha<br/>(NSE / BSE India)"]
+        PROMETHEUS["Prometheus Metrics<br/>& Audit Decision Traces"]
+        
+        GATE -->|Passed| PAPER
+        GATE -->|Passed| ALPACA
+        GATE -->|Passed| INDIAN
+        PAPER & ALPACA & INDIAN --> PROMETHEUS
+    end
+```
+
+---
+
+## ⚡ Core Capabilities
+
+### 1. Dual-Market Trading Support
+- **US Equities**: Full support for Alpaca Paper and Live brokerage accounts, real-time WebSocket quotes, and IEX/SIP market feeds.
+- **Indian Equities (NSE/BSE)**: Seamless connectivity for Angel One SmartAPI (automated TOTP session) and Zerodha Kite Connect, alongside Yahoo Finance.
+- **100% Free Paper Mode**: Runs out of the box with zero subscriptions or API keys required.
+
+### 2. Point-in-Time Data Lake (Zero-Leakage Guarantee)
+- Backed by **Apache Parquet** columnar storage and **DuckDB** analytical engine.
+- Cryptographically audited causality invariants enforce zero lookahead bias: quarterly fundamentals and corporate actions are strictly invisible prior to their official `available_at` timestamp.
+
+### 3. Institutional Portfolio Optimizer
+- **Covariance Shrinkage**: Employs Ledoit-Wolf analytical shrinkage to stabilize ill-conditioned high-dimensional covariance matrices.
+- **CVaR (Expected Shortfall)**: Tail-risk optimization guarding against black swan drawdowns.
+- **Fractional Kelly Criterion**: Dynamically adjusts position sizing based on real win probability, payout ratios, and volatility.
+- **Market Microstructure Models**: Incorporates non-linear bid-ask spread and volume-dependent square-root slippage penalties.
+
+### 4. Laya Specialist v2.1 Neural Intelligence
+- Fine-tuned domain specialist LLM with reinforcement learning (RL) meta-decision policies.
+- Evaluates candidate trades across 9 financial dimensions and acts as a secondary cognitive sanity check, with cold-start fallbacks ensuring continuous operation even on CPU.
+
+### 5. Multi-Layered Safety Air-Gap & Hardware Kill Switches
+- **15-Condition Preflight Check**: Every order is verified against portfolio concentration limits, daily loss limits, maximum order size ($5,000 default), and margin capacity.
+- **Emergency Kill Switch**: Hardware JSON kill switch (`trading/kill_switch.json`) instantly terminates trading loops, rejects new orders, and triggers sequential liquidation.
+- **Sequential Liquidation**: Systematic, liquidity-ordered position unwinding under volatility spikes.
+
+---
+
+## 🚀 Quick Start in 60 Seconds
+
+### Prerequisites
+- Python 3.10, 3.11, 3.12, or 3.13
+- Git
+
+### 1. Clone & Install
 ```bash
+git clone https://github.com/Sanvith6/AI-Trading.git
+cd AI-Trading
+
+# Create virtual environment
+python -m venv .venv
+
+# Activate virtual environment
+# Windows:
+.venv\Scripts\activate
+# Linux/macOS:
+source .venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
-cp .env.example .env   # only OPENROUTER_API_KEY needed for AI reasoning
-# Dashboard:
+```
+
+### 2. Configure Environment
+```bash
+cp .env.example .env
+```
+*(No API keys are required to test or paper trade! If you want AI reasoning, add your OpenRouter key, or Alpaca keys for US paper broker routing).*
+
+### 3. Verify System Health (15/15 Preflight Checks)
+```bash
+# Verify that all 15 quantitative subsystems and safety gates are operational
+python -m trading.cli preflight
+```
+
+### 4. Run Free Paper Backtest
+```bash
+# Run walk-forward backtest on any symbol (e.g., AAPL or RELIANCE.NS)
+python -m trading.backtest AAPL --days 365
+```
+
+---
+
+## 🖥️ Interactive User Interfaces
+
+AI-Trading provides three distinct interfaces depending on your workflow:
+
+````carousel
+```bash
+# 1. Streamlit Web Dashboard
 streamlit run trading/trading_app.py --server.port 8502
-# or double-click run_trading.bat
-# Backtest (no keys):
-python -m trading.backtest RELIANCE --days 365
-# or double-click run_backtest.bat
+# Or double-click: run_trading.bat
 ```
-
-## File Structure (trading)
-
-```
-├── trading/
-│   ├── data_provider.py   # FREE Yahoo Finance quotes/OHLCV (default source)
-│   ├── technical_analysis.py  # RSI/MACD/BB/EMA/SMA/volume → BUY/SELL/HOLD
-│   ├── order_manager.py   # Paper ledger + optional Angel live routing
-│   ├── risk_manager.py    # Per-order / daily-loss / position-count guards
-│   ├── market_data.py     # Angel One live module (BROKER=angel only)
-│   ├── angel_auth.py      # Angel TOTP session (optional)
-│   ├── kite_auth.py       # Zerodha manual-token module (optional, paid API)
-│   ├── trading_agent.py   # AI agent (15 tools: 8 trading + 7 system)
-│   ├── backtest.py        # Walk-forward backtester on free history
-│   ├── trading_app.py     # Streamlit dashboard (signals/portfolio/swarm)
-│   ├── paper_portfolio.json / trade_log.csv  # Paper state (auto-created)
-│   └── swarm/             # Darwinian arena (DNA/evolution/graveyard/dash)
-```
-
-## 🤖 OpenRouter Autonomous AI Agent & LLM Suite
-
-> Company-grade stack report: see **[TECHNOLOGIES.md](TECHNOLOGIES.md)** —
-> every inevitable tool/algorithm (ATR/ADX, Kelly, Sharpe, BLX evolution,
-> NSE cost model, risk gates) and the daily operating flow.
-
-This workspace contains a full-featured **Autonomous AI Agent** that can execute real tasks on your system using OpenRouter, configured with `inclusionai/ling-3.0-flash-vl:free`.
-
----
-
-## ⚡ Quick Start Options
-
-You can interact with your Agent or Model in three ways:
-
-### 1. Rich Terminal Agent Console (Interactive CLI)
+<!-- slide -->
 ```bash
+# 2. Real-Time Portfolio & Market Monitor
+python -m trading.cli monitor
+# Or double-click: run_monitor.bat
+```
+<!-- slide -->
+```bash
+# 3. Interactive Autonomous Agent CLI
 python agent_cli.py
+# Or double-click: run_agent.bat
 ```
-*(Or double-click [`run_agent.bat`](file:///c:/GRAG/AI/run_agent.bat))*
+````
 
-- **Live animated spinners** and real-time execution steps
-- **Tool call panels** displaying exact parameters and outputs
-- **Safe Mode**: Toggle with `/safe` to prompt for confirmation before commands or file edits run
-- **Commands**: `/tools`, `/safe`, `/clear`, `/model`, `/help`, `/exit`
+### 1. Streamlit Trading Dashboard
+- Real-time technical indicator visualizers (RSI, MACD, Bollinger Bands, EMA crossovers, Volume).
+- Paper portfolio ledger, order history, and P&L charts.
+- Darwinian Strategy Swarm Arena for evolutionary optimization.
+
+### 2. Live Terminal Monitor (`run_monitor.bat`)
+- Real-time market clock and session state (Pre-market, Regular, After-hours).
+- Real-time prices, unrealized P&L, stop-loss distance, and daily drawdown metrics.
+
+### 3. Continuous Trading Daemon (`run_daemon.bat`)
+- Background autonomous loop executing during market hours.
+- Dynamic stop-loss tracking and automated portfolio rebalancing at configurable intervals.
 
 ---
 
-### 2. Streamlit Web Dashboard (Browser)
+## 🛠️ CLI Reference & Automation
+
+The platform provides a unified CLI via `trading.cli`:
+
 ```bash
-streamlit run agent_app.py
-```
-*(Or double-click [`run_agent_web.bat`](file:///c:/GRAG/AI/run_agent_web.bat))*
+# Run full 15-condition startup preflight audit
+python -m trading.cli preflight
 
-- **Collapsible tool execution accordions** showing full arguments & return values
-- **Real-time reasoning status box** (Step-by-step trace)
-- **Built-in Workspace File Inspector** in sidebar
-- **One-click quick task buttons**
+# Execute a single scheduled trading cycle
+python -m trading.cli run --market US
 
----
+# Launch the continuous market-hours daemon
+python -m trading.cli daemon --interval 300
 
-### 3. Lightweight Chat & Quickstart
-- **Simple 1-query test**: `python quickstart.py`
-- **Pure text terminal chat**: `python chat.py` (or double-click [`run_chat.bat`](file:///c:/GRAG/AI/run_chat.bat))
-- **Pure text web chat**: `streamlit run app.py` (or double-click [`run_web.bat`](file:///c:/GRAG/AI/run_web.bat))
+# Launch real-time portfolio & price monitor
+python -m trading.cli monitor
 
----
+# Inspect current portfolio positions and cash
+python -m trading.cli portfolio
 
-## 🛠️ Built-in Agent Tools
+# View comparative audit report (Baseline vs Laya Specialist v2)
+python -m trading.cli laya-report
 
-The agent has access to 7 built-in tools defined in [`tools.py`](file:///c:/GRAG/AI/tools.py):
+# Test paper broker order roundtrip (submit, query, reconcile)
+python -m trading.cli test-paper
 
-| Tool | Purpose |
-|---|---|
-| `execute_command` | Runs PowerShell commands on your system and returns terminal stdout/stderr |
-| `read_file` | Inspects contents of files (supports line ranges) |
-| `write_file` | Creates or modifies files |
-| `list_directory` | Explores directories and lists file sizes |
-| `search_files` | Searches workspace files with regex or text patterns |
-| `run_python` | Runs Python code snippets in an isolated subprocess |
-| `fetch_url` | Fetches webpage text or REST API data from the web |
-
----
-
-## 🐍 Using the Agent in Python Code
-
-```python
-from agent import Agent
-
-# Create an agent instance
-agent = Agent()
-
-# Run a task autonomously
-task = "Search the project for where API keys are loaded, then create a summary file."
-result = agent.run(task)
-print(result)
-```
-
-### Real-Time Event Streaming:
-```python
-from agent import Agent
-
-agent = Agent()
-for event in agent.step_stream("Calculate 999 * 888 using python"):
-    if event.type == "tool_start":
-        print(f"Tool called: {event.data['tool_name']}")
-    elif event.type == "tool_end":
-        print(f"Result: {event.data['result']}")
-    elif event.type == "final_answer":
-        print(f"Answer: {event.data['content']}")
+# Check or activate emergency kill switch
+python -m trading.cli kill-switch --status
+python -m trading.cli kill-switch --engage
 ```
 
 ---
 
-## ⚙️ Configuration & Model Switching
+## 📁 Repository Structure
 
-All settings are configured in [`.env`](file:///c:/GRAG/AI/.env):
-
-```env
-OPENROUTER_API_KEY=sk-or-v1-...
-OPENROUTER_MODEL=inclusionai/ling-3.0-flash-vl:free
 ```
-
-You can change to any OpenRouter model (e.g., `deepseek/deepseek-r1:free`, `meta-llama/llama-3.3-70b-instruct:free`, `anthropic/claude-3.5-sonnet`) simply by editing `OPENROUTER_MODEL`.
+AI-Trading/
+├── .agents/                 # MCP (Model Context Protocol) configurations
+├── data_lake/               # Parquet storage, DuckDB database & dataset manifests
+│   ├── laya_specialist/     # Specialist benchmarks, evaluation results, configs
+│   └── market_data/         # Historical point-in-time market data
+├── docs/                    # In-depth architectural documentation & runbooks
+│   ├── ALPACA_PAPER_SETUP.md # Alpaca paper broker integration guide
+│   ├── US_PAPER_LIVE_TRADING.md # Complete US execution runbook
+│   └── US_TRADING_RUNBOOK.md   # Production deployment runbook
+├── reports/                 # Empirical research reports & audit logs
+│   ├── FINAL_FULL_SYSTEM_AUDIT.md
+│   ├── FINAL_PORTFOLIO_OPTIMIZER_AUDIT.md
+│   └── LAYA_FINANCIAL_SPECIALIST_V2_REPORT.md
+├── scripts/                 # Maintenance, diagnostic & recovery drill scripts
+├── trading/                 # Core Quantitative & Execution Engine
+│   ├── brokers/             # Alpaca, Angel One, Zerodha & Paper brokers
+│   ├── execution/           # Execution adapters, safety guards & sequential liquidation
+│   ├── laya_specialist/     # Neural intelligence & RL decision policy
+│   ├── market/              # Market data providers (Alpaca WebSocket/REST & Yahoo)
+│   ├── monitoring/          # Health reports & Prometheus metrics
+│   ├── portfolio/           # Ledoit-Wolf covariance, CVaR & Kelly optimizer
+│   ├── runtime/             # Orchestrator, session lifecycle & safety gates
+│   ├── storage/             # ParquetStore, DuckDBStore & DatasetRegistry
+│   ├── universe/            # Point-in-time dynamic universe selection
+│   ├── cli.py               # Production CLI entrypoint
+│   └── tests/               # 218 test verification suite
+├── requirements.txt         # Production dependencies
+├── LICENSE                  # MIT License
+└── README.md                # Platform documentation
+```
 
 ---
 
-## 📁 File Structure
+## 🧪 Testing & Empirical Research
+
+AI-Trading adheres to strict quantitative verification standards. The test suite validates causality, numerical stability, risk bounds, and broker communication.
+
+```bash
+# Run all 218 tests
+pytest trading/tests -v
+```
 
 ```
-├── .env                 # OpenRouter API Key & configuration (keep private)
-├── .env.example         # Template for environment setup
-├── .gitignore           # Prevents committing .env and cache files
-├── README.md            # Documentation & guide
-├── requirements.txt     # Python dependencies
-│
-├── tools.py             # Tool definitions & OpenAI function schemas
-├── agent.py             # Core autonomous ReAct agent loop
-│
-├── agent_cli.py         # Rich interactive terminal agent console
-├── agent_app.py         # Full-featured Streamlit agent web dashboard
-│
-├── llm_client.py        # OpenAI SDK wrapper for OpenRouter
-├── quickstart.py        # Single-prompt test script
-├── chat.py              # Terminal text chat
-├── app.py               # Streamlit text chat
-│
-├── run_agent.bat        # Double-click launcher for Terminal Agent
-├── run_agent_web.bat    # Double-click launcher for Web Agent Dashboard
-├── run_chat.bat         # Double-click launcher for Terminal Chat
-└── run_web.bat          # Double-click launcher for Web Chat
+============================= test session starts =============================
+platform win32 -- Python 3.13.0, pytest-9.2.0
+collected 218 items
+
+trading\tests\test_alpaca_mcp_config.py ..............                   [  6%]
+trading\tests\test_final_hardening.py ................                   [ 13%]
+trading\tests\test_full_architecture.py ............                     [ 19%]
+trading\tests\test_laya_integration.py .................                 [ 27%]
+trading\tests\test_laya_specialist.py ...............                    [ 33%]
+trading\tests\test_laya_specialist_v2.py .......                         [ 37%]
+trading\tests\test_phase1_foundation.py ..............                   [ 43%]
+trading\tests\test_portfolio_optimizer.py .............................. [ 57%]
+..................                                                       [ 65%]
+trading\tests\test_pre_monday_readiness.py ...........................   [ 77%]
+trading\tests\test_us_runtime_hardening.py ..........................    [ 89%]
+trading\tests\test_us_runtime_integration.py ......................      [100%]
+
+============================ 218 passed in 41.06s =============================
 ```
+
+### Key Quantitative Audits & Reports
+- **[Final Full System Audit](reports/FINAL_FULL_SYSTEM_AUDIT.md)**: 32-phase adversarial stress test and execution boundary analysis.
+- **[Portfolio Optimizer Audit](reports/FINAL_PORTFOLIO_OPTIMIZER_AUDIT.md)**: Ledoit-Wolf shrinkage vs empirical covariance walk-forward tests.
+- **[Laya Specialist v2 Report](reports/LAYA_FINANCIAL_SPECIALIST_V2_REPORT.md)**: Neural decision attribution, edge verification, and out-of-sample Sharpe analysis.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please review [CONTRIBUTING.md](CONTRIBUTING.md) for environment setup guidelines, code conventions, and testing requirements.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feat/AmazingFeature`)
+3. Ensure all tests pass (`pytest trading/tests`)
+4. Commit your Changes (`git commit -m 'feat: Add AmazingFeature'`)
+5. Push to the Branch (`git push origin feat/AmazingFeature`)
+6. Open a Pull Request
+
+---
+
+## 📜 Disclaimer & License
+
+> **Risk Warning**: Quantitative trading in financial markets involves substantial risk of loss. This software is provided solely for educational, research, and paper-simulation purposes. It is NOT financial advice. Always verify strategies extensively in simulated paper environments before considering live capital.
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.

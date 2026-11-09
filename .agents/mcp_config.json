@@ -1,0 +1,54 @@
+{
+  "mcpServers": {
+    "alpaca-paper-readonly": {
+      "command": "uvx",
+      "args": [
+        "alpaca-mcp-server"
+      ],
+      "env": {
+        "ALPACA_API_KEY": "$ALPACA_PAPER_API_KEY",
+        "ALPACA_SECRET_KEY": "$ALPACA_PAPER_SECRET_KEY",
+        "ALPACA_PAPER_TRADE": "true",
+        "ALPACA_TOOLSETS": "account,stock-data,assets,news,corporate-actions"
+      },
+      "includeTools": [
+        "get_stock_bars",
+        "get_stock_quotes",
+        "get_stock_trades",
+        "get_crypto_bars",
+        "get_crypto_quotes",
+        "get_crypto_trades",
+        "search_alpaca_docs",
+        "fetch_alpaca_doc",
+        "search_alpaca_api_specs",
+        "list_alpaca_api_endpoints",
+        "get_alpaca_endpoint_docs",
+        "get_account_info",
+        "get_account_activities",
+        "get_account_activities_by_type",
+        "get_account_config",
+        "get_portfolio_history",
+        "get_all_assets",
+        "get_asset",
+        "get_calendar",
+        "get_clock",
+        "get_corporate_action_announcements",
+        "get_corporate_action_announcement",
+        "get_option_contracts",
+        "get_option_contract",
+        "get_news",
+        "get_market_movers",
+        "get_most_active_stocks",
+        "get_corporate_actions",
+        "get_stock_latest_bar",
+        "get_stock_latest_quote",
+        "get_stock_snapshot",
+        "get_stock_latest_trade"
+      ],
+      "excludeTools": [
+        "update_account_config"
+      ],
+      "trust": false
+    }
+  }
+}

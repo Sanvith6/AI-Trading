@@ -11,7 +11,18 @@ Computes:
 import numpy as np
 import pandas as pd
 from typing import Dict, Any, List, Tuple
-from sklearn.metrics import brier_score_loss, log_loss
+try:
+    from sklearn.metrics import brier_score_loss, log_loss
+except ImportError:
+    def brier_score_loss(y_true, y_prob):
+        y_true = np.asarray(y_true).astype(float)
+        y_prob = np.asarray(y_prob).astype(float)
+        return float(np.mean((y_prob - y_true) ** 2))
+
+    def log_loss(y_true, y_prob, eps=1e-15):
+        y_true = np.asarray(y_true).astype(float)
+        y_prob = np.clip(np.asarray(y_prob).astype(float), eps, 1.0 - eps)
+        return float(-np.mean(y_true * np.log(y_prob) + (1.0 - y_true) * np.log(1.0 - y_prob)))
 
 
 class ModelCalibrator:

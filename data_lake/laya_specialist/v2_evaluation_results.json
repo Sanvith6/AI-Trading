@@ -1,0 +1,197 @@
+{
+  "model_version": "laya-financial-us-v2",
+  "winning_base_initialization": "convaiinnovations/laya-typed-decisions (Arm B)",
+  "hardware_target": "NVIDIA GeForce RTX 3050 Laptop GPU (4GB VRAM)",
+  "optimizer": "Adafactor (O(1) memory ~25MB optimizer state)",
+  "peak_vram_mb": 3994.5,
+  "dataset_total": 12000,
+  "split_counts": {
+    "train": 8608,
+    "val": 2082,
+    "cal": 939,
+    "dev_holdout": 371
+  },
+  "calibrated_temperature": 1.0,
+  "calibrated_take_threshold": 0.27,
+  "training_seeds": {
+    "seed_42": {
+      "seed": 42,
+      "total_steps": 300,
+      "train_loss": 1.416,
+      "val_loss": 1.0756,
+      "val_brier": 0.0813,
+      "duration_sec": 271.7,
+      "peak_vram_mb": 3994.5
+    },
+    "seed_123": {
+      "seed": 123,
+      "total_steps": 60,
+      "train_loss": 1.3445,
+      "val_loss": 1.0697,
+      "val_brier": 0.0798,
+      "duration_sec": 66.3,
+      "peak_vram_mb": 3994.5
+    },
+    "seed_2026": {
+      "seed": 2026,
+      "total_steps": 60,
+      "train_loss": 1.333,
+      "val_loss": 1.0621,
+      "val_brier": 0.0779,
+      "duration_sec": 59.4,
+      "peak_vram_mb": 3994.5
+    }
+  },
+  "comparative_arms": {
+    "arm_1_baseline": {
+      "name": "Arm_1_Baseline_Only",
+      "trade_count": 371,
+      "approval_rate": 1.0,
+      "win_rate": 0.5283,
+      "profit_factor": 1.27,
+      "mean_net_return": 0.00674,
+      "portfolio_sharpe": 0.47
+    },
+    "arm_3_laya_v2": {
+      "name": "Arm_3_Laya_V2_Specialist",
+      "trade_count": 28,
+      "approval_rate": 0.0755,
+      "win_rate": 0.7143,
+      "profit_factor": 3.01,
+      "mean_net_return": 0.03555,
+      "portfolio_sharpe": 8.32,
+      "max_drawdown": -0.0606
+    },
+    "arm_4_oracle": {
+      "name": "Arm_4_Oracle_Upper_Bound",
+      "trade_count": 113,
+      "approval_rate": 0.3046,
+      "win_rate": 0.9204,
+      "profit_factor": 29.8,
+      "mean_net_return": 0.07569,
+      "portfolio_sharpe": 24.8
+    },
+    "arm_5_random_placebo": {
+      "name": "Arm_5_Random_Placebo",
+      "trade_count": 117,
+      "approval_rate": 0.3154,
+      "win_rate": 0.5385,
+      "profit_factor": 1.2,
+      "mean_net_return": 0.00554,
+      "portfolio_sharpe": 0.36
+    }
+  },
+  "placebo_suite": {
+    "real_model": {
+      "portfolio_sharpe": 8.32,
+      "profit_factor": 3.01,
+      "win_rate": 0.7143,
+      "mean_net_return": 0.03555
+    },
+    "label_shuffle_placebo": {
+      "portfolio_sharpe": -3.83,
+      "profit_factor": 0.44,
+      "win_rate": 0.3929,
+      "mean_net_return": -0.0171
+    },
+    "timestamp_shuffle_placebo": {
+      "portfolio_sharpe": 6.81,
+      "profit_factor": 3.01,
+      "win_rate": 0.7143,
+      "mean_net_return": 0.03555
+    },
+    "prediction_permutation_placebo": {
+      "portfolio_sharpe": 2.65,
+      "profit_factor": 1.45,
+      "win_rate": 0.6071,
+      "mean_net_return": 0.01067
+    },
+    "placebo_validation_passed": true
+  },
+  "stress_tests": {
+    "friction_1x": {
+      "cost_multiplier": 1.0,
+      "trade_count": 28,
+      "profit_factor": 3.01,
+      "mean_net_return": 0.03555,
+      "portfolio_sharpe": 8.32
+    },
+    "friction_2x": {
+      "cost_multiplier": 2.0,
+      "trade_count": 28,
+      "profit_factor": 2.88,
+      "mean_net_return": 0.03405,
+      "portfolio_sharpe": 7.98
+    },
+    "friction_3x": {
+      "cost_multiplier": 3.0,
+      "trade_count": 28,
+      "profit_factor": 2.75,
+      "mean_net_return": 0.03255,
+      "portfolio_sharpe": 7.64
+    },
+    "friction_5x": {
+      "cost_multiplier": 5.0,
+      "trade_count": 28,
+      "profit_factor": 2.52,
+      "mean_net_return": 0.02955,
+      "portfolio_sharpe": 6.96
+    }
+  },
+  "ablations": {
+    "No_Vol_ATR": {
+      "portfolio_sharpe": 2.44,
+      "profit_factor": 1.4,
+      "win_rate": 0.5577,
+      "mean_net_return": 0.00941
+    },
+    "No_Trend_Mom": {
+      "portfolio_sharpe": 3.64,
+      "profit_factor": 1.48,
+      "win_rate": 0.5812,
+      "mean_net_return": 0.01094
+    },
+    "No_Volume_Liq": {
+      "portfolio_sharpe": 1.97,
+      "profit_factor": 1.51,
+      "win_rate": 0.563,
+      "mean_net_return": 0.00967
+    },
+    "No_Microstructure": {
+      "portfolio_sharpe": 0.43,
+      "profit_factor": 1.11,
+      "win_rate": 0.5345,
+      "mean_net_return": 0.00275
+    },
+    "No_Macro_Regime": {
+      "portfolio_sharpe": 2.25,
+      "profit_factor": 1.47,
+      "win_rate": 0.5888,
+      "mean_net_return": 0.01115
+    },
+    "No_Market_Context": {
+      "portfolio_sharpe": 2.67,
+      "profit_factor": 1.23,
+      "win_rate": 0.5652,
+      "mean_net_return": 0.00559
+    },
+    "No_ML_Score": {
+      "portfolio_sharpe": 3.24,
+      "profit_factor": 1.59,
+      "win_rate": 0.5667,
+      "mean_net_return": 0.01345
+    },
+    "Hard_Classif": {
+      "portfolio_sharpe": 1.97,
+      "profit_factor": 1.09,
+      "win_rate": 0.4885,
+      "mean_net_return": 0.00243
+    },
+    "Label_A_Target": {
+      "portfolio_sharpe": 1.67,
+      "profit_factor": 1.38,
+      "win_rate": 0.5586,
+      "mean_net_return": 0.00842
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "128": {
+    "forward_peak_mb": 2348.2,
+    "backward_peak_mb": 3231.0,
+    "optimizer_peak_mb": 8048.8,
+    "allocated_vram_mb": 4836.3,
+    "reserved_vram_mb": 8564.0,
+    "fits_physical_vram": false,
+    "status": "WARNING (Paging to host RAM)"
+  },
+  "256": {
+    "forward_peak_mb": 5594.8,
+    "backward_peak_mb": 6444.6,
+    "optimizer_peak_mb": 8049.7,
+    "allocated_vram_mb": 4836.3,
+    "reserved_vram_mb": 8600.0,
+    "fits_physical_vram": false,
+    "status": "WARNING (Paging to host RAM)"
+  },
+  "384": {
+    "forward_peak_mb": 5615.0,
+    "backward_peak_mb": 6444.8,
+    "optimizer_peak_mb": 8049.7,
+    "allocated_vram_mb": 4836.3,
+    "reserved_vram_mb": 8564.0,
+    "fits_physical_vram": false,
+    "status": "WARNING (Paging to host RAM)"
+  },
+  "512": {
+    "forward_peak_mb": 5615.0,
+    "backward_peak_mb": 6444.8,
+    "optimizer_peak_mb": 8049.7,
+    "allocated_vram_mb": 4836.3,
+    "reserved_vram_mb": 8564.0,
+    "fits_physical_vram": false,
+    "status": "WARNING (Paging to host RAM)"
+  }
+}

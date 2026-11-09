@@ -1,4 +1,4 @@
-"""
+r"""
 Financial Specialist Decision Policy & Explicit Abstention Engine.
 
 Enforces Phases 18 and 19:

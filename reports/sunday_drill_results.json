@@ -1,0 +1,124 @@
+{
+  "host": {
+    "os": "Linux 6.6.87.2-microsoft-standard-WSL2 (#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025)",
+    "python": "3.12.14",
+    "local_clock": "2026-09-27 02:39:38 UTC (UTC+0000)",
+    "utc_clock": "2026-09-27 02:39:38 UTC",
+    "disk_total_gb": 450.71,
+    "disk_used_gb": 427.04,
+    "disk_free_gb": 23.67,
+    "disk_free_pct": 5.3,
+    "mem_total": "8133872 kB",
+    "mem_available": "7577052 kB",
+    "torch_version": "2.14.0+cu130",
+    "cuda_available": true,
+    "cuda_version": "13.0",
+    "gpu_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "vram_total_mb": 4095.5,
+    "vram_allocated_mb": 0.0,
+    "vram_free_mb": 4095.5
+  },
+  "model_integrity": {
+    "passed": true,
+    "details": {
+      "model.safetensors": {
+        "status": "MATCH",
+        "actual": "22dcf5656bd0aebc8b8caad30a448a5aeea4c213c5e9676adfe4e587328fdbb7",
+        "expected": "22dcf5656bd0aebc8b8caad30a448a5aeea4c213c5e9676adfe4e587328fdbb7"
+      },
+      "model_metadata.json": {
+        "status": "MATCH",
+        "actual": "5dfe1da98cbb0c4fd3e08964e0dea32c72bdd68e4f1876d9f9353fb29cec957e",
+        "expected": "5dfe1da98cbb0c4fd3e08964e0dea32c72bdd68e4f1876d9f9353fb29cec957e"
+      },
+      "rl_agent_config.json": {
+        "status": "MATCH",
+        "actual": "ebf0cd524d92342a6be5e48e9fca3d7c2babfb5a56ccd79d2171ef5d8c7f7be8",
+        "expected": "ebf0cd524d92342a6be5e48e9fca3d7c2babfb5a56ccd79d2171ef5d8c7f7be8"
+      }
+    }
+  },
+  "runtime_config": {
+    "broker_provider": "alpaca",
+    "trading_mode": "paper_broker",
+    "live_trading_enabled": false,
+    "laya_mode": "shadow",
+    "alpaca_env": "paper"
+  },
+  "mcp": {
+    "tool_count": 32,
+    "read_only": 32,
+    "mutation": 0,
+    "trading": 0,
+    "passed": true
+  },
+  "broker": {
+    "latency_ms": 781.3,
+    "environment": "paper",
+    "is_live": false,
+    "equity": 99998.95,
+    "cash": 99998.95,
+    "buying_power": 399995.8,
+    "open_positions": {},
+    "open_orders_count": 0,
+    "market_clock": {
+      "is_open": false,
+      "next_close": "2026-09-28T16:00:00-04:00",
+      "next_open": "2026-09-28T09:30:00-04:00",
+      "timestamp": "2026-09-26T22:39:53.556224851-04:00"
+    }
+  },
+  "market_data": {
+    "provider": "AlpacaMarketDataProvider",
+    "feed": "iex",
+    "latency_ms": 723.1,
+    "quote_age_s": 0.723,
+    "status": "HEALTHY (ONLINE)",
+    "fallback_active": false
+  },
+  "fail_closed_data": {
+    "simulated_stale_detected": true,
+    "reason": "Quote age 300.0s exceeds limit 60.0s for 1m cadence"
+  },
+  "laya": {
+    "latency_ms": 0.36,
+    "action": "TAKE",
+    "scale_multiplier": 0.948,
+    "shadow_mode": true
+  },
+  "dry_run": {
+    "status": "OPTIMAL",
+    "selected_subset": [
+      "AAPL",
+      "NVDA",
+      "MSFT"
+    ],
+    "weights": {
+      "AAPL": 0.0484,
+      "NVDA": 0.0492,
+      "MSFT": 0.0462
+    },
+    "gross_exposure": 0.1438,
+    "projected_cash": 87598.95,
+    "proposals_count": 3,
+    "risk_approved": true,
+    "invariants_passed": true,
+    "optimizer_latency_ms": 19.93
+  },
+  "calendar": {
+    "status": "WEEKEND",
+    "can_execute": false,
+    "current_time": "2026-09-26T22:39:58.114361-04:00",
+    "next_session_date": "2026-09-28",
+    "next_session_open_utc": "13:30 UTC"
+  },
+  "storage": {
+    "duckdb": true,
+    "journals_writable": true
+  },
+  "safety_exit": {
+    "open_orders": 0,
+    "live_trading_enabled": false,
+    "passed": true
+  }
+}

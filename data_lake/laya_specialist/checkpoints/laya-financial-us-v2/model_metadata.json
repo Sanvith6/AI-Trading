@@ -1,0 +1,7 @@
+{
+  "model_version": "laya-financial-us-v2",
+  "base_model": "convaiinnovations/laya-typed-decisions",
+  "temperature": 1.0,
+  "max_length": 256,
+  "saved_at": "2026-09-26T07:59:38Z"
+}

@@ -1,0 +1,16 @@
+{
+  "ARM_A_BASE": {
+    "train_loss": 1.1032,
+    "val_loss": 0.9152,
+    "val_brier": 0.0212,
+    "peak_vram_mb": 3626.9,
+    "duration_sec": 55.5
+  },
+  "ARM_B_TYPED": {
+    "train_loss": 0.9675,
+    "val_loss": 0.883,
+    "val_brier": 0.0148,
+    "peak_vram_mb": 3626.4,
+    "duration_sec": 136.6
+  }
+}

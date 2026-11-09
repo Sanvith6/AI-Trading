@@ -1,65 +1,83 @@
 # US Trading Runtime: Operational Runbook
 
-This runbook defines the operational procedures for managing the US Equity AI Trading Runtime in Paper and Live modes.
+This runbook defines the operational procedures for managing the US Equity AI Trading Runtime across Local Paper, Broker Paper, and Live modes.
 
 ---
 
-## 1. Paper Trading Operations
+## 1. Execution Modes & Quick Start
 
-### 1.1 Start US Paper Trading
+### 1.1 Local Air-Gapped Paper Trading (`US_PAPER_LOCAL`)
 ```bash
-python -m trading.cli run --market US --mode paper
+python -m trading.cli run --mode paper_local
 ```
-Expected output banner:
-```
-================================================================================
-🟢 US PAPER TRADING — REAL MARKET DATA | SIMULATED EXECUTION | NO REAL ORDERS 🟢
-================================================================================
-```
+- Real market data, in-process ledger simulation, zero outbound network calls to brokers.
+- Forward journal stored in `trading/paper_journal/paper_orders_journal.parquet`.
 
-### 1.2 Check System Status
+### 1.2 Broker-Backed Paper Trading (`US_PAPER_BROKER`)
 ```bash
-python -m trading.cli status
+python -m trading.cli run --mode paper_broker
 ```
-Displays market session status, kill-switch state, data freshness, and cash balances.
+- Official Alpaca Paper Broker endpoint (`https://paper-api.alpaca.markets`).
+- Full order lifecycle, realistic fills, order management.
+- Forward journal stored in `trading/paper_broker_journal/broker_paper_orders_journal.parquet`.
 
-### 1.3 Inspect Current Paper Portfolio
+### 1.3 Safe Dry-Run Simulation (Any Mode)
 ```bash
-python -m trading.cli portfolio
+python -m trading.cli run --mode paper_broker --dry-run
+python -m trading.cli run --mode live --dry-run
 ```
-Displays cash balance, open positions, average entry prices, and current market values.
+- Full decision pipeline, alpha computation, ML scoring, RiskEngine validation, and `OrderIntent` generation.
+- Order transmission suppressed; zero orders reach any broker.
 
-### 1.4 Inspect Forward Journal
-Paper orders and fills are stored in `trading/paper_journal/paper_orders_journal.parquet`:
-```python
-import pandas as pd
-df = pd.read_parquet("trading/paper_journal/paper_orders_journal.parquet")
-print(df.tail(10))
+---
+
+## 2. Startup Verification & Diagnostics
+
+### 2.1 Run Preflight Audit
+Verifies 15 operational subsystems (Python, CUDA, Laya checkpoint, data feeds, calendar, universe, alphas, ML, Regime, Portfolio, RiskEngine, adapters, journals, metrics, kill switch):
+```bash
+python -m trading.cli preflight
+```
+
+### 2.2 Evaluate Pre-Monday Readiness
+```bash
+python -m trading.cli monday-readiness
+```
+
+### 2.3 Read-Only Live Broker Probe
+Verify live broker account status, cash, buying power, and trading permissions with ZERO orders placed:
+```bash
+python -m trading.cli broker verify-live
+```
+
+### 2.4 Run 10-Dimension Safety Health Audit
+```bash
+python -m trading.cli health
 ```
 
 ---
 
-## 2. Emergency Kill Switch Operations
+## 3. Emergency Kill Switch Operations
 
-### 2.1 Engage Global Kill Switch (Immediate Halt)
+### 3.1 Engage Global Kill Switch (Immediate Halt)
 To immediately block all new order generation:
 ```bash
 python -m trading.cli kill-switch on
 ```
 Or set `EMERGENCY_HALT=true` in `.env`.
 
-*Effect*: Prevents new orders immediately across both paper and live modes. Read-only market data and reconciliation remain operational.
+*Effect*: Prevents new orders immediately across local paper, broker paper, and live modes. Read-only market data and reconciliation remain operational.
 
-### 2.2 Disengage Kill Switch (Resume Normal Operations)
+### 3.2 Disengage Kill Switch (Resume Normal Operations)
 ```bash
 python -m trading.cli kill-switch off
 ```
 
 ---
 
-## 3. Live Trading Operations (Strict Protocol)
+## 4. Live Trading Operations (Strict Protocol)
 
-### 3.1 Prerequisites for Live Mode
+### 4.1 Prerequisites for Live Mode
 1. Active, funded US broker account (Alpaca / IBKR).
 2. Live credentials configured in `.env`:
    ```bash
@@ -70,9 +88,9 @@ python -m trading.cli kill-switch off
 3. Verified market session is open (`REGULAR`).
 4. Risk limits verified and approved.
 
-### 3.2 Request US Live Trading Mode
+### 4.2 Request US Live Trading Mode
 ```bash
-python -m trading.cli run --market US --mode live
+python -m trading.cli run --mode live
 ```
 The CLI will display the live warning banner:
 ```
@@ -83,18 +101,19 @@ Type 'YES_EXECUTE_LIVE_TRADES' to confirm live order submission:
 ```
 Type `YES_EXECUTE_LIVE_TRADES` to proceed. If any guard fails, execution halts automatically.
 
+> [!CAUTION]
+> `--force-open` is strictly rejected in LIVE mode and will raise an immediate fatal safety exception (`FORCE_OPEN_VIOLATION`). In PAPER mode, `--force-open` is only permitted when running in a designated testing environment (`TESTING=true` or `ALLOW_FORCE_OPEN=true`).
+
 ---
 
-## 4. Reconciliation & Failure Recovery
+## 5. Portfolio & Reconciliation
 
-### 4.1 Run Startup Reconciliation
+### 5.1 Inspect Current Portfolio
+```bash
+python -m trading.cli portfolio
+```
+
+### 5.2 Reconcile State with Broker
 ```bash
 python -m trading.cli reconcile
 ```
-Compares local order state with the broker ledger, verifying cash, positions, and open orders.
-
-### 4.2 Recovery from Network Interruption / Ambiguous Responses
-1. Do NOT manually force repeat orders.
-2. The runtime tracks orders by deterministic `client_order_id`.
-3. Run `python -m trading.cli reconcile` to pull the latest order status from the broker.
-4. If discrepancies persist, engage the kill switch: `python -m trading.cli kill-switch on`.

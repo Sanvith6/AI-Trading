@@ -111,6 +111,13 @@ class PaperExecutionAdapter(ExecutionAdapter):
     def get_positions(self) -> Dict[str, Dict[str, Any]]:
         return self.broker.get_positions()
 
+    def get_execution_type(self) -> str:
+        return "PAPER"
+
+    @property
+    def journal_path(self) -> Path:
+        return self.journal_file
+
     def reconcile(self) -> Dict[str, Any]:
         """Paper reconciliation verifies local ledger integrity."""
         account = self.broker.get_account()

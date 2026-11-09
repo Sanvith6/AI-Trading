@@ -2,50 +2,55 @@
 
 ## 1. System Overview
 
-The **US Market Trading Runtime** is a unified, institutional-grade equity decision and execution system. It shares a single, deterministic intelligence pipeline across both **Paper Trading (`US_PAPER`)** and **Live Trading (`US_LIVE`)**.
+The **US Market Trading Runtime** is a unified, institutional-grade equity decision and execution system. It shares a single, deterministic intelligence pipeline across three distinct operational modes:
+1. **`US_PAPER_LOCAL` (`TRADING_MODE=paper_local`)**: Fully air-gapped simulated execution on an in-process local ledger (`trading/paper_journal/`). Zero external network calls.
+2. **`US_PAPER_BROKER` (`TRADING_MODE=paper_broker`)**: Official Alpaca Paper Broker API integration (`https://paper-api.alpaca.markets`) with isolated journal (`trading/paper_broker_journal/`), complete order lifecycle management, and offline simulation fallback.
+3. **`US_LIVE` (`TRADING_MODE=live`)**: Production Alpaca/IBKR live broker execution (`https://api.alpaca.markets`) guarded by a 15-condition fail-closed safety gate and interactive operator authorization (`trading/live_journal/`).
 
 Only the **Execution Adapter** changes between modes:
-- **`US_PAPER`**: Consumes real-time US market data, runs the shared quantitative decision pipeline, simulates fills with institutional friction, and updates an isolated local ledger (`trading/paper_journal/`). **Structurally air-gapped from live broker networks.**
-- **`US_LIVE`**: Consumes the identical real-time US market data, runs the identical decision pipeline, enforces a 15-condition security gate, and routes orders to verified live US broker endpoints (`trading/live_journal/`).
 
 ```
-                              Real US Market Data (NYSE/NASDAQ)
-                                             │
-                                             ▼
-                             Point-in-Time Feature Engine (Zero Lookahead)
-                                             │
-                                             ▼
-                             12 Quantitative Alpha Families ([-1.0, +1.0])
-                                             │
-                                             ▼
-                             ML Meta-Model & Disagreement Gate
-                                             │
-                                             ▼
-                             Authoritative RegimeEngine Multi-State Detector
-                                             │
-                                             ▼
-                             Candidate Ranking & Top-N Selection
-                                             │
-                                             ▼
-                        Laya Financial Specialist V2 (Secondary Intelligence)
-                          (SHADOW: Observes & Logs | ADVISORY: Gating)
-                                             │
-                                             ▼
-                             Portfolio Construction & Capacity Engine
-                                             │
-                                             ▼
-                             Immutable RiskEngine (Hard Gating Boundary)
-                                             │
-                     ┌───────────────────────┴───────────────────────┐
-                     ▼                                               ▼
-         [TRADING_MODE=paper]                            [TRADING_MODE=live]
-        PaperExecutionAdapter                           LiveExecutionAdapter
-                 │                                               │
-     Local Institutional Simulator                     15-Condition Security Gate
-                 │                                               │
-         Paper Cash Ledger                             Verified Live Broker API
-                 │                                               │
-     trading/paper_journal/                           trading/live_journal/
+                               Real US Market Data (NYSE/NASDAQ)
+                                              │
+                                              ▼
+                              Point-in-Time Feature Engine (Zero Lookahead)
+                                              │
+                                              ▼
+                              12 Quantitative Alpha Families ([-1.0, +1.0])
+                                              │
+                                              ▼
+                              ML Meta-Model & Disagreement Gate
+                                              │
+                                              ▼
+                              Authoritative RegimeEngine Multi-State Detector
+                                              │
+                                              ▼
+                              Candidate Ranking & Top-N Selection
+                                              │
+                                              ▼
+                         Laya Financial Specialist V2 (Secondary Intelligence)
+                           (SHADOW: Observes & Logs | ADVISORY: Gating)
+                                              │
+                                              ▼
+                              Portfolio Construction & Capacity Engine
+                                              │
+                                              ▼
+                              Immutable RiskEngine (Hard Gating Boundary)
+                                              │
+                                              ▼
+                              Formal OrderIntent Abstraction
+                                              │
+                      ┌───────────────────────┼───────────────────────┐
+                      ▼                       ▼                       ▼
+           [TRADING_MODE=paper_local] [TRADING_MODE=paper_broker] [TRADING_MODE=live]
+              PaperExecutionAdapter     BrokerPaperExecutionAdapter  LiveExecutionAdapter
+                      │                       │                       │
+           In-Process Air-Gapped        Alpaca Paper API         15-Condition Safety Gate
+              Local Ledger           (paper-api.alpaca.markets)               │
+                      │                       │                  Verified Live Broker API
+                      │                       │                   (api.alpaca.markets)
+                      ▼                       ▼                       ▼
+            trading/paper_journal/      trading/paper_broker_journal/  trading/live_journal/
 ```
 
 ---
@@ -57,33 +62,50 @@ Configuration is managed via explicit, strongly typed enums in `trading/runtime/
 | Parameter | Type / Enum | Default | Description |
 | :--- | :--- | :--- | :--- |
 | `MARKET` | `MarketType.US` | `US` | Strict market boundary. |
-| `TRADING_MODE` | `TradingMode` | `paper` | `paper` or `live`. Never defaults to live. |
+| `TRADING_MODE` | `TradingMode` | `paper_local` | `paper_local`, `paper_broker`, or `live`. Never defaults to live. |
 | `DATA_MODE` | `DataMode` | `live` | `live`, `historical`, or `replay`. |
 | `LAYA_MODEL` | `str` | `laya-financial-us-v2` | Frozen specialist checkpoint. |
 | `LAYA_MODE` | `LayaMode` | `shadow` | `shadow` (observe/log) or `advisory` (filtering). |
-| `BROKER_PROVIDER` | `BrokerProvider` | `paper` | `paper`, `alpaca`, `ibkr`. |
+| `BROKER_PROVIDER` | `BrokerProvider` | `local` | `local`, `alpaca`, `ibkr`, `mock_live`. |
+| `ALPACA_ENV` | `AlpacaEnv` | `paper` | `paper` or `live`. Strictly matched against mode. |
 | `LIVE_TRADING_ENABLED`| `bool` | `false` | Must be explicitly unlocked for live. |
 | `LIVE_CONFIRMATION_REQUIRED` | `bool` | `true` | Requires confirmation token at runtime. |
 
-### Hard Paper/Live Air Gap
+### Strict Endpoint & Credential Separation
 - `PaperExecutionAdapter` connects solely to `PaperBroker`. It has **zero broker client code or live network endpoints**.
+- `BrokerPaperExecutionAdapter` verifies that `base_url` contains `paper` or `sandbox`. Any live URL or credential injection fails closed immediately.
 - `LiveExecutionAdapter` is guarded by `LiveTradingGuard.verify_live_eligibility()`. If `LIVE_TRADING_ENABLED` is false, or if broker credentials point to paper/sandbox, execution is unconditionally blocked.
 
 ---
 
-## 3. Decision Invariance Guarantee
+## 3. OrderIntent Abstraction & Parity
 
-The decision engine is 100% shared:
-Given the same market quote, feature snapshot, and random seed:
-1. Candidate list is identical.
-2. Alpha scores are identical.
-3. ML Meta-model predictions are identical.
-4. RegimeEngine state is identical.
-5. Laya Specialist V2 probabilities are identical.
-6. Portfolio position sizing is identical.
-7. RiskEngine approval status is identical.
+Before any order is sent to an execution adapter, the decision pipeline constructs an immutable, deterministic `OrderIntent`:
 
-Only the execution adapter differs.
+```python
+@dataclass
+class OrderIntent:
+    symbol: str
+    side: OrderSide
+    quantity: int
+    limit_price: Optional[float]
+    order_type: OrderType
+    strategy_id: str
+    decision_timestamp: str
+    state_hash: str
+    client_order_id: str = field(default_factory=generate_client_order_id)
+    target_mode: str
+    risk_approved: bool
+```
+
+### Deterministic Invariance
+Given identical market state:
+1. `CandidateDecision` candidate ordering is identical across all 3 modes.
+2. Alpha scores and ML confidence are identical.
+3. RegimeEngine state is identical.
+4. Top-N selection is identical.
+5. RiskEngine validations are identical.
+6. `OrderIntent` parameters (`symbol`, `side`, `quantity`, `limit_price`, `state_hash`) are identical.
 
 ---
 
@@ -98,22 +120,32 @@ Before any live order can be created, `LiveTradingGuard` enforces all 15 conditi
 6. Global Kill Switch inactive
 7. Market session open (`SessionStatus.REGULAR`)
 8. Broker account environment verified as genuinely `live`
-9. RiskEngine healthy and daily loss limit not breached
-10. Data freshness verified (`data_age_seconds <= 60`)
-11. Point-in-Time feature causality verified
-12. Laya model checkpoint healthy
-13. Portfolio cash floor respected
-14. Max concurrent positions respected
-15. Session manifest matched
-
-If **ANY** check fails, live trading fails closed.
+9. Broker account status is `ACTIVE`
+10. Broker URL does not point to paper/sandbox
+11. Point-in-time causality verified (zero future leakage)
+12. Data freshness verified (within configured freshness window)
+13. RiskEngine healthy and emergency halt inactive
+14. Laya operating in shadow isolation (no broker access)
+15. Internal positions reconciled with broker
 
 ---
 
-## 5. Idempotent Order Execution & Duplicate Protection
+## 5. CLI Verification Commands
 
-Every live order is assigned a deterministic `client_order_id`:
-$$\text{client\_order\_id} = \text{SHA256}(\text{strategy} \parallel \text{symbol} \parallel \text{decision\_timestamp} \parallel \text{state\_hash})[:16]$$
+```bash
+# 1. Full 15-subsystem startup preflight:
+python -m trading.cli preflight
 
-- Prevents duplicate order submission across restarts, network retries, or broker timeouts.
-- If a broker response is ambiguous (HTTP timeout or socket drop), the adapter enters `OrderStatus.UNKNOWN` and executes an immediate reconciliation query by `client_order_id` rather than blindly resubmitting.
+# 2. Pre-Monday operational readiness check:
+python -m trading.cli monday-readiness
+
+# 3. Read-only live broker connectivity & permissions probe:
+python -m trading.cli broker verify-live
+
+# 4. Dry-run execution cycle (zero broker orders transmitted):
+python -m trading.cli run --mode paper_broker --dry-run
+python -m trading.cli run --mode live --dry-run
+
+# 5. Automated 10-dimension safety health audit:
+python -m trading.cli health
+```

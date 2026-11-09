@@ -82,13 +82,24 @@ class LiveTradingGuard:
         if not c4:
             blocked.append("LIVE_TRADING_ENABLED is False. Accidental live trading blocked.")
 
-        # 5. Live confirmation token check
+        # 5. Live confirmation token check (must be supplied externally, never a hardcoded secret)
         c5 = True
         if config.live_confirmation_required:
-            c5 = bool(config.live_confirmation_token and config.live_confirmation_token == "AUTHORIZE_LIVE_US_TRADING")
+            tok = str(config.live_confirmation_token or "").strip()
+            is_placeholder = tok.lower() in (
+                "",
+                "<set_externally>",
+                "your_live_token_here",
+                "your_token_here",
+                "authorize_live_us_trading",
+                "changeme",
+                "none",
+                "null",
+            )
+            c5 = bool(tok and len(tok) >= 8 and not is_placeholder)
         checks["live_confirmation_token_valid"] = c5
         if not c5:
-            blocked.append("LIVE_CONFIRMATION_REQUIRED is True, but valid confirmation token was not provided.")
+            blocked.append("LIVE_CONFIRMATION_REQUIRED is True, but a valid external confirmation token was not provided.")
 
         # 6. Global Kill Switch must NOT be engaged
         ks = kill_switch or GlobalKillSwitch.get_instance()

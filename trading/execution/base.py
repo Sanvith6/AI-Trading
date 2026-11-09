@@ -7,7 +7,8 @@ from typing import Dict, Any, List, Optional
 from dataclasses import dataclass
 import time
 
-from trading.brokers.interface import OrderRequest, OrderResponse, OrderSide, OrderType, OrderStatus
+from trading.brokers.interface import OrderRequest, OrderResponse, OrderSide, OrderType, OrderStatus, OrderIntent
+from pathlib import Path
 
 
 @dataclass
@@ -31,12 +32,41 @@ class ExecutionResult:
 
 
 class ExecutionAdapter(ABC):
+
     """Abstract execution adapter."""
 
     @abstractmethod
     def execute_order(self, order_request: OrderRequest) -> ExecutionResult:
         """Executes trade order."""
         pass
+
+    def execute_intent(self, intent: OrderIntent, **kwargs) -> ExecutionResult:
+        """Executes order directly from formal OrderIntent."""
+        return self.execute_order(intent.to_order_request(), **kwargs)
+
+    def execute_sequential_liquidation(
+        self,
+        symbol: str,
+        total_quantity: int,
+        price: float,
+        max_order_value: float = 5000.0,
+        strategy_id: str = "US_QUANT_LIQUIDATION",
+        order_type: OrderType = OrderType.MARKET,
+        state_hash: str = "",
+    ):
+        """Executes large liquidation using sequential fill-aware chunking."""
+        from .sequential_liquidation import SequentialChunkLiquidator
+        liquidator = SequentialChunkLiquidator(max_order_value=max_order_value)
+        return liquidator.liquidate(
+            adapter=self,
+            symbol=symbol,
+            total_quantity=total_quantity,
+            price=price,
+            strategy_id=strategy_id,
+            order_type=order_type,
+            state_hash=state_hash,
+        )
+
 
     @abstractmethod
     def get_portfolio(self) -> Dict[str, Any]:
@@ -46,4 +76,15 @@ class ExecutionAdapter(ABC):
     @abstractmethod
     def reconcile(self) -> Dict[str, Any]:
         """Reconciles internal state with underlying ledger/broker."""
+        pass
+
+    @abstractmethod
+    def get_execution_type(self) -> str:
+        """Returns execution type (e.g. 'PAPER' or 'LIVE')."""
+        pass
+
+    @property
+    @abstractmethod
+    def journal_path(self) -> Path:
+        """Returns path to the audit journal parquet file."""
         pass

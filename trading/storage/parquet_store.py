@@ -12,7 +12,7 @@ import json
 import logging
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Union
-from datetime import datetime
+from datetime import datetime, timezone
 import pandas as pd
 
 logger = logging.getLogger(__name__)
@@ -84,7 +84,7 @@ class ParquetStore:
             "file_path": str(target_file),
             "size_bytes": file_bytes,
             "sha256": sha256,
-            "written_at": datetime.utcnow().isoformat(),
+            "written_at": datetime.now(timezone.utc).isoformat(),
         }
 
         # Write sidecar metadata json
@@ -151,7 +151,7 @@ class ParquetStore:
             "feature_version": feature_version,
             "shape": list(df.shape),
             "columns": list(df.columns),
-            "written_at": datetime.utcnow().isoformat(),
+            "written_at": datetime.now(timezone.utc).isoformat(),
             "sha256": self._compute_file_hash(target_file),
             **(metadata or {}),
         }

@@ -1,0 +1,811 @@
+{
+  "timestamp": "2026-09-26T19:17:00.684525",
+  "ablation_study": {
+    "A_Mean_CVaR_Only": {
+      "selected_portfolio": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.05
+      },
+      "positions_count": 3,
+      "expected_return": 0.00587,
+      "portfolio_volatility": 0.0272,
+      "covariance_risk": 0.00074,
+      "cvar": 0.0522,
+      "turnover": 0.15,
+      "transaction_cost_dollars": 8.0,
+      "objective_value": 0.004517,
+      "status": "OPTIMAL"
+    },
+    "B_Plus_Shrinkage_Cov": {
+      "selected_portfolio": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.05
+      },
+      "positions_count": 3,
+      "expected_return": 0.00587,
+      "portfolio_volatility": 0.0265,
+      "covariance_risk": 0.000703,
+      "cvar": 0.0522,
+      "turnover": 0.15,
+      "transaction_cost_dollars": 8.0,
+      "objective_value": 0.004653,
+      "status": "OPTIMAL"
+    },
+    "C_Plus_Robust_Return": {
+      "selected_portfolio": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.05
+      },
+      "positions_count": 3,
+      "expected_return": 0.004,
+      "portfolio_volatility": 0.0265,
+      "covariance_risk": 0.000703,
+      "cvar": 0.0522,
+      "turnover": 0.15,
+      "transaction_cost_dollars": 8.0,
+      "objective_value": 0.002704,
+      "status": "OPTIMAL"
+    },
+    "D_Plus_Vol_Normalization": {
+      "selected_portfolio": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.05
+      },
+      "positions_count": 3,
+      "expected_return": 0.004,
+      "portfolio_volatility": 0.0265,
+      "covariance_risk": 0.000703,
+      "cvar": 0.0522,
+      "turnover": 0.15,
+      "transaction_cost_dollars": 8.0,
+      "objective_value": 0.002704,
+      "status": "OPTIMAL"
+    },
+    "E_Plus_Kelly_Ceiling": {
+      "selected_portfolio": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339
+      },
+      "positions_count": 3,
+      "expected_return": 0.0036,
+      "portfolio_volatility": 0.0215,
+      "covariance_risk": 0.000461,
+      "cvar": 0.0458,
+      "turnover": 0.1339,
+      "transaction_cost_dollars": 6.71,
+      "objective_value": 0.002507,
+      "status": "OPTIMAL"
+    },
+    "F_Plus_CVaR_Penalty": {
+      "selected_portfolio": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339
+      },
+      "positions_count": 3,
+      "expected_return": 0.0036,
+      "portfolio_volatility": 0.0215,
+      "covariance_risk": 0.000461,
+      "cvar": 0.0458,
+      "turnover": 0.1339,
+      "transaction_cost_dollars": 6.71,
+      "objective_value": 0.002507,
+      "status": "OPTIMAL"
+    },
+    "G_Plus_Transaction_Costs": {
+      "selected_portfolio": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339
+      },
+      "positions_count": 3,
+      "expected_return": 0.0036,
+      "portfolio_volatility": 0.0215,
+      "covariance_risk": 0.000461,
+      "cvar": 0.0458,
+      "turnover": 0.1339,
+      "transaction_cost_dollars": 6.71,
+      "objective_value": 0.002439,
+      "status": "OPTIMAL"
+    },
+    "H_Plus_Turnover_Penalty": {
+      "selected_portfolio": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339
+      },
+      "positions_count": 3,
+      "expected_return": 0.0036,
+      "portfolio_volatility": 0.0215,
+      "covariance_risk": 0.000461,
+      "cvar": 0.0458,
+      "turnover": 0.0839,
+      "transaction_cost_dollars": 6.71,
+      "objective_value": 0.002272,
+      "status": "OPTIMAL"
+    },
+    "I_Full_Hybrid": {
+      "selected_portfolio": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339
+      },
+      "positions_count": 3,
+      "expected_return": 0.0036,
+      "portfolio_volatility": 0.0215,
+      "covariance_risk": 0.000461,
+      "cvar": 0.0458,
+      "turnover": 0.0839,
+      "transaction_cost_dollars": 6.71,
+      "objective_value": 0.002272,
+      "status": "OPTIMAL"
+    }
+  },
+  "controlled_component_ablations": {
+    "Without_CVaR": {
+      "component_active": true,
+      "subset_changed": false,
+      "portfolio_weight_changed": false,
+      "max_weight_delta": 0.0,
+      "objective_delta": -0.000917,
+      "volatility_delta": 0.0,
+      "cvar_delta": 0.0,
+      "classification": "OBJECTIVE_TERM_ACTIVE",
+      "hybrid_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "ablated_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "hybrid_weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339,
+        "AMZN": 0.0,
+        "META": 0.0
+      },
+      "ablated_weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339,
+        "AMZN": 0.0,
+        "META": 0.0
+      }
+    },
+    "Without_Transaction_Cost": {
+      "component_active": true,
+      "subset_changed": false,
+      "portfolio_weight_changed": false,
+      "max_weight_delta": 0.0,
+      "objective_delta": -6.7e-05,
+      "volatility_delta": 0.0,
+      "cvar_delta": 0.0,
+      "classification": "OBJECTIVE_TERM_ACTIVE",
+      "hybrid_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "ablated_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "hybrid_weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339,
+        "AMZN": 0.0,
+        "META": 0.0
+      },
+      "ablated_weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339,
+        "AMZN": 0.0,
+        "META": 0.0
+      }
+    },
+    "Without_Turnover_Penalty": {
+      "component_active": true,
+      "subset_changed": false,
+      "portfolio_weight_changed": false,
+      "max_weight_delta": 0.0,
+      "objective_delta": -0.000167,
+      "volatility_delta": 0.0,
+      "cvar_delta": 0.0,
+      "classification": "OBJECTIVE_TERM_ACTIVE",
+      "hybrid_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "ablated_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "hybrid_weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339,
+        "AMZN": 0.0,
+        "META": 0.0
+      },
+      "ablated_weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339,
+        "AMZN": 0.0,
+        "META": 0.0
+      }
+    },
+    "Without_Uncertainty_Haircut": {
+      "component_active": true,
+      "subset_changed": false,
+      "portfolio_weight_changed": true,
+      "max_weight_delta": 0.0161,
+      "objective_delta": -0.002101,
+      "volatility_delta": -0.005,
+      "cvar_delta": -0.0064,
+      "classification": "OBJECTIVE_TERM_DECISIONAL",
+      "hybrid_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "ablated_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "hybrid_weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339,
+        "AMZN": 0.0,
+        "META": 0.0
+      },
+      "ablated_weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.05,
+        "AMZN": 0.0,
+        "META": 0.0
+      }
+    },
+    "Without_Kelly_Ceiling": {
+      "component_active": true,
+      "subset_changed": false,
+      "portfolio_weight_changed": true,
+      "max_weight_delta": 0.0161,
+      "objective_delta": -0.000152,
+      "volatility_delta": -0.005,
+      "cvar_delta": -0.0064,
+      "classification": "OBJECTIVE_TERM_DECISIONAL",
+      "hybrid_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "ablated_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "hybrid_weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0339,
+        "AMZN": 0.0,
+        "META": 0.0
+      },
+      "ablated_weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.05,
+        "AMZN": 0.0,
+        "META": 0.0
+      }
+    }
+  },
+  "zero_trade_suite": {
+    "Case_A_Positive_Edge": {
+      "status": "OPTIMAL",
+      "positions": 2,
+      "zero_trade": false
+    },
+    "Case_B_Zero_Edge": {
+      "status": "NO_TRADE",
+      "positions": 0,
+      "zero_trade": true
+    },
+    "Case_C_Negative_Robust_Edge": {
+      "status": "NO_TRADE",
+      "positions": 0,
+      "zero_trade": true
+    },
+    "Case_D_High_Uncertainty": {
+      "status": "NO_TRADE",
+      "positions": 0,
+      "zero_trade": true
+    },
+    "Case_E_Cost_Exceeds_Edge": {
+      "status": "NO_TRADE",
+      "positions": 0,
+      "zero_trade": true
+    },
+    "Case_F_Extreme_Volatility": {
+      "status": "ZERO_ALLOCATION_INVALID_VOLATILITIES",
+      "positions": 0,
+      "zero_trade": true
+    },
+    "Case_G_Invalid_Forecast": {
+      "status": "NO_TRADE",
+      "positions": 0,
+      "zero_trade": true
+    },
+    "Case_H_Unstable_Cash_Covariance": {
+      "status": "ZERO_ALLOCATION_INSUFFICIENT_CASH_RESERVE",
+      "positions": 0,
+      "zero_trade": true
+    }
+  },
+  "walk_forward_benchmark": {
+    "1_Existing_Kelly": {
+      "cagr_pct": 1.24,
+      "ann_vol_pct": 3.82,
+      "sharpe_ratio": 0.34,
+      "sortino_ratio": 0.58,
+      "calmar_ratio": 0.3,
+      "max_drawdown_pct": 4.16,
+      "cvar_95_pct": 6.95,
+      "worst_day_pct": -0.78,
+      "turnover": 0.158,
+      "avg_positions": 3.0,
+      "total_trades": 11,
+      "total_friction_dollars": 76.0
+    },
+    "2_Fixed_Fractional": {
+      "cagr_pct": 1.24,
+      "ann_vol_pct": 3.82,
+      "sharpe_ratio": 0.34,
+      "sortino_ratio": 0.58,
+      "calmar_ratio": 0.3,
+      "max_drawdown_pct": 4.16,
+      "cvar_95_pct": 6.95,
+      "worst_day_pct": -0.78,
+      "turnover": 0.158,
+      "avg_positions": 3.0,
+      "total_trades": 11,
+      "total_friction_dollars": 76.0
+    },
+    "3_Volatility_Target": {
+      "cagr_pct": 1.04,
+      "ann_vol_pct": 3.52,
+      "sharpe_ratio": 0.31,
+      "sortino_ratio": 0.53,
+      "calmar_ratio": 0.27,
+      "max_drawdown_pct": 3.88,
+      "cvar_95_pct": 6.41,
+      "worst_day_pct": -0.71,
+      "turnover": 0.15,
+      "avg_positions": 3.0,
+      "total_trades": 14,
+      "total_friction_dollars": 72.0
+    },
+    "4_Fractional_Kelly": {
+      "cagr_pct": 1.24,
+      "ann_vol_pct": 3.82,
+      "sharpe_ratio": 0.34,
+      "sortino_ratio": 0.58,
+      "calmar_ratio": 0.3,
+      "max_drawdown_pct": 4.16,
+      "cvar_95_pct": 6.95,
+      "worst_day_pct": -0.78,
+      "turnover": 0.158,
+      "avg_positions": 3.0,
+      "total_trades": 11,
+      "total_friction_dollars": 76.0
+    },
+    "5_Risk_Constrained_Kelly": {
+      "cagr_pct": 1.24,
+      "ann_vol_pct": 3.82,
+      "sharpe_ratio": 0.34,
+      "sortino_ratio": 0.58,
+      "calmar_ratio": 0.3,
+      "max_drawdown_pct": 4.16,
+      "cvar_95_pct": 6.95,
+      "worst_day_pct": -0.78,
+      "turnover": 0.158,
+      "avg_positions": 3.0,
+      "total_trades": 11,
+      "total_friction_dollars": 76.0
+    },
+    "6_Risk_Parity_ERC": {
+      "cagr_pct": 1.04,
+      "ann_vol_pct": 3.52,
+      "sharpe_ratio": 0.31,
+      "sortino_ratio": 0.53,
+      "calmar_ratio": 0.27,
+      "max_drawdown_pct": 3.88,
+      "cvar_95_pct": 6.41,
+      "worst_day_pct": -0.71,
+      "turnover": 0.15,
+      "avg_positions": 3.0,
+      "total_trades": 14,
+      "total_friction_dollars": 72.0
+    },
+    "7_Standard_Mean_CVaR": {
+      "cagr_pct": -0.05,
+      "ann_vol_pct": 3.88,
+      "sharpe_ratio": 0.01,
+      "sortino_ratio": 0.01,
+      "calmar_ratio": -0.01,
+      "max_drawdown_pct": 5.08,
+      "cvar_95_pct": 7.14,
+      "worst_day_pct": -0.78,
+      "turnover": 0.158,
+      "avg_positions": 3.0,
+      "total_trades": 11,
+      "total_friction_dollars": 76.0
+    },
+    "8_Robust_Mean_CVaR": {
+      "cagr_pct": 0.27,
+      "ann_vol_pct": 3.82,
+      "sharpe_ratio": 0.09,
+      "sortino_ratio": 0.15,
+      "calmar_ratio": 0.06,
+      "max_drawdown_pct": 4.45,
+      "cvar_95_pct": 7.14,
+      "worst_day_pct": -0.78,
+      "turnover": 0.175,
+      "avg_positions": 3.0,
+      "total_trades": 12,
+      "total_friction_dollars": 84.0
+    },
+    "9_New_Hybrid": {
+      "cagr_pct": 0.23,
+      "ann_vol_pct": 3.78,
+      "sharpe_ratio": 0.08,
+      "sortino_ratio": 0.13,
+      "calmar_ratio": 0.05,
+      "max_drawdown_pct": 4.45,
+      "cvar_95_pct": 7.04,
+      "worst_day_pct": -0.78,
+      "turnover": 0.174,
+      "avg_positions": 3.0,
+      "total_trades": 13,
+      "total_friction_dollars": 83.34
+    }
+  },
+  "portfolio_behavior_table": {
+    "avg_positions": 3.0,
+    "median_positions": 3.0,
+    "pct_0_positions": 0.0,
+    "pct_1_position": 0.0,
+    "pct_2_positions": 0.0,
+    "pct_3_positions": 100.0,
+    "mean_order_notional": 4610.0,
+    "median_order_notional": 5000.0,
+    "p25_order_notional": 5000.0,
+    "p75_order_notional": 5000.0,
+    "p95_order_notional": 5000.0,
+    "max_order_notional": 5000.0,
+    "mean_exposure_pct": 14.81,
+    "median_exposure_pct": 15.0,
+    "p95_exposure_pct": 15.0,
+    "max_exposure_pct": 15.0,
+    "no_trade_rate_pct": 0.0,
+    "binding_frequencies": {
+      "cardinality_pct": 100.0,
+      "order_cap_pct": 100.0,
+      "kelly_pct": 50.0,
+      "exposure_pct": 0.0,
+      "sector_pct": 0.0,
+      "cash_pct": 0.0
+    }
+  },
+  "stress_testing": {
+    "Baseline": {
+      "selected_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0406
+      },
+      "gross_exposure": 0.1406,
+      "portfolio_variance": 0.000563,
+      "portfolio_volatility": 0.0237,
+      "portfolio_cvar": 0.0461,
+      "transaction_cost_drag": 0.0001,
+      "turnover": 0.1406,
+      "objective_value": 0.00179,
+      "min_eigenvalue": 0.025846,
+      "cost_multiplier": 1.0,
+      "cross_correlation": 0.25,
+      "robust_return_term": 0.003252,
+      "variance_penalty_term": 0.000141,
+      "cvar_penalty_term": 0.000922,
+      "cost_penalty_term": 0.000112,
+      "turnover_penalty_term": 0.000281,
+      "status": "OPTIMAL"
+    },
+    "Alpha_Decay_10pct": {
+      "selected_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0275
+      },
+      "gross_exposure": 0.1275,
+      "portfolio_variance": 0.00041,
+      "portfolio_volatility": 0.0202,
+      "portfolio_cvar": 0.0385,
+      "transaction_cost_drag": 0.0001,
+      "turnover": 0.1275,
+      "objective_value": 0.001333,
+      "min_eigenvalue": 0.025846,
+      "cost_multiplier": 1.0,
+      "cross_correlation": 0.25,
+      "robust_return_term": 0.002569,
+      "variance_penalty_term": 0.000103,
+      "cvar_penalty_term": 0.00077,
+      "cost_penalty_term": 0.000102,
+      "turnover_penalty_term": 0.000255,
+      "status": "OPTIMAL"
+    },
+    "Alpha_Decay_20pct": {
+      "selected_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.012
+      },
+      "gross_exposure": 0.112,
+      "portfolio_variance": 0.000284,
+      "portfolio_volatility": 0.0168,
+      "portfolio_cvar": 0.0316,
+      "transaction_cost_drag": 0.0001,
+      "turnover": 0.112,
+      "objective_value": 0.000938,
+      "min_eigenvalue": 0.025846,
+      "cost_multiplier": 1.0,
+      "cross_correlation": 0.25,
+      "robust_return_term": 0.001959,
+      "variance_penalty_term": 7.1e-05,
+      "cvar_penalty_term": 0.000633,
+      "cost_penalty_term": 9e-05,
+      "turnover_penalty_term": 0.000224,
+      "status": "OPTIMAL"
+    },
+    "Alpha_Decay_30pct": {
+      "selected_subset": [
+        "AAPL",
+        "MSFT"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05
+      },
+      "gross_exposure": 0.1,
+      "portfolio_variance": 0.000226,
+      "portfolio_volatility": 0.015,
+      "portfolio_cvar": 0.0282,
+      "transaction_cost_drag": 0.0001,
+      "turnover": 0.1,
+      "objective_value": 0.000595,
+      "min_eigenvalue": 0.025846,
+      "cost_multiplier": 1.0,
+      "cross_correlation": 0.25,
+      "robust_return_term": 0.001499,
+      "variance_penalty_term": 5.7e-05,
+      "cvar_penalty_term": 0.000564,
+      "cost_penalty_term": 8e-05,
+      "turnover_penalty_term": 0.0002,
+      "status": "OPTIMAL"
+    },
+    "Volatility_1.5x": {
+      "selected_subset": [
+        "AAPL",
+        "MSFT"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.0413
+      },
+      "gross_exposure": 0.0913,
+      "portfolio_variance": 0.00042,
+      "portfolio_volatility": 0.0205,
+      "portfolio_cvar": 0.0384,
+      "transaction_cost_drag": 0.0001,
+      "turnover": 0.0913,
+      "objective_value": 0.000829,
+      "min_eigenvalue": 0.058153,
+      "cost_multiplier": 1.0,
+      "cross_correlation": 0.25,
+      "robust_return_term": 0.001962,
+      "variance_penalty_term": 0.000105,
+      "cvar_penalty_term": 0.000768,
+      "cost_penalty_term": 7.3e-05,
+      "turnover_penalty_term": 0.000183,
+      "status": "OPTIMAL"
+    },
+    "Volatility_2.0x": {
+      "selected_subset": [
+        "AAPL",
+        "MSFT"
+      ],
+      "weights": {
+        "AAPL": 0.0462,
+        "MSFT": 0.0114
+      },
+      "gross_exposure": 0.0576,
+      "portfolio_variance": 0.000335,
+      "portfolio_volatility": 0.0183,
+      "portfolio_cvar": 0.0353,
+      "transaction_cost_drag": 0.0,
+      "turnover": 0.0576,
+      "objective_value": 0.000271,
+      "min_eigenvalue": 0.103382,
+      "cost_multiplier": 1.0,
+      "cross_correlation": 0.25,
+      "robust_return_term": 0.001229,
+      "variance_penalty_term": 8.4e-05,
+      "cvar_penalty_term": 0.000706,
+      "cost_penalty_term": 4.6e-05,
+      "turnover_penalty_term": 0.000115,
+      "status": "OPTIMAL"
+    },
+    "Correlation_Spike_0.8": {
+      "selected_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0155
+      },
+      "gross_exposure": 0.1155,
+      "portfolio_variance": 0.000519,
+      "portfolio_volatility": 0.0228,
+      "portfolio_cvar": 0.0479,
+      "transaction_cost_drag": 0.0001,
+      "turnover": 0.1155,
+      "objective_value": 0.001333,
+      "min_eigenvalue": 0.00696,
+      "cost_multiplier": 1.0,
+      "cross_correlation": 0.8,
+      "robust_return_term": 0.002753,
+      "variance_penalty_term": 0.00013,
+      "cvar_penalty_term": 0.000958,
+      "cost_penalty_term": 9.2e-05,
+      "turnover_penalty_term": 0.000231,
+      "status": "OPTIMAL"
+    },
+    "Cost_Spike_1.5x": {
+      "selected_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0406
+      },
+      "gross_exposure": 0.1406,
+      "portfolio_variance": 0.000563,
+      "portfolio_volatility": 0.0237,
+      "portfolio_cvar": 0.0461,
+      "transaction_cost_drag": 0.0001,
+      "turnover": 0.1406,
+      "objective_value": 0.001734,
+      "min_eigenvalue": 0.025846,
+      "cost_multiplier": 1.5,
+      "cross_correlation": 0.25,
+      "robust_return_term": 0.003252,
+      "variance_penalty_term": 0.000141,
+      "cvar_penalty_term": 0.000922,
+      "cost_penalty_term": 0.000169,
+      "turnover_penalty_term": 0.000281,
+      "status": "OPTIMAL"
+    },
+    "Cost_Spike_2.0x": {
+      "selected_subset": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "weights": {
+        "AAPL": 0.05,
+        "MSFT": 0.05,
+        "NVDA": 0.0406
+      },
+      "gross_exposure": 0.1406,
+      "portfolio_variance": 0.000563,
+      "portfolio_volatility": 0.0237,
+      "portfolio_cvar": 0.0461,
+      "transaction_cost_drag": 0.0001,
+      "turnover": 0.1406,
+      "objective_value": 0.001678,
+      "min_eigenvalue": 0.025846,
+      "cost_multiplier": 2.0,
+      "cross_correlation": 0.25,
+      "robust_return_term": 0.003252,
+      "variance_penalty_term": 0.000141,
+      "cvar_penalty_term": 0.000922,
+      "cost_penalty_term": 0.000225,
+      "turnover_penalty_term": 0.000281,
+      "status": "OPTIMAL"
+    }
+  }
+}

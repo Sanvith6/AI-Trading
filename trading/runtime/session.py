@@ -85,8 +85,21 @@ class USMarketCalendar:
         date(2027, 1, 1),   # New Year's Day
     }
 
+    # Fixed and known US market half-days (early close at 13:00 America/New_York)
+    US_HALF_DAYS: Set[date] = {
+        date(2025, 7, 3),    # Day before Independence Day
+        date(2025, 11, 28),  # Day after Thanksgiving (Black Friday)
+        date(2025, 12, 24),  # Christmas Eve
+        date(2026, 11, 27),  # Day after Thanksgiving (Black Friday)
+        date(2026, 12, 24),  # Christmas Eve
+        date(2027, 7, 2),    # Day before Independence Day (Observed)
+        date(2027, 11, 26),  # Day after Thanksgiving (Black Friday)
+        date(2027, 12, 24),  # Christmas Eve
+    }
+
     REGULAR_OPEN = dtime(9, 30)
     REGULAR_CLOSE = dtime(16, 0)
+    EARLY_CLOSE = dtime(13, 0)
     PRE_MARKET_OPEN = dtime(4, 0)
     POST_MARKET_CLOSE = dtime(20, 0)
 
@@ -98,6 +111,7 @@ class USMarketCalendar:
     ) -> MarketSessionInfo:
         """
         Determines current US market session status in America/New_York timezone.
+        Seamlessly handles EST, EDT, and half-day 13:00 early closes.
         """
         if dt is None:
             now_ny = datetime.now(cls.NY_TZ)
@@ -111,8 +125,11 @@ class USMarketCalendar:
         cur_date = now_ny.date()
         cur_time = now_ny.time()
 
+        is_half_day = cur_date in cls.US_HALF_DAYS
+        active_close_time = cls.EARLY_CLOSE if is_half_day else cls.REGULAR_CLOSE
+
         open_dt = datetime.combine(cur_date, cls.REGULAR_OPEN, tzinfo=cls.NY_TZ)
-        close_dt = datetime.combine(cur_date, cls.REGULAR_CLOSE, tzinfo=cls.NY_TZ)
+        close_dt = datetime.combine(cur_date, active_close_time, tzinfo=cls.NY_TZ)
 
         # Check Weekend
         if cur_date.weekday() >= 5:  # 5=Saturday, 6=Sunday
@@ -142,8 +159,9 @@ class USMarketCalendar:
                 reason="Market closed: US Federal/Exchange Holiday.",
             )
 
-        # Check Regular Market Hours
-        if cls.REGULAR_OPEN <= cur_time < cls.REGULAR_CLOSE:
+        # Check Regular Market Hours (accounts for 13:00 early close on half-days)
+        if cls.REGULAR_OPEN <= cur_time < active_close_time:
+            reason = "Market open: Regular trading session active (Early Close 13:00 ET)." if is_half_day else "Market open: Regular trading session active."
             return MarketSessionInfo(
                 session_date=cur_date.strftime("%Y-%m-%d"),
                 current_time=now_ny.isoformat(),
@@ -153,7 +171,7 @@ class USMarketCalendar:
                 status=SessionStatus.REGULAR,
                 is_regular_trading_open=True,
                 can_execute_orders=True,
-                reason="Market open: Regular trading session active.",
+                reason=reason,
             )
 
         # Check Pre-Market Hours

@@ -61,5 +61,320 @@
     "generation": 3,
     "contaminated": true,
     "total_accesses": 9
+  },
+  {
+    "access_id": 10,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 10
+  },
+  {
+    "access_id": 11,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 11
+  },
+  {
+    "access_id": 12,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 12
+  },
+  {
+    "access_id": 13,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 13
+  },
+  {
+    "access_id": 14,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 14
+  },
+  {
+    "access_id": 15,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 15
+  },
+  {
+    "access_id": 16,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 16
+  },
+  {
+    "access_id": 17,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 17
+  },
+  {
+    "access_id": 18,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 18
+  },
+  {
+    "access_id": 19,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 19
+  },
+  {
+    "access_id": 20,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 20
+  },
+  {
+    "access_id": 21,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 21
+  },
+  {
+    "access_id": 22,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 22
+  },
+  {
+    "access_id": 23,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 23
+  },
+  {
+    "access_id": 24,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 24
+  },
+  {
+    "access_id": 25,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 25
+  },
+  {
+    "access_id": 26,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 26
+  },
+  {
+    "access_id": 27,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 27
+  },
+  {
+    "access_id": 28,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 28
+  },
+  {
+    "access_id": 29,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 29
+  },
+  {
+    "access_id": 30,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 30
+  },
+  {
+    "access_id": 31,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 31
+  },
+  {
+    "access_id": 32,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 32
+  },
+  {
+    "access_id": 33,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 33
+  },
+  {
+    "access_id": 34,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 34
+  },
+  {
+    "access_id": 35,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 35
+  },
+  {
+    "access_id": 36,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 36
+  },
+  {
+    "access_id": 37,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 37
+  },
+  {
+    "access_id": 38,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 38
+  },
+  {
+    "access_id": 39,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 39
+  },
+  {
+    "access_id": 40,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 40
+  },
+  {
+    "access_id": 41,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 41
+  },
+  {
+    "access_id": 42,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 42
+  },
+  {
+    "access_id": 43,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 43
+  },
+  {
+    "access_id": 44,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 44
+  },
+  {
+    "access_id": 45,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 45
+  },
+  {
+    "access_id": 46,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 46
+  },
+  {
+    "access_id": 47,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 47
+  },
+  {
+    "access_id": 48,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 48
+  },
+  {
+    "access_id": 49,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 49
+  },
+  {
+    "access_id": 50,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 50
+  },
+  {
+    "access_id": 51,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 51
+  },
+  {
+    "access_id": 52,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 52
+  },
+  {
+    "access_id": 53,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 53
+  },
+  {
+    "access_id": 54,
+    "strategy_id": "STRAT_FINALIST_01",
+    "generation": 3,
+    "contaminated": true,
+    "total_accesses": 54
   }
 ]

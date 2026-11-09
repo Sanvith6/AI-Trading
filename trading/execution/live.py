@@ -194,6 +194,13 @@ class LiveExecutionAdapter(ExecutionAdapter):
     def get_positions(self) -> Dict[str, Dict[str, Any]]:
         return self.broker.get_positions()
 
+    def get_execution_type(self) -> str:
+        return "LIVE"
+
+    @property
+    def journal_path(self) -> Path:
+        return self.journal_file
+
     def reconcile(self) -> Dict[str, Any]:
         """Queries broker state and compares with local order cache."""
         account = self.broker.get_account()

@@ -21,7 +21,7 @@ NEVER FAIL OPEN.
 """
 
 from dataclasses import dataclass
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Dict, Any, Optional
 import logging
 
@@ -63,7 +63,7 @@ class LayaCircuitBreaker:
     def record_failure(self, error_message: str) -> None:
         """Records failure and trips breaker if threshold exceeded."""
         self.failure_count += 1
-        self.last_failure_time = datetime.utcnow()
+        self.last_failure_time = datetime.now(timezone.utc)
         logger.warning(f"Laya failure recorded ({self.failure_count}/{self.failure_threshold}): {error_message}")
 
         if self.failure_count >= self.failure_threshold:
@@ -76,7 +76,7 @@ class LayaCircuitBreaker:
             return True
 
         if self.state == "OPEN":
-            if self.last_failure_time and datetime.utcnow() - self.last_failure_time > timedelta(seconds=self.reset_timeout_seconds):
+            if self.last_failure_time and datetime.now(timezone.utc) - self.last_failure_time > timedelta(seconds=self.reset_timeout_seconds):
                 self.state = "HALF_OPEN"
                 logger.info("Laya Circuit Breaker transitioned to HALF_OPEN (probing single request).")
                 return True
@@ -168,7 +168,7 @@ class LayaFailSafeEngine:
             latency_ms=latency_ms,
             model_version=laya_config.model_version,
             state_hash=state_hash,
-            timestamp=datetime.utcnow().isoformat(),
+            timestamp=datetime.now(timezone.utc).isoformat(),
             is_valid=False,
             fallback_triggered=True,
             validation_error=error_msg,

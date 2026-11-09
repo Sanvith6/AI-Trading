@@ -13,7 +13,7 @@ import logging
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Union
 from dataclasses import dataclass, asdict
-from datetime import datetime
+from datetime import datetime, timezone
 import pandas as pd
 
 logger = logging.getLogger(__name__)
@@ -115,7 +115,7 @@ class DatasetRegistry:
             version=version,
             market=market.upper(),
             source=source,
-            created_at=datetime.utcnow().isoformat(),
+            created_at=datetime.now(timezone.utc).isoformat(),
             date_range={"start": start_date, "end": end_date},
             symbols=symbols,
             schema_version=schema_version,

@@ -26,8 +26,10 @@ class MarketType(str, Enum):
 
 
 class TradingMode(str, Enum):
-    PAPER = "paper"
+    PAPER_LOCAL = "paper_local"
+    PAPER_BROKER = "paper_broker"
     LIVE = "live"
+    PAPER = "paper"  # Backward compatibility alias for paper_local
 
 
 class DataMode(str, Enum):
@@ -37,25 +39,33 @@ class DataMode(str, Enum):
 
 
 class LayaMode(str, Enum):
+    DISABLED = "disabled"
     SHADOW = "shadow"
     ADVISORY = "advisory"
 
 
 class BrokerProvider(str, Enum):
+    LOCAL = "local"
     PAPER = "paper"
     ALPACA = "alpaca"
     IBKR = "ibkr"
     MOCK_LIVE = "mock_live"
 
 
+class AlpacaEnv(str, Enum):
+    PAPER = "paper"
+    LIVE = "live"
+
+
 @dataclass(frozen=True)
 class RuntimeConfig:
     market: MarketType = MarketType.US
-    trading_mode: TradingMode = TradingMode.PAPER
+    trading_mode: TradingMode = TradingMode.PAPER_LOCAL
     data_mode: DataMode = DataMode.LIVE
     laya_model: str = "laya-financial-us-v2"
     laya_mode: LayaMode = LayaMode.SHADOW
-    broker_provider: BrokerProvider = BrokerProvider.PAPER
+    broker_provider: BrokerProvider = BrokerProvider.LOCAL
+    alpaca_env: AlpacaEnv = AlpacaEnv.PAPER
     paper_initial_capital: float = 100000.0
     live_trading_enabled: bool = False
     live_confirmation_required: bool = True
@@ -66,6 +76,9 @@ class RuntimeConfig:
     max_positions: int = 10
     stop_loss_pct: float = 2.0
     target_pct: float = 4.0
+    laya_top_n: int = 5
+    us_universe_size: int = 100
+    max_sector_exposure_percent: float = 30.0
     config_version: str = "runtime_us_v2.0"
 
     def validate(self) -> None:
@@ -78,12 +91,20 @@ class RuntimeConfig:
                 raise ValueError("LIVE trading requested but LIVE_TRADING_ENABLED is False. Execution blocked.")
             if self.data_mode != DataMode.LIVE:
                 raise ValueError(f"Illegal configuration: LIVE trading requires DATA_MODE=live, got {self.data_mode}.")
-            if self.broker_provider == BrokerProvider.PAPER:
-                raise ValueError("Illegal configuration: LIVE trading cannot use BrokerProvider.PAPER.")
+            if self.broker_provider in (BrokerProvider.PAPER, BrokerProvider.LOCAL):
+                raise ValueError(f"Illegal configuration: LIVE trading cannot use local paper broker ({self.broker_provider}).")
+            if self.broker_provider == BrokerProvider.ALPACA and self.alpaca_env != AlpacaEnv.LIVE:
+                raise ValueError(f"Illegal configuration: LIVE trading with Alpaca requires ALPACA_ENV=live, got {self.alpaca_env}.")
 
-        if self.trading_mode == TradingMode.PAPER:
-            if self.broker_provider not in (BrokerProvider.PAPER, BrokerProvider.MOCK_LIVE):
-                raise ValueError(f"Illegal configuration: PAPER trading cannot use live broker {self.broker_provider}.")
+        if self.trading_mode == TradingMode.PAPER_BROKER:
+            if self.broker_provider not in (BrokerProvider.ALPACA, BrokerProvider.IBKR, BrokerProvider.MOCK_LIVE):
+                raise ValueError(f"Illegal configuration: PAPER_BROKER requires external broker provider (e.g. alpaca), got {self.broker_provider}.")
+            if self.broker_provider == BrokerProvider.ALPACA and self.alpaca_env != AlpacaEnv.PAPER:
+                raise ValueError(f"Illegal configuration: PAPER_BROKER with Alpaca requires ALPACA_ENV=paper, got {self.alpaca_env}.")
+
+        if self.trading_mode in (TradingMode.PAPER_LOCAL, TradingMode.PAPER):
+            if self.broker_provider not in (BrokerProvider.PAPER, BrokerProvider.LOCAL, BrokerProvider.MOCK_LIVE):
+                raise ValueError(f"Illegal configuration: PAPER trading cannot use live broker ({self.broker_provider}). Air gap enforced.")
 
         if self.data_mode == DataMode.REPLAY and self.trading_mode == TradingMode.LIVE:
             raise ValueError("Illegal configuration: REPLAY data mode cannot be paired with LIVE trading.")
@@ -103,10 +124,11 @@ class RuntimeConfig:
     def from_env(cls) -> "RuntimeConfig":
         """Loads configuration strictly from environment with safe defaults."""
         m_str = os.getenv("MARKET", "US").strip().upper()
-        t_str = os.getenv("TRADING_MODE", "paper").strip().lower()
+        t_str = os.getenv("TRADING_MODE", "paper_local").strip().lower()
         d_str = os.getenv("DATA_MODE", "live").strip().lower()
         lm_str = os.getenv("LAYA_MODE", "shadow").strip().lower()
-        b_str = os.getenv("BROKER_PROVIDER", "paper").strip().lower()
+        b_str = os.getenv("BROKER_PROVIDER", "local").strip().lower()
+        ae_str = os.getenv("ALPACA_ENV", "paper").strip().lower()
 
         # Parse enums safely
         try:
@@ -117,7 +139,7 @@ class RuntimeConfig:
         try:
             trading_mode = TradingMode(t_str)
         except ValueError:
-            raise ValueError(f"Invalid TRADING_MODE '{t_str}'. Must be 'paper' or 'live'.")
+            raise ValueError(f"Invalid TRADING_MODE '{t_str}'. Must be 'paper_local', 'paper_broker', or 'live'.")
 
         try:
             data_mode = DataMode(d_str)
@@ -127,12 +149,18 @@ class RuntimeConfig:
         try:
             laya_mode = LayaMode(lm_str)
         except ValueError:
-            raise ValueError(f"Invalid LAYA_MODE '{lm_str}'. Must be 'shadow' or 'advisory'.")
+            raise ValueError(f"Invalid LAYA_MODE '{lm_str}'. Must be 'disabled', 'shadow', or 'advisory'.")
 
         try:
             broker_provider = BrokerProvider(b_str)
         except ValueError:
             raise ValueError(f"Invalid BROKER_PROVIDER '{b_str}'.")
+
+        try:
+            alpaca_env = AlpacaEnv(ae_str)
+        except ValueError:
+            raise ValueError(f"Invalid ALPACA_ENV '{ae_str}'. Must be 'paper' or 'live'.")
+
 
         live_enabled = os.getenv("LIVE_TRADING_ENABLED", "false").strip().lower() in ("true", "1", "yes")
         live_confirm = os.getenv("LIVE_CONFIRMATION_REQUIRED", "true").strip().lower() in ("true", "1", "yes")
@@ -146,7 +174,9 @@ class RuntimeConfig:
             laya_model=laya_model,
             laya_mode=laya_mode,
             broker_provider=broker_provider,
+            alpaca_env=alpaca_env,
             paper_initial_capital=float(os.getenv("PAPER_INITIAL_CAPITAL", "100000.0")),
+
             live_trading_enabled=live_enabled,
             live_confirmation_required=live_confirm,
             live_confirmation_token=live_token,
@@ -156,6 +186,9 @@ class RuntimeConfig:
             max_positions=int(os.getenv("TRADE_MAX_POSITIONS", "10")),
             stop_loss_pct=float(os.getenv("TRADE_STOP_LOSS_PCT", "2.0")),
             target_pct=float(os.getenv("TRADE_TARGET_PCT", "4.0")),
+            laya_top_n=int(os.getenv("LAYA_TOP_N", "5")),
+            us_universe_size=int(os.getenv("US_UNIVERSE_SIZE", "100")),
+            max_sector_exposure_percent=float(os.getenv("MAX_SECTOR_EXPOSURE_PERCENT", "30.0")),
         )
         cfg.validate()
         return cfg

@@ -14,7 +14,7 @@ Provides `reproduce_experiment(experiment_id)` to re-verify results.
 """
 
 from dataclasses import dataclass, asdict
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any, List, Optional
 import json
 import subprocess
@@ -130,7 +130,7 @@ class ReproducibilityEngine:
             key_packages=packages,
             random_seed=seed,
             config_hash=cfg_hash,
-            timestamp=datetime.utcnow().isoformat(),
+            timestamp=datetime.now(timezone.utc).isoformat(),
         )
 
     def freeze_experiment(
@@ -162,7 +162,7 @@ class ReproducibilityEngine:
             model_version=model_version,
             environment=env,
             baseline_metrics=baseline_metrics,
-            created_at=datetime.utcnow().isoformat(),
+            created_at=datetime.now(timezone.utc).isoformat(),
         )
 
         self.bundles[experiment_id] = bundle.to_dict()

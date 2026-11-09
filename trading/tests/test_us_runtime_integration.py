@@ -296,9 +296,9 @@ def test_restart_recovery():
     state_file.unlink(missing_ok=True)
 
 
-# ── TEST 22: Order Reconciliation ───────────────────────────────────────────
-def test_order_reconciliation():
-    broker = PaperBroker()
+def test_order_reconciliation(tmp_path):
+    state_file = tmp_path / "test_paper_portfolio.json"
+    broker = PaperBroker(initial_capital=100000.0, state_file=state_file)
     order = broker.submit_order(OrderRequest(symbol="SPY", side=OrderSide.BUY, quantity=5, limit_price=500.0, client_order_id="REC_01"))
     fetched = broker.get_order_status("REC_01")
     assert fetched.order_id == order.order_id

@@ -15,7 +15,7 @@ from trading.data.validator import validate_quote, validate_ohlcv, QualityFlags
 
 logger = logging.getLogger(__name__)
 
-MARKET = os.getenv("MARKET", "IN").strip().upper()  # US | IN
+MARKET = os.getenv("MARKET", "US").strip().upper()  # US | IN
 
 
 class YahooDataProvider(BaseDataProvider):
@@ -30,14 +30,15 @@ class YahooDataProvider(BaseDataProvider):
         "WEEK": "1wk", "ONE_WEEK": "1wk",
     }
 
-    def __init__(self, cache: Optional[DataCache] = None):
-        exchange = "NYSE/NASDAQ" if MARKET == "US" else "NSE"
+    def __init__(self, cache: Optional[DataCache] = None, market: Optional[str] = None):
+        self.market = (market or os.getenv("MARKET", "US")).strip().upper()
+        exchange = "NYSE/NASDAQ" if self.market == "US" else "NSE"
         super().__init__(name="yahoo", default_exchange=exchange)
         self.cache = cache or DataCache()
 
     def _format_ticker(self, symbol: str) -> str:
         s = symbol.strip().upper()
-        if MARKET == "US":
+        if self.market == "US":
             return s  # US tickers: AAPL, NVDA, SPY — no suffix needed
         if s.endswith(".NS") or s.endswith(".BO"):
             return s
